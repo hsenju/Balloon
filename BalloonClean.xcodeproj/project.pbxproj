@@ -21,6 +21,24 @@
 		000E79C7193FB2F400E7024F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 000E79A9193FB2F400E7024F /* UIKit.framework */; };
 		000E79CF193FB2F400E7024F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 000E79CD193FB2F400E7024F /* InfoPlist.strings */; };
 		000E79D1193FB2F400E7024F /* BalloonCleanTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 000E79D0193FB2F400E7024F /* BalloonCleanTests.m */; };
+		000E79DD193FB73E00E7024F /* PAPCardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 000E79DB193FB73E00E7024F /* PAPCardView.m */; };
+		000E79DE193FB73E00E7024F /* PAPCardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 000E79DC193FB73E00E7024F /* PAPCardView.xib */; };
+		000E79E1193FB75600E7024F /* CountdownLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 000E79E0193FB75600E7024F /* CountdownLabel.m */; };
+		000E79E5193FB80300E7024F /* PAPInvitesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 000E79E3193FB80300E7024F /* PAPInvitesViewController.m */; };
+		000E79E6193FB80300E7024F /* PAPInvitesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 000E79E4193FB80300E7024F /* PAPInvitesViewController.xib */; };
+		000E79E9193FB81400E7024F /* Invite.m in Sources */ = {isa = PBXBuildFile; fileRef = 000E79E8193FB81300E7024F /* Invite.m */; };
+		000E79EC193FB82000E7024F /* ParseInviteManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 000E79EB193FB82000E7024F /* ParseInviteManager.m */; };
+		000E79EF193FB83C00E7024F /* CardsViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 000E79EE193FB83C00E7024F /* CardsViewFlowLayout.m */; };
+		000E79F3193FB99000E7024F /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 000E79F2193FB99000E7024F /* AudioToolbox.framework */; };
+		000E79F5193FB99800E7024F /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 000E79F4193FB99800E7024F /* CFNetwork.framework */; };
+		000E79F7193FB9A600E7024F /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 000E79F6193FB9A600E7024F /* CoreLocation.framework */; };
+		000E79F9193FB9AD00E7024F /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 000E79F8193FB9AD00E7024F /* libz.dylib */; };
+		000E79FB193FB9B400E7024F /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 000E79FA193FB9B400E7024F /* MobileCoreServices.framework */; };
+		000E79FD193FB9BA00E7024F /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 000E79FC193FB9BA00E7024F /* QuartzCore.framework */; };
+		000E79FF193FB9C100E7024F /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 000E79FE193FB9C100E7024F /* Security.framework */; };
+		000E7A01193FB9C700E7024F /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 000E7A00193FB9C700E7024F /* StoreKit.framework */; };
+		000E7A03193FB9CD00E7024F /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 000E7A02193FB9CD00E7024F /* SystemConfiguration.framework */; };
+		000E7A05193FBB7300E7024F /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 000E7A04193FBB7300E7024F /* Parse.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +71,30 @@
 		000E79CC193FB2F400E7024F /* BalloonCleanTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BalloonCleanTests-Info.plist"; sourceTree = "<group>"; };
 		000E79CE193FB2F400E7024F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		000E79D0193FB2F400E7024F /* BalloonCleanTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BalloonCleanTests.m; sourceTree = "<group>"; };
+		000E79DA193FB73E00E7024F /* PAPCardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PAPCardView.h; sourceTree = "<group>"; };
+		000E79DB193FB73E00E7024F /* PAPCardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PAPCardView.m; sourceTree = "<group>"; };
+		000E79DC193FB73E00E7024F /* PAPCardView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PAPCardView.xib; sourceTree = "<group>"; };
+		000E79DF193FB75600E7024F /* CountdownLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CountdownLabel.h; sourceTree = "<group>"; };
+		000E79E0193FB75600E7024F /* CountdownLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CountdownLabel.m; sourceTree = "<group>"; };
+		000E79E2193FB80300E7024F /* PAPInvitesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PAPInvitesViewController.h; sourceTree = "<group>"; };
+		000E79E3193FB80300E7024F /* PAPInvitesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PAPInvitesViewController.m; sourceTree = "<group>"; };
+		000E79E4193FB80300E7024F /* PAPInvitesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PAPInvitesViewController.xib; sourceTree = "<group>"; };
+		000E79E7193FB81300E7024F /* Invite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Invite.h; sourceTree = "<group>"; };
+		000E79E8193FB81300E7024F /* Invite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Invite.m; sourceTree = "<group>"; };
+		000E79EA193FB82000E7024F /* ParseInviteManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParseInviteManager.h; sourceTree = "<group>"; };
+		000E79EB193FB82000E7024F /* ParseInviteManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParseInviteManager.m; sourceTree = "<group>"; };
+		000E79ED193FB83C00E7024F /* CardsViewFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardsViewFlowLayout.h; sourceTree = "<group>"; };
+		000E79EE193FB83C00E7024F /* CardsViewFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardsViewFlowLayout.m; sourceTree = "<group>"; };
+		000E79F2193FB99000E7024F /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		000E79F4193FB99800E7024F /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		000E79F6193FB9A600E7024F /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		000E79F8193FB9AD00E7024F /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		000E79FA193FB9B400E7024F /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		000E79FC193FB9BA00E7024F /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		000E79FE193FB9C100E7024F /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		000E7A00193FB9C700E7024F /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		000E7A02193FB9CD00E7024F /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		000E7A04193FBB7300E7024F /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,7 +102,17 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				000E7A03193FB9CD00E7024F /* SystemConfiguration.framework in Frameworks */,
+				000E7A01193FB9C700E7024F /* StoreKit.framework in Frameworks */,
+				000E79FF193FB9C100E7024F /* Security.framework in Frameworks */,
+				000E79FD193FB9BA00E7024F /* QuartzCore.framework in Frameworks */,
+				000E79FB193FB9B400E7024F /* MobileCoreServices.framework in Frameworks */,
+				000E79F9193FB9AD00E7024F /* libz.dylib in Frameworks */,
+				000E7A05193FBB7300E7024F /* Parse.framework in Frameworks */,
+				000E79F7193FB9A600E7024F /* CoreLocation.framework in Frameworks */,
 				000E79A8193FB2F400E7024F /* CoreGraphics.framework in Frameworks */,
+				000E79F5193FB99800E7024F /* CFNetwork.framework in Frameworks */,
+				000E79F3193FB99000E7024F /* AudioToolbox.framework in Frameworks */,
 				000E79AA193FB2F400E7024F /* UIKit.framework in Frameworks */,
 				000E79A6193FB2F400E7024F /* Foundation.framework in Frameworks */,
 			);
@@ -82,6 +134,7 @@
 		000E7999193FB2F400E7024F = {
 			isa = PBXGroup;
 			children = (
+				000E7A04193FBB7300E7024F /* Parse.framework */,
 				000E79AB193FB2F400E7024F /* BalloonClean */,
 				000E79CA193FB2F400E7024F /* BalloonCleanTests */,
 				000E79A4193FB2F400E7024F /* Frameworks */,
@@ -101,6 +154,15 @@
 		000E79A4193FB2F400E7024F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				000E7A02193FB9CD00E7024F /* SystemConfiguration.framework */,
+				000E7A00193FB9C700E7024F /* StoreKit.framework */,
+				000E79FE193FB9C100E7024F /* Security.framework */,
+				000E79FC193FB9BA00E7024F /* QuartzCore.framework */,
+				000E79FA193FB9B400E7024F /* MobileCoreServices.framework */,
+				000E79F8193FB9AD00E7024F /* libz.dylib */,
+				000E79F6193FB9A600E7024F /* CoreLocation.framework */,
+				000E79F4193FB99800E7024F /* CFNetwork.framework */,
+				000E79F2193FB99000E7024F /* AudioToolbox.framework */,
 				000E79A5193FB2F400E7024F /* Foundation.framework */,
 				000E79A7193FB2F400E7024F /* CoreGraphics.framework */,
 				000E79A9193FB2F400E7024F /* UIKit.framework */,
@@ -118,6 +180,20 @@
 				000E79BA193FB2F400E7024F /* BCViewController.h */,
 				000E79BB193FB2F400E7024F /* BCViewController.m */,
 				000E79BD193FB2F400E7024F /* Images.xcassets */,
+				000E79DF193FB75600E7024F /* CountdownLabel.h */,
+				000E79E0193FB75600E7024F /* CountdownLabel.m */,
+				000E79DA193FB73E00E7024F /* PAPCardView.h */,
+				000E79DB193FB73E00E7024F /* PAPCardView.m */,
+				000E79DC193FB73E00E7024F /* PAPCardView.xib */,
+				000E79E2193FB80300E7024F /* PAPInvitesViewController.h */,
+				000E79E3193FB80300E7024F /* PAPInvitesViewController.m */,
+				000E79E4193FB80300E7024F /* PAPInvitesViewController.xib */,
+				000E79E7193FB81300E7024F /* Invite.h */,
+				000E79E8193FB81300E7024F /* Invite.m */,
+				000E79EA193FB82000E7024F /* ParseInviteManager.h */,
+				000E79EB193FB82000E7024F /* ParseInviteManager.m */,
+				000E79ED193FB83C00E7024F /* CardsViewFlowLayout.h */,
+				000E79EE193FB83C00E7024F /* CardsViewFlowLayout.m */,
 				000E79AC193FB2F400E7024F /* Supporting Files */,
 			);
 			path = BalloonClean;
@@ -231,7 +307,9 @@
 			files = (
 				000E79BE193FB2F400E7024F /* Images.xcassets in Resources */,
 				000E79B0193FB2F400E7024F /* InfoPlist.strings in Resources */,
+				000E79DE193FB73E00E7024F /* PAPCardView.xib in Resources */,
 				000E79B9193FB2F400E7024F /* Main.storyboard in Resources */,
+				000E79E6193FB80300E7024F /* PAPInvitesViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,9 +328,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				000E79EF193FB83C00E7024F /* CardsViewFlowLayout.m in Sources */,
+				000E79E1193FB75600E7024F /* CountdownLabel.m in Sources */,
 				000E79BC193FB2F400E7024F /* BCViewController.m in Sources */,
+				000E79E9193FB81400E7024F /* Invite.m in Sources */,
 				000E79B2193FB2F400E7024F /* main.m in Sources */,
+				000E79EC193FB82000E7024F /* ParseInviteManager.m in Sources */,
+				000E79DD193FB73E00E7024F /* PAPCardView.m in Sources */,
 				000E79B6193FB2F400E7024F /* BCAppDelegate.m in Sources */,
+				000E79E5193FB80300E7024F /* PAPInvitesViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -379,6 +463,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/seanwertheim/Desktop/BalloonClean,
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BalloonClean/BalloonClean-Prefix.pch";
 				INFOPLIST_FILE = "BalloonClean/BalloonClean-Info.plist";
@@ -392,6 +480,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/seanwertheim/Desktop/BalloonClean,
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BalloonClean/BalloonClean-Prefix.pch";
 				INFOPLIST_FILE = "BalloonClean/BalloonClean-Info.plist";
