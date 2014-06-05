@@ -7,12 +7,21 @@
 //
 
 #import "BCAppDelegate.h"
+
 #import <Parse/Parse.h>
+#import "BCParseGroup.h"
+#import "BCParseActivity.h"
+#import "BCParseBalloon.h"
+#import "BCParseUser.h"
 
 @implementation BCAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    [BCParseGroup registerSubclass];
+    [BCParseActivity registerSubclass];
+    [BCParseBalloon registerSubclass];
+    [BCParseUser registerSubclass];
     
     [Parse setApplicationId:@"F0cvLwmfI1R73szAAbXp5diFL2Q0GbQwPjhaafBI"
                   clientKey:@"gPZ4p1xWFznflPhvvZDDtyEOx1vt9lHXYnVyWpHJ"];
