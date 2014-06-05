@@ -8,6 +8,7 @@
 
 #import "BCCreateGroupViewController.h"
 
+
 @interface BCCreateGroupViewController ()
 
 @property (strong, nonatomic) IBOutlet UITextField *groupNameTextField;
@@ -34,14 +35,28 @@ static const NSString *kToContactsSelectorSegueIdentifier = @"createGroupToConta
 	// Do any additional setup after loading the view.
 }
 
+- (IBAction)doneButtonPressed:(id)sender {
+    SMContactsSelector *controller = [[SMContactsSelector alloc] initWithNibName:@"SMContactsSelector" bundle:nil];
+    controller.delegate = self;
+    controller.requestData = DATA_CONTACT_TELEPHONE;
+    controller.showModal = YES; //Mandatory: YES or NO
+    controller.showCheckButton = YES; //Mandatory: YES or NO
+    
+    // Set your contact list setting record ids (optional)
+    //controller.recordIDs = [NSArray arrayWithObjects:@"1", @"2", nil];
+    
+    [self presentViewController:controller animated:YES completion:nil];
+}
+
+- (void)numberOfRowsSelected:(NSInteger)numberRows withData:(NSArray *)data andDataType:(DATA_CONTACT)type
+{
+    
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-}
-
--(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
-    
 }
 
 @end
