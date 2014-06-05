@@ -59,6 +59,11 @@
 		000E7A80193FD84F00E7024F /* SMContactsSelector.xib in Resources */ = {isa = PBXBuildFile; fileRef = 000E7A6C193FD84F00E7024F /* SMContactsSelector.xib */; };
 		000E7A81193FD84F00E7024F /* CustomIOS7AlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 000E7A6F193FD84F00E7024F /* CustomIOS7AlertView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		000E7A82193FD84F00E7024F /* UIAlertView+UITableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 000E7A71193FD84F00E7024F /* UIAlertView+UITableView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		0097D08E1940E53300C26E28 /* BCParseGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 0097D08D1940E53300C26E28 /* BCParseGroup.m */; };
+		0097D0941940EF5700C26E28 /* BCParseActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = 0097D0931940EF5700C26E28 /* BCParseActivity.m */; };
+		0097D0971940F2AB00C26E28 /* BCParseBalloon.m in Sources */ = {isa = PBXBuildFile; fileRef = 0097D0961940F2AB00C26E28 /* BCParseBalloon.m */; };
+		0097D09B1940F61E00C26E28 /* BCParseUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 0097D09A1940F61E00C26E28 /* BCParseUser.m */; };
+		0097D0A11940FBB900C26E28 /* BCCreateGroupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0097D0A01940FBB900C26E28 /* BCCreateGroupViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -150,6 +155,16 @@
 		000E7A6F193FD84F00E7024F /* CustomIOS7AlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomIOS7AlertView.m; sourceTree = "<group>"; };
 		000E7A70193FD84F00E7024F /* UIAlertView+UITableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+UITableView.h"; sourceTree = "<group>"; };
 		000E7A71193FD84F00E7024F /* UIAlertView+UITableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+UITableView.m"; sourceTree = "<group>"; };
+		0097D08C1940E53300C26E28 /* BCParseGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCParseGroup.h; sourceTree = "<group>"; };
+		0097D08D1940E53300C26E28 /* BCParseGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCParseGroup.m; sourceTree = "<group>"; };
+		0097D0921940EF5700C26E28 /* BCParseActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCParseActivity.h; sourceTree = "<group>"; };
+		0097D0931940EF5700C26E28 /* BCParseActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCParseActivity.m; sourceTree = "<group>"; };
+		0097D0951940F2AB00C26E28 /* BCParseBalloon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCParseBalloon.h; sourceTree = "<group>"; };
+		0097D0961940F2AB00C26E28 /* BCParseBalloon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCParseBalloon.m; sourceTree = "<group>"; };
+		0097D0991940F61E00C26E28 /* BCParseUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCParseUser.h; sourceTree = "<group>"; };
+		0097D09A1940F61E00C26E28 /* BCParseUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCParseUser.m; sourceTree = "<group>"; };
+		0097D09F1940FBB900C26E28 /* BCCreateGroupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCCreateGroupViewController.h; sourceTree = "<group>"; };
+		0097D0A01940FBB900C26E28 /* BCCreateGroupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCCreateGroupViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -276,6 +291,7 @@
 		000E7A06193FC43F00E7024F /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				0097D0981940F50600C26E28 /* PFObjectSubclasses */,
 				000E79E7193FB81300E7024F /* Invite.h */,
 				000E79E8193FB81300E7024F /* Invite.m */,
 				000E79EA193FB82000E7024F /* ParseInviteManager.h */,
@@ -312,6 +328,8 @@
 				000E79E2193FB80300E7024F /* PAPInvitesViewController.h */,
 				000E79E3193FB80300E7024F /* PAPInvitesViewController.m */,
 				000E79E4193FB80300E7024F /* PAPInvitesViewController.xib */,
+				0097D09F1940FBB900C26E28 /* BCCreateGroupViewController.h */,
+				0097D0A01940FBB900C26E28 /* BCCreateGroupViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -391,6 +409,21 @@
 				000E7A71193FD84F00E7024F /* UIAlertView+UITableView.m */,
 			);
 			path = "UIAlertView+UITableView";
+			sourceTree = "<group>";
+		};
+		0097D0981940F50600C26E28 /* PFObjectSubclasses */ = {
+			isa = PBXGroup;
+			children = (
+				0097D08C1940E53300C26E28 /* BCParseGroup.h */,
+				0097D08D1940E53300C26E28 /* BCParseGroup.m */,
+				0097D0921940EF5700C26E28 /* BCParseActivity.h */,
+				0097D0931940EF5700C26E28 /* BCParseActivity.m */,
+				0097D0951940F2AB00C26E28 /* BCParseBalloon.h */,
+				0097D0961940F2AB00C26E28 /* BCParseBalloon.m */,
+				0097D0991940F61E00C26E28 /* BCParseUser.h */,
+				0097D09A1940F61E00C26E28 /* BCParseUser.m */,
+			);
+			name = PFObjectSubclasses;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -505,21 +538,26 @@
 				000E79E1193FB75600E7024F /* CountdownLabel.m in Sources */,
 				000E79E9193FB81400E7024F /* Invite.m in Sources */,
 				000E7A11193FC70600E7024F /* BCGroupCell.m in Sources */,
+				0097D08E1940E53300C26E28 /* BCParseGroup.m in Sources */,
 				000E79B2193FB2F400E7024F /* main.m in Sources */,
 				000E79EC193FB82000E7024F /* ParseInviteManager.m in Sources */,
 				000E7A7D193FD84F00E7024F /* SBJsonParser.m in Sources */,
+				0097D0971940F2AB00C26E28 /* BCParseBalloon.m in Sources */,
 				000E7A7F193FD84F00E7024F /* SMContactsSelector.m in Sources */,
 				000E7A7C193FD84F00E7024F /* SBJsonBase.m in Sources */,
 				000E7A73193FD84F00E7024F /* NSString+Additions.m in Sources */,
 				000E79DD193FB73E00E7024F /* PAPCardView.m in Sources */,
 				000E79B6193FB2F400E7024F /* BCAppDelegate.m in Sources */,
 				000E7A79193FD84F00E7024F /* NSObject+SBJSON.m in Sources */,
+				0097D0A11940FBB900C26E28 /* BCCreateGroupViewController.m in Sources */,
+				0097D0941940EF5700C26E28 /* BCParseActivity.m in Sources */,
 				000E7A72193FD84F00E7024F /* Address+Additions.m in Sources */,
 				000E7A7B193FD84F00E7024F /* SBJSON.m in Sources */,
 				000E79E5193FB80300E7024F /* PAPInvitesViewController.m in Sources */,
 				000E7A0E193FC58C00E7024F /* BCGroup.m in Sources */,
 				000E7A7A193FD84F00E7024F /* NSString+SBJSON.m in Sources */,
 				000E7A81193FD84F00E7024F /* CustomIOS7AlertView.m in Sources */,
+				0097D09B1940F61E00C26E28 /* BCParseUser.m in Sources */,
 				000E7A0B193FC4FF00E7024F /* GroupsTableViewController.m in Sources */,
 				000E7A82193FD84F00E7024F /* UIAlertView+UITableView.m in Sources */,
 			);
@@ -762,6 +800,7 @@
 				000E79D6193FB2F400E7024F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		000E79D7193FB2F400E7024F /* Build configuration list for PBXNativeTarget "BalloonCleanTests" */ = {
 			isa = XCConfigurationList;
@@ -770,6 +809,7 @@
 				000E79D9193FB2F400E7024F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
