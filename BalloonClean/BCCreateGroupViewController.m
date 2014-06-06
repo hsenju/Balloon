@@ -36,6 +36,7 @@ static const NSString *kToContactsSelectorSegueIdentifier = @"createGroupToConta
     self.groupToAdd = [BCParseGroup object];
     self.groupNameTextField.delegate = self;
 }
+
 - (IBAction)addPhotoButtonPressed:(id)sender {
     //want to choose photo from photo roll
     UIImagePickerController* picker = [[UIImagePickerController alloc]init];
