@@ -37,7 +37,6 @@
 		000E79FF193FB9C100E7024F /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 000E79FE193FB9C100E7024F /* Security.framework */; };
 		000E7A01193FB9C700E7024F /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 000E7A00193FB9C700E7024F /* StoreKit.framework */; };
 		000E7A03193FB9CD00E7024F /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 000E7A02193FB9CD00E7024F /* SystemConfiguration.framework */; };
-		000E7A05193FBB7300E7024F /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 000E7A04193FBB7300E7024F /* Parse.framework */; };
 		000E7A0B193FC4FF00E7024F /* GroupsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 000E7A0A193FC4FF00E7024F /* GroupsTableViewController.m */; };
 		000E7A0E193FC58C00E7024F /* BCGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 000E7A0D193FC58C00E7024F /* BCGroup.m */; };
 		000E7A11193FC70600E7024F /* BCGroupCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 000E7A10193FC70600E7024F /* BCGroupCell.m */; };
@@ -64,6 +63,10 @@
 		0097D0971940F2AB00C26E28 /* BCParseBalloon.m in Sources */ = {isa = PBXBuildFile; fileRef = 0097D0961940F2AB00C26E28 /* BCParseBalloon.m */; };
 		0097D09B1940F61E00C26E28 /* BCParseUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 0097D09A1940F61E00C26E28 /* BCParseUser.m */; };
 		0097D0A11940FBB900C26E28 /* BCCreateGroupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0097D0A01940FBB900C26E28 /* BCCreateGroupViewController.m */; };
+		6B6791F219410A99001D8F8D /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B6791F119410A99001D8F8D /* Parse.framework */; };
+		6B6791F5194111DA001D8F8D /* FacebookViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B6791F4194111DA001D8F8D /* FacebookViewController.m */; };
+		6B6791F8194111EB001D8F8D /* PhoneNumberViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B6791F7194111EB001D8F8D /* PhoneNumberViewController.m */; };
+		6B6791FB194113E2001D8F8D /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B6791FA194113E2001D8F8D /* FacebookSDK.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -117,7 +120,6 @@
 		000E79FE193FB9C100E7024F /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		000E7A00193FB9C700E7024F /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		000E7A02193FB9CD00E7024F /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		000E7A04193FBB7300E7024F /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		000E7A09193FC4FE00E7024F /* GroupsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GroupsTableViewController.h; path = ../GroupsTableViewController.h; sourceTree = "<group>"; };
 		000E7A0A193FC4FF00E7024F /* GroupsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GroupsTableViewController.m; path = ../GroupsTableViewController.m; sourceTree = "<group>"; };
 		000E7A0C193FC58C00E7024F /* BCGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCGroup.h; sourceTree = "<group>"; };
@@ -165,6 +167,12 @@
 		0097D09A1940F61E00C26E28 /* BCParseUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCParseUser.m; sourceTree = "<group>"; };
 		0097D09F1940FBB900C26E28 /* BCCreateGroupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCCreateGroupViewController.h; sourceTree = "<group>"; };
 		0097D0A01940FBB900C26E28 /* BCCreateGroupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCCreateGroupViewController.m; sourceTree = "<group>"; };
+		6B6791F119410A99001D8F8D /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		6B6791F3194111DA001D8F8D /* FacebookViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FacebookViewController.h; sourceTree = "<group>"; };
+		6B6791F4194111DA001D8F8D /* FacebookViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FacebookViewController.m; sourceTree = "<group>"; };
+		6B6791F6194111EB001D8F8D /* PhoneNumberViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhoneNumberViewController.h; sourceTree = "<group>"; };
+		6B6791F7194111EB001D8F8D /* PhoneNumberViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhoneNumberViewController.m; sourceTree = "<group>"; };
+		6B6791FA194113E2001D8F8D /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,19 +180,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				000E79FB193FB9B400E7024F /* MobileCoreServices.framework in Frameworks */,
 				000E7A03193FB9CD00E7024F /* SystemConfiguration.framework in Frameworks */,
 				000E7A01193FB9C700E7024F /* StoreKit.framework in Frameworks */,
 				000E79FF193FB9C100E7024F /* Security.framework in Frameworks */,
 				000E79FD193FB9BA00E7024F /* QuartzCore.framework in Frameworks */,
-				000E79FB193FB9B400E7024F /* MobileCoreServices.framework in Frameworks */,
 				000E79F9193FB9AD00E7024F /* libz.dylib in Frameworks */,
-				000E7A05193FBB7300E7024F /* Parse.framework in Frameworks */,
 				000E79F7193FB9A600E7024F /* CoreLocation.framework in Frameworks */,
 				000E79A8193FB2F400E7024F /* CoreGraphics.framework in Frameworks */,
 				000E79F5193FB99800E7024F /* CFNetwork.framework in Frameworks */,
+				6B6791F219410A99001D8F8D /* Parse.framework in Frameworks */,
 				000E79F3193FB99000E7024F /* AudioToolbox.framework in Frameworks */,
 				000E79AA193FB2F400E7024F /* UIKit.framework in Frameworks */,
 				000E79A6193FB2F400E7024F /* Foundation.framework in Frameworks */,
+				6B6791FB194113E2001D8F8D /* FacebookSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -225,7 +234,8 @@
 		000E79A4193FB2F400E7024F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				000E7A04193FBB7300E7024F /* Parse.framework */,
+				6B6791FA194113E2001D8F8D /* FacebookSDK.framework */,
+				6B6791F119410A99001D8F8D /* Parse.framework */,
 				000E7A02193FB9CD00E7024F /* SystemConfiguration.framework */,
 				000E7A00193FB9C700E7024F /* StoreKit.framework */,
 				000E79FE193FB9C100E7024F /* Security.framework */,
@@ -323,6 +333,7 @@
 		000E7A08193FC46300E7024F /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				6B6791F9194111F6001D8F8D /* Login */,
 				000E7A09193FC4FE00E7024F /* GroupsTableViewController.h */,
 				000E7A0A193FC4FF00E7024F /* GroupsTableViewController.m */,
 				000E79E2193FB80300E7024F /* PAPInvitesViewController.h */,
@@ -426,6 +437,17 @@
 			name = PFObjectSubclasses;
 			sourceTree = "<group>";
 		};
+		6B6791F9194111F6001D8F8D /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				6B6791F6194111EB001D8F8D /* PhoneNumberViewController.h */,
+				6B6791F7194111EB001D8F8D /* PhoneNumberViewController.m */,
+				6B6791F3194111DA001D8F8D /* FacebookViewController.h */,
+				6B6791F4194111DA001D8F8D /* FacebookViewController.m */,
+			);
+			name = Login;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -471,7 +493,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = BC;
-				LastUpgradeCheck = 0500;
+				LastUpgradeCheck = 0600;
 				ORGANIZATIONNAME = "Sean Wertheim";
 				TargetAttributes = {
 					000E79C2193FB2F400E7024F = {
@@ -532,6 +554,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B6791F8194111EB001D8F8D /* PhoneNumberViewController.m in Sources */,
 				000E7A15193FCB8400E7024F /* Common.m in Sources */,
 				000E7A7E193FD84F00E7024F /* SBJsonWriter.m in Sources */,
 				000E79EF193FB83C00E7024F /* CardsViewFlowLayout.m in Sources */,
@@ -546,6 +569,7 @@
 				000E7A7F193FD84F00E7024F /* SMContactsSelector.m in Sources */,
 				000E7A7C193FD84F00E7024F /* SBJsonBase.m in Sources */,
 				000E7A73193FD84F00E7024F /* NSString+Additions.m in Sources */,
+				6B6791F5194111DA001D8F8D /* FacebookViewController.m in Sources */,
 				000E79DD193FB73E00E7024F /* PAPCardView.m in Sources */,
 				000E79B6193FB2F400E7024F /* BCAppDelegate.m in Sources */,
 				000E7A79193FD84F00E7024F /* NSObject+SBJSON.m in Sources */,
@@ -637,7 +661,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -676,7 +699,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -713,6 +735,8 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/seanwertheim/Desktop/BalloonClean,
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/FacebookSDK",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BalloonClean/BalloonClean-Prefix.pch";
@@ -730,6 +754,8 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/seanwertheim/Desktop/BalloonClean,
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/FacebookSDK",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BalloonClean/BalloonClean-Prefix.pch";
@@ -742,7 +768,6 @@
 		000E79D8193FB2F400E7024F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/BalloonClean.app/BalloonClean";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -765,7 +790,6 @@
 		000E79D9193FB2F400E7024F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/BalloonClean.app/BalloonClean";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
