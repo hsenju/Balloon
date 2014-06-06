@@ -11,6 +11,7 @@
 
 @interface BCParseActivity : PFObject<PFSubclassing>
 +(NSString*)parseClassName;
+-(void)setActivityPhotoFileWithUIImage:(UIImage *)activityImage;
 @property (retain) NSString *fromUser;
 @property (retain) NSString *toUser;
 @property (retain) NSString *content;

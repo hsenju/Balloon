@@ -8,7 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "SMContactsSelector.h"
+#import "BCParseGroup.h"
 
-@interface BCCreateGroupViewController : UIViewController <SMContactsSelectorDelegate>
+@interface BCCreateGroupViewController : UIViewController <SMContactsSelectorDelegate, UIImagePickerControllerDelegate,UINavigationControllerDelegate>
 
 @end

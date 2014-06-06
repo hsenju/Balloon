@@ -10,7 +10,7 @@
 
 @interface BCParseBalloon : PFObject<PFSubclassing>
 +(NSString*)parseClassName;
-
+-(void)setEventPhotoFileWithUIImage:(UIImage *)eventImage;
 @property (retain) NSMutableArray *comments;
 @property (retain) NSMutableArray *invitedMembers;
 @property (retain) NSMutableArray *membersRespondedYes;

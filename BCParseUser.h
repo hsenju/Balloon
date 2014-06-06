@@ -11,7 +11,7 @@
 
 @interface BCParseUser : PFObject<PFSubclassing>
 +(NSString*)parseClassName;
-
+-(void)setUserPhotoFileWithUIImage:(UIImage *)userImage;
 @property (retain) NSMutableArray *userMemberGroups;
 @property (retain) NSString *usernameFromPhoneNumber;
 @property (retain) PFFile *userPhotoFile;
