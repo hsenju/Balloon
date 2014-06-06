@@ -12,16 +12,17 @@
 @implementation BCParseGroup
 
 @dynamic membersByPhoneNumber;
-@dynamic profileImageFile;
+@dynamic groupImageFile;
+@dynamic groupName;
 
 +(NSString*)parseClassName{
     return @"Group";
 }
 
--(void)setProfileImageFileWithUIImage:(UIImage *)profileImage{
+-(void)setGroupImageFileWithUIImage:(UIImage *)profileImage{
     NSData *imageData = UIImagePNGRepresentation(profileImage);
     PFFile *imageFile = [PFFile fileWithName:@"profileImage.png" data:imageData];
-    self.profileImageFile = imageFile;
+    self.groupImageFile = imageFile;
 }
 
 @end

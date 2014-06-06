@@ -10,7 +10,9 @@
 
 @interface BCParseGroup : PFObject<PFSubclassing>
 +(NSString*)parseClassName;
+-(void)setGroupImageFileWithUIImage:(UIImage *)profileImage;
 @property (retain) NSMutableArray *membersByPhoneNumber;
-@property (retain) PFFile *profileImageFile;
+@property (retain) PFFile *groupImageFile;
+@property (retain) NSString *groupName;
 
 @end
