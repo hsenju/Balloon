@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6154.17" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="4RG-Rm-Dod">
     <dependencies>
+        <deployment defaultVersion="1792" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6153.11"/>
     </dependencies>
     <scenes>
@@ -115,6 +116,9 @@
                                 <state key="normal" title="edit">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="editButton:" destination="PCJ-bo-XSZ" eventType="touchUpInside" id="Qjc-iV-8ez"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xZB-Rr-Iw1">
                                 <rect key="frame" x="70" y="245" width="192" height="30"/>
@@ -122,6 +126,9 @@
                                 <state key="normal" title="Use Your Facebook Info">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="facebookButton:" destination="PCJ-bo-XSZ" eventType="touchUpInside" id="6z6-Ij-JJ5"/>
+                                </connections>
                             </button>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="SeparatorComments.png" translatesAutoresizingMaskIntoConstraints="NO" id="NpA-bN-2g6">
                                 <rect key="frame" x="26" y="192" width="280" height="2"/>
@@ -142,6 +149,9 @@
                                 <rect key="frame" x="38" y="164" width="262" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="textChanged:" destination="PCJ-bo-XSZ" eventType="editingChanged" id="Hiy-6N-w6g"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Min-NO-i7V">
                                 <rect key="frame" x="238" y="283" width="46" height="18"/>
@@ -150,7 +160,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="facebookButton:" destination="PCJ-bo-XSZ" eventType="touchUpInside" id="DoM-Uc-RQE"/>
+                                    <action selector="doneButton:" destination="PCJ-bo-XSZ" eventType="touchUpInside" id="yGD-pa-6Vm"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -185,6 +195,7 @@
                         <segue destination="gYL-34-mip" kind="relationship" relationship="viewControllers" id="FSu-Dq-f1l"/>
                         <segue destination="SAU-ju-z9h" kind="relationship" relationship="viewControllers" id="MWm-Xl-H2u"/>
                         <segue destination="q0I-sM-01y" kind="relationship" relationship="viewControllers" id="eUY-0o-tvz"/>
+                        <segue destination="J1x-55-D7v" kind="relationship" relationship="viewControllers" id="iIv-Sk-rF5"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yJC-4r-Df3" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -314,6 +325,164 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yoS-6G-PFW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-4749" y="1326"/>
+        </scene>
+        <!--Settings-->
+        <scene sceneID="EIb-kl-X1b">
+            <objects>
+                <viewController id="1ro-hI-LED" customClass="BCSettings" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="MZR-iR-gIq"/>
+                        <viewControllerLayoutGuide type="bottom" id="Gkh-LV-0Jr"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="EaN-JD-Ce9">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y0w-yh-KmN">
+                                <rect key="frame" x="20" y="444" width="280" height="32"/>
+                                <state key="normal" backgroundImage="Logoutbutton.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="logOutTouched:" destination="1ro-hI-LED" eventType="touchUpInside" id="3LK-zu-f7R"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ENp-7D-QWc">
+                                <rect key="frame" x="20" y="91" width="280" height="280"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Full Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HCB-Wx-xHG">
+                                        <rect key="frame" x="92" y="14" width="97" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MBl-HQ-5ak">
+                                        <rect key="frame" x="50" y="49" width="181" height="181"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ghy-xC-hh3">
+                                        <rect key="frame" x="35" y="37" width="211" height="205"/>
+                                        <state key="normal">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="profPictureTouched:" destination="1ro-hI-LED" eventType="touchUpInside" id="kc9-AX-BBy"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AMn-wj-sAt">
+                                <rect key="frame" x="20" y="396" width="280" height="29"/>
+                                <state key="normal" backgroundImage="LinkToFacebook.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="linkFacebookTouched:" destination="1ro-hI-LED" eventType="touchUpInside" id="Dt7-pa-lpA"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.63939787706796403" green="0.83520563431880046" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="sd3-u7-tzZ"/>
+                    <connections>
+                        <outlet property="fullName" destination="HCB-Wx-xHG" id="gwz-2m-cnO"/>
+                        <outlet property="linkFacebook" destination="AMn-wj-sAt" id="a1g-4M-hkK"/>
+                        <outlet property="logOut" destination="Y0w-yh-KmN" id="juL-7u-jY5"/>
+                        <outlet property="profPictureButton" destination="Ghy-xC-hh3" id="oDk-Z9-hnP"/>
+                        <outlet property="profilePicture" destination="MBl-HQ-5ak" id="tY5-Ix-ukc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7kL-eI-64A" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <view contentMode="scaleToFill" id="0EH-MC-218">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    <subviews>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Enter your name and " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qyQ-hl-jce">
+                            <rect key="frame" x="140" y="47" width="165" height="39"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ProfilePictureStroke" translatesAutoresizingMaskIntoConstraints="NO" id="TKI-tZ-Keg">
+                            <rect key="frame" x="20" y="20" width="99" height="93"/>
+                        </imageView>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="profile picture" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gtZ-LZ-XIn">
+                            <rect key="frame" x="140" y="81" width="105" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Or import profile from Facebook" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XQn-vV-vDj">
+                            <rect key="frame" x="38" y="206" width="246" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z4U-jL-sSH">
+                            <rect key="frame" x="54" y="112" width="30" height="30"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <state key="normal" title="edit">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DVv-CT-PE7">
+                            <rect key="frame" x="70" y="245" width="192" height="30"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <state key="normal" title="Use Your Facebook Info">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                        </button>
+                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="SeparatorComments.png" translatesAutoresizingMaskIntoConstraints="NO" id="GLj-jo-3aM">
+                            <rect key="frame" x="26" y="192" width="280" height="2"/>
+                        </imageView>
+                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="SeparatorComments.png" translatesAutoresizingMaskIntoConstraints="NO" id="YUT-gM-jNL">
+                            <rect key="frame" x="25" y="235" width="280" height="2"/>
+                        </imageView>
+                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="SeparatorComments.png" translatesAutoresizingMaskIntoConstraints="NO" id="sCH-oT-lNy">
+                            <rect key="frame" x="25" y="159" width="280" height="2"/>
+                        </imageView>
+                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="SeparatorComments.png" translatesAutoresizingMaskIntoConstraints="NO" id="DrF-wj-TQy">
+                            <rect key="frame" x="25" y="273" width="280" height="2"/>
+                        </imageView>
+                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="facebook-icon" translatesAutoresizingMaskIntoConstraints="NO" id="HlU-XJ-ggU">
+                            <rect key="frame" x="32" y="245" width="25" height="25"/>
+                        </imageView>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CXR-sX-HtR">
+                            <rect key="frame" x="38" y="164" width="262" height="30"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F66-r3-67c">
+                            <rect key="frame" x="238" y="283" width="46" height="18"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <state key="normal" title="Done">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="facebookButton:" destination="PCJ-bo-XSZ" eventType="touchUpInside" id="7ns-9L-8Xx"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+            </objects>
+            <point key="canvasLocation" x="-4155" y="4196"/>
+        </scene>
+        <!--Navigation Controller - Item-->
+        <scene sceneID="Fyb-ZD-a9c">
+            <objects>
+                <navigationController id="J1x-55-D7v" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="lB4-Iq-Z6U"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="wD4-AZ-26J">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="1ro-hI-LED" kind="relationship" relationship="rootViewController" id="xbb-Md-AMG"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Meg-16-ED2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-4649" y="4196"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="ggs-kj-uby">
@@ -754,6 +923,8 @@
     </scenes>
     <resources>
         <image name="Balloon-logo" width="300" height="106"/>
+        <image name="LinkToFacebook.png" width="614" height="62"/>
+        <image name="Logoutbutton.png" width="614" height="62"/>
         <image name="ProfilePictureStroke" width="300" height="106"/>
         <image name="SeparatorComments.png" width="300" height="106"/>
         <image name="buttonFollowing" width="103" height="33"/>

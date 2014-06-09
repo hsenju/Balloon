@@ -68,6 +68,10 @@
 		6B6791F5194111DA001D8F8D /* FacebookViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B6791F4194111DA001D8F8D /* FacebookViewController.m */; };
 		6B6791F8194111EB001D8F8D /* PhoneNumberViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B6791F7194111EB001D8F8D /* PhoneNumberViewController.m */; };
 		6B6791FB194113E2001D8F8D /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B6791FA194113E2001D8F8D /* FacebookSDK.framework */; };
+		6B6791FD19426828001D8F8D /* LinkToFacebook.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B6791FC19426828001D8F8D /* LinkToFacebook.png */; };
+		6B67920019426BCC001D8F8D /* Logoutbutton.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B6791FF19426BCC001D8F8D /* Logoutbutton.png */; };
+		6B6792061942701A001D8F8D /* BCSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B6792051942701A001D8F8D /* BCSettings.m */; };
+		6B67920F19455E1E001D8F8D /* BCIntegrateFacebookController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B67920E19455E1E001D8F8D /* BCIntegrateFacebookController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -176,6 +180,12 @@
 		6B6791F6194111EB001D8F8D /* PhoneNumberViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhoneNumberViewController.h; sourceTree = "<group>"; };
 		6B6791F7194111EB001D8F8D /* PhoneNumberViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhoneNumberViewController.m; sourceTree = "<group>"; };
 		6B6791FA194113E2001D8F8D /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
+		6B6791FC19426828001D8F8D /* LinkToFacebook.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = LinkToFacebook.png; path = Resources/Assets/LinkToFacebook.png; sourceTree = SOURCE_ROOT; };
+		6B6791FF19426BCC001D8F8D /* Logoutbutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Logoutbutton.png; path = Resources/Assets/Logoutbutton.png; sourceTree = SOURCE_ROOT; };
+		6B6792041942701A001D8F8D /* BCSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCSettings.h; sourceTree = "<group>"; };
+		6B6792051942701A001D8F8D /* BCSettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCSettings.m; sourceTree = "<group>"; };
+		6B67920D19455E1E001D8F8D /* BCIntegrateFacebookController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCIntegrateFacebookController.h; sourceTree = "<group>"; };
+		6B67920E19455E1E001D8F8D /* BCIntegrateFacebookController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCIntegrateFacebookController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -266,6 +276,7 @@
 				000E7A07193FC45500E7024F /* View */,
 				000E7A08193FC46300E7024F /* Controller */,
 				000E79BD193FB2F400E7024F /* Images.xcassets */,
+				6B6791FE19426873001D8F8D /* Resources */,
 				000E7A16193FD57A00E7024F /* Third Party Modules */,
 				000E79AC193FB2F400E7024F /* Supporting Files */,
 			);
@@ -336,6 +347,8 @@
 		000E7A08193FC46300E7024F /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				6B67920D19455E1E001D8F8D /* BCIntegrateFacebookController.h */,
+				6B67920E19455E1E001D8F8D /* BCIntegrateFacebookController.m */,
 				6B6791F9194111F6001D8F8D /* Login */,
 				000E7A09193FC4FE00E7024F /* GroupsTableViewController.h */,
 				000E7A0A193FC4FF00E7024F /* GroupsTableViewController.m */,
@@ -346,6 +359,8 @@
 				0097D0A01940FBB900C26E28 /* BCCreateGroupViewController.m */,
 				001071A3194213600078625B /* BCPeoplePickerViewController.h */,
 				001071A4194213600078625B /* BCPeoplePickerViewController.m */,
+				6B6792041942701A001D8F8D /* BCSettings.h */,
+				6B6792051942701A001D8F8D /* BCSettings.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -453,6 +468,15 @@
 			name = Login;
 			sourceTree = "<group>";
 		};
+		6B6791FE19426873001D8F8D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				6B6791FC19426828001D8F8D /* LinkToFacebook.png */,
+				6B6791FF19426BCC001D8F8D /* Logoutbutton.png */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -499,7 +523,7 @@
 			attributes = {
 				CLASSPREFIX = BC;
 				LastUpgradeCheck = 0600;
-				ORGANIZATIONNAME = "Sean Wertheim";
+				ORGANIZATIONNAME = Balloon;
 				TargetAttributes = {
 					000E79C2193FB2F400E7024F = {
 						TestTargetID = 000E79A1193FB2F400E7024F;
@@ -531,9 +555,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				000E79BE193FB2F400E7024F /* Images.xcassets in Resources */,
+				6B67920019426BCC001D8F8D /* Logoutbutton.png in Resources */,
 				000E7A74193FD84F00E7024F /* InfoPlist.strings in Resources */,
 				000E7A76193FD84F00E7024F /* ViewController.xib in Resources */,
 				000E79B0193FB2F400E7024F /* InfoPlist.strings in Resources */,
+				6B6791FD19426828001D8F8D /* LinkToFacebook.png in Resources */,
 				000E7A78193FD84F00E7024F /* unchecked.png in Resources */,
 				000E79DE193FB73E00E7024F /* PAPCardView.xib in Resources */,
 				000E7A80193FD84F00E7024F /* SMContactsSelector.xib in Resources */,
@@ -566,6 +592,7 @@
 				000E79E1193FB75600E7024F /* CountdownLabel.m in Sources */,
 				000E79E9193FB81400E7024F /* Invite.m in Sources */,
 				000E7A11193FC70600E7024F /* BCGroupCell.m in Sources */,
+				6B67920F19455E1E001D8F8D /* BCIntegrateFacebookController.m in Sources */,
 				0097D08E1940E53300C26E28 /* BCParseGroup.m in Sources */,
 				000E79B2193FB2F400E7024F /* main.m in Sources */,
 				000E79EC193FB82000E7024F /* ParseInviteManager.m in Sources */,
@@ -586,6 +613,7 @@
 				000E79E5193FB80300E7024F /* PAPInvitesViewController.m in Sources */,
 				000E7A0E193FC58C00E7024F /* BCGroup.m in Sources */,
 				000E7A7A193FD84F00E7024F /* NSString+SBJSON.m in Sources */,
+				6B6792061942701A001D8F8D /* BCSettings.m in Sources */,
 				000E7A81193FD84F00E7024F /* CustomIOS7AlertView.m in Sources */,
 				0097D09B1940F61E00C26E28 /* BCParseUser.m in Sources */,
 				000E7A0B193FC4FF00E7024F /* GroupsTableViewController.m in Sources */,

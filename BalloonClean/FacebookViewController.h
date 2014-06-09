@@ -1,4 +1,4 @@
-//
+
 //  FacebookViewController.h
 //  Balloon
 //
@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BCIntegrateFacebookController.h"
 
-@interface FacebookViewController : UIViewController  <UIImagePickerControllerDelegate>
+@interface FacebookViewController : BCIntegrateFacebookController
 @property (nonatomic, strong) NSString *phoneNumber;
 @end
