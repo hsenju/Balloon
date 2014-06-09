@@ -11,5 +11,9 @@
 @interface BCIntegrateFacebookController : UIViewController  <UIImagePickerControllerDelegate>
 
 - (void)facebookrequest: (UIImageView*)image textField:(UITextField*)textField;
-- (void)makeRequestForUserData  (UIImageView*)image textField:(UITextField*)textField;
+- (void)makeRequestForUserData:  (UIImageView*)image textField:(UITextField*)textField;
+- (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker;
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info;
+- (BOOL)shouldStartPhotoLibraryPickerController:(UIImageView*)image;
+
 @end

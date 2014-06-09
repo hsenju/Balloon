@@ -106,7 +106,7 @@
      }];
 }
 
-- (void)makeRequestForUserData  (UIImageView*)image textField:(UITextField*)textField{
+- (void)makeRequestForUserData:  (UIImageView*)image textField:(UITextField*)textField{
     [FBRequestConnection startForMeWithCompletionHandler:^(FBRequestConnection *connection, id result, NSError *error) {
         if (!error) {
             // Success! Include your code to handle the results here
@@ -119,7 +119,7 @@
                                                                       cachePolicy:NSURLRequestUseProtocolCachePolicy
                                                                   timeoutInterval:2.0f];
             [NSURLConnection connectionWithRequest:urlRequest delegate:self];
-            textField = name;
+            textField.text = name;
             
             
         } else {
@@ -144,13 +144,9 @@
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection {
     // once the facebook profile image has finished loading, save the image to parse.
     UIImage *image = [UIImage imageWithData:_imagedata];
-    self.profilepicture = image;
+    
+    self.profile.image = image;
 
-}
-
-
-- (IBAction)editButton:(id)sender {
-    [self shouldStartPhotoLibraryPickerController];
 }
 
 #pragma mark - UIImagePickerDelegate
@@ -164,12 +160,10 @@
     
     UIImage *image = [info objectForKey:UIImagePickerControllerEditedImage];
     
-    self.profilepicture.image = image;
-    self.edited = true;
-    [self textChanged:self.username];
+    self.profile.image = image;
 }
 
-- (BOOL)shouldStartPhotoLibraryPickerController {
+- (BOOL)shouldStartPhotoLibraryPickerController:(UIImageView*)image {
     if (([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypePhotoLibrary] == NO
          && [UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeSavedPhotosAlbum] == NO)) {
         return NO;
@@ -195,20 +189,11 @@
     cameraUI.allowsEditing = YES;
     cameraUI.delegate = self;
     
+    self.profile = image;
+    
     [self presentViewController:cameraUI animated:YES completion:nil];
     
     return YES;
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

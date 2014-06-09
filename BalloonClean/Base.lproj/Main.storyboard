@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6154.17" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="4RG-Rm-Dod">
     <dependencies>
-        <deployment defaultVersion="1792" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6153.11"/>
     </dependencies>
     <scenes>
@@ -344,6 +343,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
+                                    <action selector="logOut:" destination="1ro-hI-LED" eventType="touchUpInside" id="SAw-8J-JUf"/>
                                     <action selector="logOutTouched:" destination="1ro-hI-LED" eventType="touchUpInside" id="3LK-zu-f7R"/>
                                 </connections>
                             </button>
@@ -389,6 +389,7 @@
                         <outlet property="logOut" destination="Y0w-yh-KmN" id="juL-7u-jY5"/>
                         <outlet property="profPictureButton" destination="Ghy-xC-hh3" id="oDk-Z9-hnP"/>
                         <outlet property="profilePicture" destination="MBl-HQ-5ak" id="tY5-Ix-ukc"/>
+                        <segue destination="muy-AB-Vbo" kind="push" identifier="logOutSegue" id="iUn-Kc-c4k"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7kL-eI-64A" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -465,7 +466,7 @@
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </view>
             </objects>
-            <point key="canvasLocation" x="-4155" y="4196"/>
+            <point key="canvasLocation" x="-4092" y="4196"/>
         </scene>
         <!--Navigation Controller - Item-->
         <scene sceneID="Fyb-ZD-a9c">
@@ -935,4 +936,7 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="iUn-Kc-c4k"/>
+    </inferredMetricsTieBreakers>
 </document>
