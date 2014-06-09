@@ -10,6 +10,7 @@
 #import "BCParseUser.h"
 #import <Parse/Parse.h>
 #import <MobileCoreServices/UTCoreTypes.h>
+#import "PhoneNumberViewController.h"
 
 @interface BCSettings ()
 @property (strong, nonatomic) IBOutlet UITextField *fullName;
@@ -60,8 +61,19 @@
     [PFUser logOut]; // Log out
     
     // Return to login page
-    [self performSegueWithIdentifier:@"logOutSegue" sender:self];
+    [self performSegueWithIdentifier:@"UnwindToPhoneNumber" sender:self];
     
 }
+
+- (IBAction)unwindToLogin:(UIStoryboardSegue *)unwindSegue
+{
+    UIViewController* sourceViewController = unwindSegue.sourceViewController;
+    
+    if ([sourceViewController isKindOfClass:[PhoneNumberViewController class]])
+    {
+        NSLog(@"Coming from BLUE!");
+    }
+}
+
 
 @end
