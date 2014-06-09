@@ -9,7 +9,7 @@
 #import <Parse/Parse.h>
 #import "BCParseGroup.h"
 
-@interface BCParseUser : PFObject<PFSubclassing>
+@interface BCParseUser : PFUser<PFSubclassing>
 +(NSString*)parseClassName;
 -(void)setUserPhotoFileWithUIImage:(UIImage *)userImage;
 @property (retain) NSMutableArray *userMemberGroups;
