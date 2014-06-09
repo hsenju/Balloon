@@ -2,8 +2,8 @@
 //  Common.m
 //  BalloonClean
 //
-//  Created by Sean Wertheim on 6/4/14.
-//  Copyright (c) 2014 Sean Wertheim. All rights reserved.
+//  Created by Hikari Senju on 6/4/14.
+//  Copyright (c) 2014 Balloon. All rights reserved.
 //
 
 //--------------------------------------------------------------------
@@ -11,7 +11,15 @@
 //--------------------------------------------------------------------
 
 #import "Common.h"
+NSString *const kBCUserDefaultsAlertsViewControllerLastRefreshKey    = @"com.ios.Balloon.userDefaults.alertsViewController.lastRefresh";
+NSString *const kBCAlertsToUserKey           = @"toUser";
+NSString *const kBCAlertsFromUserKey         = @"fromUser";
+NSString *const kBCAlertsPhotoKey            = @"photo";
+NSString *const kBCAlertsTypeKey             = @"alertsType";
+NSString *const kBCAlertTypeJoined           = @"joined";
+NSString *const kBCUserDisplayNameKey        = @"displayName";
+NSString *const kBCAlertTypeImComing         = @"imComing";
+NSString *const kBCAlertTypeComment          = @"comment";
+//@implementation Common
 
-@implementation Common
-
-@end
+//@end

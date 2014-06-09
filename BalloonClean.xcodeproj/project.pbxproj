@@ -39,7 +39,7 @@
 		000E7A03193FB9CD00E7024F /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 000E7A02193FB9CD00E7024F /* SystemConfiguration.framework */; };
 		000E7A0B193FC4FF00E7024F /* GroupsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 000E7A0A193FC4FF00E7024F /* GroupsTableViewController.m */; };
 		000E7A0E193FC58C00E7024F /* BCGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 000E7A0D193FC58C00E7024F /* BCGroup.m */; };
-		000E7A11193FC70600E7024F /* BCGroupCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 000E7A10193FC70600E7024F /* BCGroupCell.m */; };
+		000E7A11193FC70600E7024F /* BCTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 000E7A10193FC70600E7024F /* BCTableCell.m */; };
 		000E7A15193FCB8400E7024F /* Common.m in Sources */ = {isa = PBXBuildFile; fileRef = 000E7A14193FCB8400E7024F /* Common.m */; };
 		000E7A72193FD84F00E7024F /* Address+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 000E7A50193FD84F00E7024F /* Address+Additions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		000E7A73193FD84F00E7024F /* NSString+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 000E7A52193FD84F00E7024F /* NSString+Additions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -72,6 +72,7 @@
 		6B67920019426BCC001D8F8D /* Logoutbutton.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B6791FF19426BCC001D8F8D /* Logoutbutton.png */; };
 		6B6792061942701A001D8F8D /* BCSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B6792051942701A001D8F8D /* BCSettings.m */; };
 		6B67920F19455E1E001D8F8D /* BCIntegrateFacebookController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B67920E19455E1E001D8F8D /* BCIntegrateFacebookController.m */; };
+		6B679220194617EF001D8F8D /* AlertsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B67921F194617EF001D8F8D /* AlertsTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -129,8 +130,8 @@
 		000E7A0A193FC4FF00E7024F /* GroupsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GroupsTableViewController.m; path = ../GroupsTableViewController.m; sourceTree = "<group>"; };
 		000E7A0C193FC58C00E7024F /* BCGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCGroup.h; sourceTree = "<group>"; };
 		000E7A0D193FC58C00E7024F /* BCGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCGroup.m; sourceTree = "<group>"; };
-		000E7A0F193FC70600E7024F /* BCGroupCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCGroupCell.h; sourceTree = "<group>"; };
-		000E7A10193FC70600E7024F /* BCGroupCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCGroupCell.m; sourceTree = "<group>"; };
+		000E7A0F193FC70600E7024F /* BCTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCTableCell.h; sourceTree = "<group>"; };
+		000E7A10193FC70600E7024F /* BCTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCTableCell.m; sourceTree = "<group>"; };
 		000E7A13193FCB8400E7024F /* Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
 		000E7A14193FCB8400E7024F /* Common.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Common.m; sourceTree = "<group>"; };
 		000E7A4F193FD84F00E7024F /* Address+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Address+Additions.h"; sourceTree = "<group>"; };
@@ -186,6 +187,8 @@
 		6B6792051942701A001D8F8D /* BCSettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCSettings.m; sourceTree = "<group>"; };
 		6B67920D19455E1E001D8F8D /* BCIntegrateFacebookController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCIntegrateFacebookController.h; sourceTree = "<group>"; };
 		6B67920E19455E1E001D8F8D /* BCIntegrateFacebookController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCIntegrateFacebookController.m; sourceTree = "<group>"; };
+		6B67921E194617EF001D8F8D /* AlertsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AlertsTableViewController.h; path = ../AlertsTableViewController.h; sourceTree = "<group>"; };
+		6B67921F194617EF001D8F8D /* AlertsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AlertsTableViewController.m; path = ../AlertsTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -337,8 +340,8 @@
 				000E79DA193FB73E00E7024F /* PAPCardView.h */,
 				000E79DB193FB73E00E7024F /* PAPCardView.m */,
 				000E79DC193FB73E00E7024F /* PAPCardView.xib */,
-				000E7A0F193FC70600E7024F /* BCGroupCell.h */,
-				000E7A10193FC70600E7024F /* BCGroupCell.m */,
+				000E7A0F193FC70600E7024F /* BCTableCell.h */,
+				000E7A10193FC70600E7024F /* BCTableCell.m */,
 			);
 			name = View;
 			path = ..;
@@ -359,6 +362,8 @@
 				0097D0A01940FBB900C26E28 /* BCCreateGroupViewController.m */,
 				001071A3194213600078625B /* BCPeoplePickerViewController.h */,
 				001071A4194213600078625B /* BCPeoplePickerViewController.m */,
+				6B67921E194617EF001D8F8D /* AlertsTableViewController.h */,
+				6B67921F194617EF001D8F8D /* AlertsTableViewController.m */,
 				6B6792041942701A001D8F8D /* BCSettings.h */,
 				6B6792051942701A001D8F8D /* BCSettings.m */,
 			);
@@ -591,7 +596,7 @@
 				000E79EF193FB83C00E7024F /* CardsViewFlowLayout.m in Sources */,
 				000E79E1193FB75600E7024F /* CountdownLabel.m in Sources */,
 				000E79E9193FB81400E7024F /* Invite.m in Sources */,
-				000E7A11193FC70600E7024F /* BCGroupCell.m in Sources */,
+				000E7A11193FC70600E7024F /* BCTableCell.m in Sources */,
 				6B67920F19455E1E001D8F8D /* BCIntegrateFacebookController.m in Sources */,
 				0097D08E1940E53300C26E28 /* BCParseGroup.m in Sources */,
 				000E79B2193FB2F400E7024F /* main.m in Sources */,
@@ -609,6 +614,7 @@
 				0097D0A11940FBB900C26E28 /* BCCreateGroupViewController.m in Sources */,
 				0097D0941940EF5700C26E28 /* BCParseActivity.m in Sources */,
 				000E7A72193FD84F00E7024F /* Address+Additions.m in Sources */,
+				6B679220194617EF001D8F8D /* AlertsTableViewController.m in Sources */,
 				000E7A7B193FD84F00E7024F /* SBJSON.m in Sources */,
 				000E79E5193FB80300E7024F /* PAPInvitesViewController.m in Sources */,
 				000E7A0E193FC58C00E7024F /* BCGroup.m in Sources */,

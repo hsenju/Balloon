@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <Parse/Parse.h>
 
-@interface AlertsTableViewController : UITableViewController
+@interface AlertsTableViewController : PFQueryTableViewController
 
 @end
