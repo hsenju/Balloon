@@ -7,6 +7,7 @@
 //
 
 #import "FacebookViewController.h"
+#import "BCParseUser.h"
 #import <Parse/Parse.h>
 #import <MobileCoreServices/UTCoreTypes.h>
 
