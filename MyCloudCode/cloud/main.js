@@ -27,45 +27,42 @@ client.sendSms({
 );
 });
 
-Parse.Cloud.beforeSave("Group", function(request, response) {
+Parse.Cloud.beforeSave("tempUser", function(request, response) {
   
-  
-  var members = request.object.get("members");
+
+  /* Checks if there is already a User with this tempUser's phone number.
+  *  If there is, it throws out the tempUser object.
+  */
+  var phoneNumber = request.object.get("phoneNumber");
+  query = new Parse.Query("User");
 
 
+  //there are no users, so create a tempuser for now
+  if(!query){
+    repsonse.success();
+  }
 
-  for (var i = 0; i < members.length; i++) { 
-    var currentMember = members[i];
-    var phoneNum = currentMember.object.get("phoneNumber");
-    var query = new Parse.Query("User");
-    query.equalTo("phoneNumber", phoneNum);
-    query.find({
-    success: function(results)
-    {
-        if ( results.length == 0 )
-        {
-            // not voted yet
-            response.success("no existing vote");
-        }
-        else if ( results.length == 1)
-        {
-            // update existing vote
-            result = results[0];
-            result.object.set = ("Groups", result.object.get("Groups") + request.object.get("groupName"));
-
-            result.save();        /// <---- This save isn't working
-
-            response.success();
-        }
-        else
-        {
-            response.error("Multiple internal votes on object");
-        }
+  //there are users, so get the tempUser's phone number and check if there is already
+  //a user with that phone number
+  query.equalTo("phoneNumber", phoneNumber);
+  query.count({
+    success: function(count) {
+      if (count > 0) {
+        response.error("This user is already signed up, so no new tempUser will be created.");
+      } else {
+        response.success();
+      }
     },
     error: function(error) {
-        response.error("Query failed. Error = " + error.message);
+      response.error("Error " + error.code + " : " + error.message + " when getting user with phoneNumber count.");
     }
-});
-}
-  response.success();
+  });
+
+  // query.find({
+  //   success: function(user) {
+  //     user.
+  //   error: function(error) {
+  //     console.error("Error finding related comments " + error.code + ": " + error.message);
+  //   }
+  // });
 });

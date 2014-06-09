@@ -59,7 +59,6 @@
 		000E7A80193FD84F00E7024F /* SMContactsSelector.xib in Resources */ = {isa = PBXBuildFile; fileRef = 000E7A6C193FD84F00E7024F /* SMContactsSelector.xib */; };
 		000E7A81193FD84F00E7024F /* CustomIOS7AlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 000E7A6F193FD84F00E7024F /* CustomIOS7AlertView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		000E7A82193FD84F00E7024F /* UIAlertView+UITableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 000E7A71193FD84F00E7024F /* UIAlertView+UITableView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		001071A5194213600078625B /* BCPeoplePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 001071A4194213600078625B /* BCPeoplePickerViewController.m */; };
 		008CE12919455E3700949D00 /* BCParseTempUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 008CE12819455E3700949D00 /* BCParseTempUser.m */; };
 		0097D08E1940E53300C26E28 /* BCParseGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 0097D08D1940E53300C26E28 /* BCParseGroup.m */; };
 		0097D0941940EF5700C26E28 /* BCParseActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = 0097D0931940EF5700C26E28 /* BCParseActivity.m */; };
@@ -158,8 +157,6 @@
 		000E7A6F193FD84F00E7024F /* CustomIOS7AlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomIOS7AlertView.m; sourceTree = "<group>"; };
 		000E7A70193FD84F00E7024F /* UIAlertView+UITableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+UITableView.h"; sourceTree = "<group>"; };
 		000E7A71193FD84F00E7024F /* UIAlertView+UITableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+UITableView.m"; sourceTree = "<group>"; };
-		001071A3194213600078625B /* BCPeoplePickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCPeoplePickerViewController.h; sourceTree = "<group>"; };
-		001071A4194213600078625B /* BCPeoplePickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCPeoplePickerViewController.m; sourceTree = "<group>"; };
 		008CE12719455E3700949D00 /* BCParseTempUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCParseTempUser.h; sourceTree = "<group>"; };
 		008CE12819455E3700949D00 /* BCParseTempUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCParseTempUser.m; sourceTree = "<group>"; };
 		0097D08C1940E53300C26E28 /* BCParseGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCParseGroup.h; sourceTree = "<group>"; };
@@ -341,8 +338,6 @@
 				000E79E4193FB80300E7024F /* PAPInvitesViewController.xib */,
 				0097D09F1940FBB900C26E28 /* BCCreateGroupViewController.h */,
 				0097D0A01940FBB900C26E28 /* BCCreateGroupViewController.m */,
-				001071A3194213600078625B /* BCPeoplePickerViewController.h */,
-				001071A4194213600078625B /* BCPeoplePickerViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -560,7 +555,6 @@
 				0097D0971940F2AB00C26E28 /* BCParseBalloon.m in Sources */,
 				000E7A7F193FD84F00E7024F /* SMContactsSelector.m in Sources */,
 				000E7A7C193FD84F00E7024F /* SBJsonBase.m in Sources */,
-				001071A5194213600078625B /* BCPeoplePickerViewController.m in Sources */,
 				000E7A73193FD84F00E7024F /* NSString+Additions.m in Sources */,
 				000E79DD193FB73E00E7024F /* PAPCardView.m in Sources */,
 				000E79B6193FB2F400E7024F /* BCAppDelegate.m in Sources */,

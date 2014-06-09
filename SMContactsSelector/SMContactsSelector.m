@@ -500,12 +500,18 @@
         [self.delegate numberOfRowsSelected:[objects count] withData:objects andDataType:requestData];
     
 	[objects release];
-	[self dismiss];
+	[self dismissAfterSelection];
 }
 
 - (void)dismiss
 {
 	[self dismissViewControllerAnimated:YES completion:nil];
+}
+
+-(void)dismissAfterSelection{
+    [self dismissViewControllerAnimated:YES completion:^{
+        [delegate contactsSelectorDidDismissItself];
+    }];
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath

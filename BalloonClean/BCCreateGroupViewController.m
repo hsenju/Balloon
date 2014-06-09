@@ -45,19 +45,19 @@ static const NSString *kToContactsSelectorSegueIdentifier = @"createGroupToConta
     picker.delegate = self;
     picker.allowsEditing = YES;
     picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+    
     [self presentViewController:picker animated:YES completion:NULL];
 }
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info{
     
     UIImage *chosenImage = info[UIImagePickerControllerEditedImage];
-    //set button's image to selected and blank out text
+    //set button's image to selected photo and blank out text
     [self.addPhotoButton setBackgroundImage:chosenImage forState:UIControlStateNormal];
     [self.addPhotoButton setTitle:@"" forState:UIControlStateNormal];
     [self.groupToAdd setGroupImageFileWithUIImage:chosenImage];
     
-    [picker dismissViewControllerAnimated:YES completion:^{
-    }];
+    [picker dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
@@ -66,17 +66,16 @@ static const NSString *kToContactsSelectorSegueIdentifier = @"createGroupToConta
 
 - (IBAction)doneButtonPressed:(id)sender {
     if(self.groupNameTextField.text && self.groupNameTextField.text.length > 0){
+        
         SMContactsSelector *controller = [[SMContactsSelector alloc] initWithNibName:@"SMContactsSelector" bundle:nil];
         controller.delegate = self;
         controller.requestData = DATA_CONTACT_TELEPHONE;
         controller.showModal = YES; //Mandatory: YES or NO
         controller.showCheckButton = YES; //Mandatory: YES or NO
-        
-        // Set your contact list setting record ids (optional)
-        //controller.recordIDs = [NSArray arrayWithObjects:@"1", @"2", nil];
-        
         [self presentViewController:controller animated:YES completion:nil];
+    
     } else {
+        
         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Empty Group Name"
                                                         message:@"Please enter a group name."
                                                        delegate:self
@@ -90,12 +89,12 @@ static const NSString *kToContactsSelectorSegueIdentifier = @"createGroupToConta
     [self dismissViewControllerAnimated:YES completion:Nil];
 }
 
+#pragma mark -- Hide keyboard when user taps outside textfield
+
 - (BOOL)textFieldShouldBeginEditing:(UITextField *)textField
 {
     return YES;
 }
-
-// It is important for you to hide kwyboard
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
 {
@@ -112,23 +111,37 @@ static const NSString *kToContactsSelectorSegueIdentifier = @"createGroupToConta
     [super touchesBegan:touches withEvent:event];
 }
 
+#pragma mark -- SMContactsSelectorDelegate Methods
+
+-(void)contactsSelectorDidDismissItself{
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
 - (void)numberOfRowsSelected:(NSInteger)numberRows withData:(NSArray *)data andDataType:(DATA_CONTACT)type
 {
     if (data && data.count >0) {
+        
         self.groupToAdd.groupName = self.groupNameTextField.text;
         NSMutableArray *membersArray = [NSMutableArray array];
         for (NSDictionary *dict in data) {
-            BCParseTempUser *tempUser = [BCParseTempUser object];
+            
             NSString *phoneString = [NSString stringWithFormat:@"%@", dict[@"number"]];
+            
+            BCParseTempUser *tempUser = [BCParseTempUser object];
             tempUser.phoneNumber = phoneString;
             tempUser.name = (NSString*)dict[@"name"];
+            [tempUser saveInBackground];
+            
             [membersArray addObject:tempUser];
         }
+        
         self.groupToAdd.members = membersArray;
         self.groupToAdd.visible = self.shareListWithMembersSwitch.on;
+        self.groupToAdd.numberInvitesSent = 0;
         [self.groupToAdd saveInBackground];
+        
     }
-    [self dismissViewControllerAnimated:YES completion:nil];
+    
 }
 
 - (void)didReceiveMemoryWarning

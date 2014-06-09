@@ -40,6 +40,10 @@ static const NSString *kCreateGroupsSegueIdentifier = @"createGroupSegue";
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
+-(void)viewDidAppear:(BOOL)animated{
+    [self loadObjects];
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];

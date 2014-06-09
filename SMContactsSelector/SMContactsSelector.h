@@ -26,6 +26,7 @@ typedef enum
 @required
 
 - (void)numberOfRowsSelected:(NSInteger)numberRows withData:(NSArray *)data andDataType:(DATA_CONTACT)type;
+- (void)contactsSelectorDidDismissItself;
 
 @end
 

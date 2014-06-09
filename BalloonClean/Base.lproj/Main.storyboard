@@ -218,7 +218,7 @@
                     <navigationItem key="navigationItem" title="Groups" id="Tzr-Pt-9OV">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="0i9-pr-jxZ">
                             <connections>
-                                <segue destination="Fmw-KL-gTx" kind="modal" identifier="createGroupSegue" id="qh6-Nd-mH7"/>
+                                <segue destination="mb6-TA-8Tp" kind="modal" id="10p-QV-USx"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -296,7 +296,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fvI-fW-Fdx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3085" y="-662"/>
+            <point key="canvasLocation" x="-3621" y="-634"/>
         </scene>
         <!--Navigation Controller - Balloon-->
         <scene sceneID="KU5-3o-ml2">
@@ -314,16 +314,16 @@
             </objects>
             <point key="canvasLocation" x="-4739" y="1242"/>
         </scene>
-        <!--Select Group View Controller - Select Group-->
+        <!--Groups Table View Controller - Select Group-->
         <scene sceneID="hG9-sF-wx0">
             <objects>
-                <tableViewController id="9Rr-du-0c3" customClass="BCSelectGroupViewController" sceneMemberID="viewController">
+                <tableViewController id="9Rr-du-0c3" customClass="GroupsTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="bXn-wN-FWY">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="bcGroupReuseID" id="TOV-eB-TFT" customClass="BCGroupCell">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="bcGroupsRID" id="TOV-eB-TFT" customClass="BCGroupCell">
                                 <rect key="frame" x="0.0" y="86" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="TOV-eB-TFT" id="ROZ-D9-xqO">
@@ -335,7 +335,7 @@
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                         </imageView>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5p0-Eb-MSB">
-                                            <rect key="frame" x="44" y="5" width="243" height="21"/>
+                                            <rect key="frame" x="44" y="7" width="243" height="21"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -722,24 +722,6 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xrZ-IM-G3L" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-3756" y="-1313"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="BOO-YX-AH6">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Fmw-KL-gTx" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="W3G-p2-S1n">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="mb6-TA-8Tp" kind="relationship" relationship="rootViewController" id="LR2-Dd-ckP"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="4ab-5T-R2d" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-3756" y="-662"/>
         </scene>
     </scenes>
     <resources>
