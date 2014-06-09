@@ -14,4 +14,9 @@
 
 @implementation Common
 
+NSString *const kParseGroupClassName = @"Group";
+NSString *const kParseActivityClassName = @"Activity";
+NSString *const kParseBalloonClassName = @"Balloon";
+NSString *const kParseUserClassName = @"";
+
 @end

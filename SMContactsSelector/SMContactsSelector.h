@@ -18,7 +18,8 @@ typedef enum
 {
     DATA_CONTACT_TELEPHONE = 0,
     DATA_CONTACT_EMAIL = 1,
-    DATA_CONTACT_ID = 2
+    DATA_CONTACT_ID = 2,
+    DATA_CONTACT_NAME_PHONE = 3
 }DATA_CONTACT;
 
 @protocol SMContactsSelectorDelegate <NSObject>

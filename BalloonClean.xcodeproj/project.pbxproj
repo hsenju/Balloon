@@ -60,11 +60,13 @@
 		000E7A81193FD84F00E7024F /* CustomIOS7AlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 000E7A6F193FD84F00E7024F /* CustomIOS7AlertView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		000E7A82193FD84F00E7024F /* UIAlertView+UITableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 000E7A71193FD84F00E7024F /* UIAlertView+UITableView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		001071A5194213600078625B /* BCPeoplePickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 001071A4194213600078625B /* BCPeoplePickerViewController.m */; };
+		008CE12919455E3700949D00 /* BCParseTempUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 008CE12819455E3700949D00 /* BCParseTempUser.m */; };
 		0097D08E1940E53300C26E28 /* BCParseGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 0097D08D1940E53300C26E28 /* BCParseGroup.m */; };
 		0097D0941940EF5700C26E28 /* BCParseActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = 0097D0931940EF5700C26E28 /* BCParseActivity.m */; };
 		0097D0971940F2AB00C26E28 /* BCParseBalloon.m in Sources */ = {isa = PBXBuildFile; fileRef = 0097D0961940F2AB00C26E28 /* BCParseBalloon.m */; };
 		0097D09B1940F61E00C26E28 /* BCParseUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 0097D09A1940F61E00C26E28 /* BCParseUser.m */; };
 		0097D0A11940FBB900C26E28 /* BCCreateGroupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0097D0A01940FBB900C26E28 /* BCCreateGroupViewController.m */; };
+		00DEBC3C1943CB69006319D2 /* BCSelectGroupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00DEBC3B1943CB69006319D2 /* BCSelectGroupViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -158,6 +160,8 @@
 		000E7A71193FD84F00E7024F /* UIAlertView+UITableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+UITableView.m"; sourceTree = "<group>"; };
 		001071A3194213600078625B /* BCPeoplePickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCPeoplePickerViewController.h; sourceTree = "<group>"; };
 		001071A4194213600078625B /* BCPeoplePickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCPeoplePickerViewController.m; sourceTree = "<group>"; };
+		008CE12719455E3700949D00 /* BCParseTempUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCParseTempUser.h; sourceTree = "<group>"; };
+		008CE12819455E3700949D00 /* BCParseTempUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCParseTempUser.m; sourceTree = "<group>"; };
 		0097D08C1940E53300C26E28 /* BCParseGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCParseGroup.h; sourceTree = "<group>"; };
 		0097D08D1940E53300C26E28 /* BCParseGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCParseGroup.m; sourceTree = "<group>"; };
 		0097D0921940EF5700C26E28 /* BCParseActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCParseActivity.h; sourceTree = "<group>"; };
@@ -168,6 +172,8 @@
 		0097D09A1940F61E00C26E28 /* BCParseUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCParseUser.m; sourceTree = "<group>"; };
 		0097D09F1940FBB900C26E28 /* BCCreateGroupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCCreateGroupViewController.h; sourceTree = "<group>"; };
 		0097D0A01940FBB900C26E28 /* BCCreateGroupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCCreateGroupViewController.m; sourceTree = "<group>"; };
+		00DEBC3A1943CB69006319D2 /* BCSelectGroupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCSelectGroupViewController.h; sourceTree = "<group>"; };
+		00DEBC3B1943CB69006319D2 /* BCSelectGroupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCSelectGroupViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -326,6 +332,8 @@
 		000E7A08193FC46300E7024F /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				00DEBC3A1943CB69006319D2 /* BCSelectGroupViewController.h */,
+				00DEBC3B1943CB69006319D2 /* BCSelectGroupViewController.m */,
 				000E7A09193FC4FE00E7024F /* GroupsTableViewController.h */,
 				000E7A0A193FC4FF00E7024F /* GroupsTableViewController.m */,
 				000E79E2193FB80300E7024F /* PAPInvitesViewController.h */,
@@ -427,6 +435,8 @@
 				0097D0961940F2AB00C26E28 /* BCParseBalloon.m */,
 				0097D0991940F61E00C26E28 /* BCParseUser.h */,
 				0097D09A1940F61E00C26E28 /* BCParseUser.m */,
+				008CE12719455E3700949D00 /* BCParseTempUser.h */,
+				008CE12819455E3700949D00 /* BCParseTempUser.m */,
 			);
 			name = PFObjectSubclasses;
 			sourceTree = "<group>";
@@ -558,12 +568,14 @@
 				0097D0A11940FBB900C26E28 /* BCCreateGroupViewController.m in Sources */,
 				0097D0941940EF5700C26E28 /* BCParseActivity.m in Sources */,
 				000E7A72193FD84F00E7024F /* Address+Additions.m in Sources */,
+				00DEBC3C1943CB69006319D2 /* BCSelectGroupViewController.m in Sources */,
 				000E7A7B193FD84F00E7024F /* SBJSON.m in Sources */,
 				000E79E5193FB80300E7024F /* PAPInvitesViewController.m in Sources */,
 				000E7A0E193FC58C00E7024F /* BCGroup.m in Sources */,
 				000E7A7A193FD84F00E7024F /* NSString+SBJSON.m in Sources */,
 				000E7A81193FD84F00E7024F /* CustomIOS7AlertView.m in Sources */,
 				0097D09B1940F61E00C26E28 /* BCParseUser.m in Sources */,
+				008CE12919455E3700949D00 /* BCParseTempUser.m in Sources */,
 				000E7A0B193FC4FF00E7024F /* GroupsTableViewController.m in Sources */,
 				000E7A82193FD84F00E7024F /* UIAlertView+UITableView.m in Sources */,
 			);

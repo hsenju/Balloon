@@ -1,0 +1,14 @@
+{
+    "applications": {
+        "Balloon_v2": {
+            "applicationId": "F0cvLwmfI1R73szAAbXp5diFL2Q0GbQwPjhaafBI", 
+            "masterKey": "GI3DqTlduMJckwVVIvAFQTGvxS6ATxWFZ99GuSqj"
+        }, 
+        "_default": {
+            "link": "Balloon_v2"
+        }
+    }, 
+    "global": {
+        "parseVersion": "1.2.18"
+    }
+}

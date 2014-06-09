@@ -13,6 +13,7 @@
 #import "BCParseActivity.h"
 #import "BCParseBalloon.h"
 #import "BCParseUser.h"
+#import "BCParseTempUser.h"
 
 @implementation BCAppDelegate
 
@@ -22,6 +23,7 @@
     [BCParseActivity registerSubclass];
     [BCParseBalloon registerSubclass];
     [BCParseUser registerSubclass];
+    [BCParseTempUser registerSubclass];
     
     [Parse setApplicationId:@"F0cvLwmfI1R73szAAbXp5diFL2Q0GbQwPjhaafBI"
                   clientKey:@"gPZ4p1xWFznflPhvvZDDtyEOx1vt9lHXYnVyWpHJ"];

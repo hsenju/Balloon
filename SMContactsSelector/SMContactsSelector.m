@@ -122,7 +122,8 @@
     self.navigationController.navigationBar.hidden = YES;
     if ((requestData != DATA_CONTACT_TELEPHONE) && 
         (requestData != DATA_CONTACT_EMAIL) &&
-        (requestData != DATA_CONTACT_ID))
+        (requestData != DATA_CONTACT_ID) &&
+        (requestData != DATA_CONTACT_NAME_PHONE))
     {
         [self.navigationController dismissViewControllerAnimated:YES completion:nil];
         
@@ -258,6 +259,7 @@
         [info setValue:[NSString stringWithFormat:@"%@", [[nameString stringByReplacingOccurrencesOfString:@" " withString:@""] substringToIndex:1]] forKey:@"letter"];
         [info setValue:[NSString stringWithFormat:@"%@", nameString] forKey:@"name"];
         [info setValue:@"-1" forKey:@"rowSelected"];
+        [info setValue:nameString forKey:@"fullName"];
         
         if ((![objs isEqual: @""]) || ([[objs lowercaseString] rangeOfString:@"null"].location == NSNotFound))
         {
@@ -448,9 +450,20 @@
                 {
                     str = [item valueForKey:@"telephoneSelected"];
                     
+                    NSString *fName = item[@"name"];
+                    NSString *tNumber = str;
+                    
+                    NSMutableDictionary *inviteeDict = [[NSMutableDictionary alloc] init];
+                    [inviteeDict setObject:fName forKey:@"name"];
+                    
+                    if (tNumber) {
+                        [inviteeDict setObject:tNumber forKey:@"number"];
+                    }
+                    
+                    
                     if (![str isEqualToString:@""]) 
                     {
-                        [objects addObject:str];
+                        [objects addObject:inviteeDict];
                     }
                 }
                 else if (requestData == DATA_CONTACT_EMAIL)
@@ -461,6 +474,14 @@
                     {
                         [objects addObject:str];
                     }
+                } else if (requestData == DATA_CONTACT_NAME_PHONE){
+                    NSString *fName = item[@"fullName"];
+                    NSString *tNumber = item[@"telephoneSelected"];
+                    
+                    NSMutableDictionary *inviteeDict = [[NSMutableDictionary alloc] init];
+                    [inviteeDict setObject:fName forKey:@"name"];
+                    [inviteeDict setObject:tNumber forKey:@"number"];
+                    [objects addObject:inviteeDict];
                 }
                 else
                 {

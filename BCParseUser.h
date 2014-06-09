@@ -9,13 +9,13 @@
 #import <Parse/Parse.h>
 #import "BCParseGroup.h"
 
-@interface BCParseUser : PFObject<PFSubclassing>
-+(NSString*)parseClassName;
+@interface BCParseUser : PFUser<PFSubclassing>
 -(void)setUserPhotoFileWithUIImage:(UIImage *)userImage;
-@property (retain) NSMutableArray *userMemberGroups;
-@property (retain) NSString *usernameFromPhoneNumber;
+@property (retain) NSString *name;
+@property (retain) NSString *phoneNumber;
 @property (retain) PFFile *userPhotoFile;
 @property BOOL available;
+@property (retain) NSMutableArray *userMemberGroups;
 @property (retain) NSMutableArray *blockedUsers;
 @property (retain) NSMutableArray *blockedGroups;
 @property (retain) PFGeoPoint *currentLocation;

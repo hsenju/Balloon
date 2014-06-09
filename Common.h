@@ -10,4 +10,9 @@
 
 @interface Common : NSObject
 
+extern NSString *const kParseGroupClassName;
+extern NSString *const kParseActivityClassName;
+extern NSString *const kParseBalloonClassName;
+extern NSString *const kParseUserClassName;
+
 @end

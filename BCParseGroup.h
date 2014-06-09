@@ -11,8 +11,17 @@
 @interface BCParseGroup : PFObject<PFSubclassing>
 +(NSString*)parseClassName;
 -(void)setGroupImageFileWithUIImage:(UIImage *)profileImage;
-@property (retain) NSMutableArray *membersByPhoneNumber;
-@property (retain) PFFile *groupImageFile;
+
+@property (retain) PFUser *creator;
 @property (retain) NSString *groupName;
+@property (retain) PFFile *groupImageFile;
+@property (retain) NSMutableArray *members; //stored as dictionaries of form name:phone:
+
+@property BOOL visible;
+
+@property NSUInteger totalMembers;
+@property NSUInteger numberAvailableMembers;
+
+@property NSUInteger numberInvitesSent; //for analytics
 
 @end

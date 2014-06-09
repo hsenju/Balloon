@@ -11,9 +11,14 @@
 
 @implementation BCParseGroup
 
-@dynamic membersByPhoneNumber;
+@dynamic creator;
+@dynamic members;
 @dynamic groupImageFile;
 @dynamic groupName;
+@dynamic totalMembers;
+@dynamic numberAvailableMembers;
+@dynamic visible;
+@dynamic numberInvitesSent;
 
 +(NSString*)parseClassName{
     return @"Group";

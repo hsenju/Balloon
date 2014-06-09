@@ -11,19 +11,17 @@
 
 @implementation BCParseUser
 
-@dynamic userMemberGroups;
-@dynamic usernameFromPhoneNumber;
+@dynamic name;
+@dynamic phoneNumber;
 @dynamic userPhotoFile;
 @dynamic available;
+@dynamic userMemberGroups;
 @dynamic blockedUsers;
 @dynamic blockedGroups;
 @dynamic currentLocation;
 @dynamic lastLocation;
 @dynamic facebookID;
 
-+(NSString*)parseClassName{
-    return @"User";
-}
 
 -(void)setUserPhotoFileWithUIImage:(UIImage *)userImage{
     NSData *imageData = UIImagePNGRepresentation(userImage);

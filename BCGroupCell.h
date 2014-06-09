@@ -7,11 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <Parse/Parse.h>
 
 @interface BCGroupCell : UITableViewCell
 
 @property (strong, nonatomic) IBOutlet UILabel *groupNameLabel;
 @property (strong, nonatomic) IBOutlet UILabel *numberOfMembersLabel;
-@property (strong, nonatomic) IBOutlet UIImageView *groupPictureImageView;
+@property (strong, nonatomic) IBOutlet PFImageView *groupPictureImageView;
 
 @end

@@ -13,6 +13,8 @@
 
 @property (strong, nonatomic) IBOutlet UITextField *groupNameTextField;
 @property (strong, nonatomic) BCParseGroup *groupToAdd;
+@property (strong, nonatomic) IBOutlet UIButton *addPhotoButton;
+@property (strong, nonatomic) IBOutlet UISwitch *shareListWithMembersSwitch;
 
 @end
 
@@ -49,7 +51,9 @@ static const NSString *kToContactsSelectorSegueIdentifier = @"createGroupToConta
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info{
     
     UIImage *chosenImage = info[UIImagePickerControllerEditedImage];
-    
+    //set button's image to selected and blank out text
+    [self.addPhotoButton setBackgroundImage:chosenImage forState:UIControlStateNormal];
+    [self.addPhotoButton setTitle:@"" forState:UIControlStateNormal];
     [self.groupToAdd setGroupImageFileWithUIImage:chosenImage];
     
     [picker dismissViewControllerAnimated:YES completion:^{
@@ -82,6 +86,10 @@ static const NSString *kToContactsSelectorSegueIdentifier = @"createGroupToConta
     }
 }
 
+- (IBAction)cancelPressed:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:Nil];
+}
+
 - (BOOL)textFieldShouldBeginEditing:(UITextField *)textField
 {
     return YES;
@@ -108,9 +116,19 @@ static const NSString *kToContactsSelectorSegueIdentifier = @"createGroupToConta
 {
     if (data && data.count >0) {
         self.groupToAdd.groupName = self.groupNameTextField.text;
-        self.groupToAdd.membersByPhoneNumber = [NSMutableArray arrayWithArray: data];
+        NSMutableArray *membersArray = [NSMutableArray array];
+        for (NSDictionary *dict in data) {
+            BCParseTempUser *tempUser = [BCParseTempUser object];
+            NSString *phoneString = [NSString stringWithFormat:@"%@", dict[@"number"]];
+            tempUser.phoneNumber = phoneString;
+            tempUser.name = (NSString*)dict[@"name"];
+            [membersArray addObject:tempUser];
+        }
+        self.groupToAdd.members = membersArray;
+        self.groupToAdd.visible = self.shareListWithMembersSwitch.on;
         [self.groupToAdd saveInBackground];
     }
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void)didReceiveMemoryWarning

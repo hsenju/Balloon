@@ -8,9 +8,11 @@
 
 #import "GroupsTableViewController.h"
 #import "BCGroupCell.h"
-#import "BCGroup.h"
+#import "BCParseGroup.h"
 
 @interface GroupsTableViewController ()
+
+@property (strong, nonatomic) NSString *parseClassName;
 
 @end
 
@@ -44,32 +46,63 @@ static const NSString *kCreateGroupsSegueIdentifier = @"createGroupSegue";
     // Dispose of any resources that can be recreated.
 }
 
-#pragma mark - Table view data source
-
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{
-    return 1;
+- (id)initWithCoder:(NSCoder *)aCoder {
+    self = [super initWithCoder:aCoder];
+    if (self) {
+        // Customize the table
+        
+        // The className to query on
+        self.parseClassName = [BCParseGroup parseClassName];
+        
+        //        self.imageKey = @"groupImageFile";
+        //
+        //        self.textKey = @"groupName";
+        
+        // Whether the built-in pull-to-refresh is enabled
+        self.pullToRefreshEnabled = YES;
+        
+        // Whether the built-in pagination is enabled
+        self.paginationEnabled = YES;
+        
+        // The number of objects to show per page
+        self.objectsPerPage = 25;
+    }
+    return self;
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
-    return self.userGroupsArray.count;
-}
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    static NSString *CellIdentifier = @"Cell";
-    BCGroupCell *cell = (BCGroupCell*)[tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+- (PFQuery *)queryForTable {
+    PFQuery *query = [PFQuery queryWithClassName:self.parseClassName];
     
-    if (cell == nil) {
-        cell = [[BCGroupCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+    // If no objects are loaded in memory, we look to the cache
+    // first to fill the table and then subsequently do a query
+    // against the network.
+    if ([self.objects count] == 0) {
+        query.cachePolicy = kPFCachePolicyCacheThenNetwork;
     }
     
-    BCGroup *currentGroup = (BCGroup*)self.userGroupsArray[indexPath.row];
+    [query orderByDescending:@"createdAt"];
     
+    return query;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView
+         cellForRowAtIndexPath:(NSIndexPath *)indexPath
+                        object:(PFObject *)object {
+    static NSString *CellIdentifier = @"bcGroupsRID";
+    
+    BCGroupCell *cell = (BCGroupCell*)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    if (cell == nil) {
+        cell = [[BCGroupCell alloc] init];
+    }
+    
+    // Configure the cell to show todo item with a priority at the bottom
+    BCParseGroup *currentGroup = (BCParseGroup*)object;
     cell.groupNameLabel.text = currentGroup.groupName;
-    cell.numberOfMembersLabel.text = [NSString stringWithFormat:@"%d", currentGroup.numberOfMembers];
-    cell.groupPictureImageView = [[UIImageView alloc] initWithImage:currentGroup.groupImage];
+    cell.numberOfMembersLabel.text = [NSString stringWithFormat:@"%d members available", currentGroup.members.count];
+    cell.groupPictureImageView.file = currentGroup.groupImageFile;
+    [cell.groupPictureImageView loadInBackground];
+    
+    
     return cell;
 }
 
