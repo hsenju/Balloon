@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "BCTableCell.h"
 
+@protocol BCAlertTableViewCellDelegate;
+
 @interface BCAlertTableViewCell : BCTableCell
 
 /*!Setter for the activity associated with this cell */
