@@ -64,6 +64,8 @@
 		0097D0971940F2AB00C26E28 /* BCParseBalloon.m in Sources */ = {isa = PBXBuildFile; fileRef = 0097D0961940F2AB00C26E28 /* BCParseBalloon.m */; };
 		0097D09B1940F61E00C26E28 /* BCParseUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 0097D09A1940F61E00C26E28 /* BCParseUser.m */; };
 		0097D0A11940FBB900C26E28 /* BCCreateGroupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0097D0A01940FBB900C26E28 /* BCCreateGroupViewController.m */; };
+		6B62E16C1947993A000537FD /* TTTTimeIntervalFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B62E1691947993A000537FD /* TTTTimeIntervalFormatter.m */; };
+		6B62E16D1947993A000537FD /* TTTTimeIntervalFormatterPost.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B62E16B1947993A000537FD /* TTTTimeIntervalFormatterPost.m */; };
 		6B6791F219410A99001D8F8D /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B6791F119410A99001D8F8D /* Parse.framework */; };
 		6B6791F5194111DA001D8F8D /* FacebookViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B6791F4194111DA001D8F8D /* FacebookViewController.m */; };
 		6B6791F8194111EB001D8F8D /* PhoneNumberViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B6791F7194111EB001D8F8D /* PhoneNumberViewController.m */; };
@@ -177,6 +179,10 @@
 		0097D09A1940F61E00C26E28 /* BCParseUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCParseUser.m; sourceTree = "<group>"; };
 		0097D09F1940FBB900C26E28 /* BCCreateGroupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCCreateGroupViewController.h; sourceTree = "<group>"; };
 		0097D0A01940FBB900C26E28 /* BCCreateGroupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCCreateGroupViewController.m; sourceTree = "<group>"; };
+		6B62E1681947993A000537FD /* TTTTimeIntervalFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTTTimeIntervalFormatter.h; sourceTree = "<group>"; };
+		6B62E1691947993A000537FD /* TTTTimeIntervalFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTTTimeIntervalFormatter.m; sourceTree = "<group>"; };
+		6B62E16A1947993A000537FD /* TTTTimeIntervalFormatterPost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTTTimeIntervalFormatterPost.h; sourceTree = "<group>"; };
+		6B62E16B1947993A000537FD /* TTTTimeIntervalFormatterPost.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTTTimeIntervalFormatterPost.m; sourceTree = "<group>"; };
 		6B6791F119410A99001D8F8D /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		6B6791F3194111DA001D8F8D /* FacebookViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FacebookViewController.h; sourceTree = "<group>"; };
 		6B6791F4194111DA001D8F8D /* FacebookViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FacebookViewController.m; sourceTree = "<group>"; };
@@ -383,6 +389,7 @@
 		000E7A16193FD57A00E7024F /* Third Party Modules */ = {
 			isa = PBXGroup;
 			children = (
+				6B62E1671947993A000537FD /* TTTTimeIntervalFormatter */,
 				000E7A4D193FD84F00E7024F /* SMContactsSelector */,
 			);
 			name = "Third Party Modules";
@@ -470,6 +477,17 @@
 				0097D09A1940F61E00C26E28 /* BCParseUser.m */,
 			);
 			name = PFObjectSubclasses;
+			sourceTree = "<group>";
+		};
+		6B62E1671947993A000537FD /* TTTTimeIntervalFormatter */ = {
+			isa = PBXGroup;
+			children = (
+				6B62E1681947993A000537FD /* TTTTimeIntervalFormatter.h */,
+				6B62E1691947993A000537FD /* TTTTimeIntervalFormatter.m */,
+				6B62E16A1947993A000537FD /* TTTTimeIntervalFormatterPost.h */,
+				6B62E16B1947993A000537FD /* TTTTimeIntervalFormatterPost.m */,
+			);
+			path = TTTTimeIntervalFormatter;
 			sourceTree = "<group>";
 		};
 		6B6791F9194111F6001D8F8D /* Login */ = {
@@ -611,6 +629,7 @@
 				6B67920F19455E1E001D8F8D /* BCIntegrateFacebookController.m in Sources */,
 				0097D08E1940E53300C26E28 /* BCParseGroup.m in Sources */,
 				000E79B2193FB2F400E7024F /* main.m in Sources */,
+				6B62E16C1947993A000537FD /* TTTTimeIntervalFormatter.m in Sources */,
 				6B679223194672DA001D8F8D /* BCAlertTableViewCell.m in Sources */,
 				000E79EC193FB82000E7024F /* ParseInviteManager.m in Sources */,
 				000E7A7D193FD84F00E7024F /* SBJsonParser.m in Sources */,
@@ -618,6 +637,7 @@
 				000E7A7F193FD84F00E7024F /* SMContactsSelector.m in Sources */,
 				000E7A7C193FD84F00E7024F /* SBJsonBase.m in Sources */,
 				001071A5194213600078625B /* BCPeoplePickerViewController.m in Sources */,
+				6B62E16D1947993A000537FD /* TTTTimeIntervalFormatterPost.m in Sources */,
 				000E7A73193FD84F00E7024F /* NSString+Additions.m in Sources */,
 				6B6791F5194111DA001D8F8D /* FacebookViewController.m in Sources */,
 				000E79DD193FB73E00E7024F /* PAPCardView.m in Sources */,

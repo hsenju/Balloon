@@ -15,6 +15,8 @@
 @property (nonatomic, strong) PFObject *activity;
 
 /*!Set the new state. This changes the background of the cell. */
+@property (nonatomic, strong) UILabel *contentLabel;
+
 - (void)setIsNew:(BOOL)isNew;
 
 @end

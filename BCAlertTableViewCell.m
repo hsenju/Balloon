@@ -8,15 +8,34 @@
 
 #import "BCAlertTableViewCell.h"
 #import "AlertsTableViewController.h"
+#import "TTTTimeIntervalFormatter.h"
+
+static TTTTimeIntervalFormatter *timeFormatter;
 
 @implementation BCAlertTableViewCell
 
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
+    
+    if (!timeFormatter) {
+        timeFormatter = [[TTTTimeIntervalFormatter alloc] init];
+    }
+    
     if (self) {
         // Initialization code
     }
+    
+    self.contentLabel = [[UILabel alloc] init];
+    [self.contentLabel setFont:[UIFont systemFontOfSize:13.0f]];
+    [self.contentLabel setTextColor:[UIColor colorWithRed:73./255. green:55./255. blue:35./255. alpha:1.000]];
+    [self.contentLabel setNumberOfLines:0];
+    [self.contentLabel setLineBreakMode:NSLineBreakByWordWrapping];
+    [self.contentLabel setBackgroundColor:[UIColor clearColor]];
+    [self.contentLabel setShadowColor:[UIColor colorWithWhite:1.0f alpha:0.70f]];
+    [self.contentLabel setShadowOffset:CGSizeMake( 0.0f, 1.0f)];
+    [mainView addSubview:self.contentLabel];
+    
     return self;
 }
 
@@ -58,8 +77,8 @@
         nameString = [self.user objectForKey:kBCUserDisplayNameKey];
     }
     
-    [self.nameButton setTitle:nameString forState:UIControlStateNormal];
-    [self.nameButton setTitle:nameString forState:UIControlStateHighlighted];
+    [self.groupNameLabel setTitle:nameString forState:UIControlStateNormal];
+    [self.groupNameLabel setTitle:nameString forState:UIControlStateHighlighted];
     
     // If user is set after the contentText, we reset the content to include padding
     if (self.contentLabel.text) {
@@ -77,7 +96,7 @@
         [self.contentLabel setText:activityString];
     }
     
-    [self.timeLabel setText:[timeFormatter stringForTimeIntervalFromDate:[NSDate date] toDate:[activity createdAt]]];
+    [self.numberOfMembersLabel setText:[timeFormatter stringForTimeIntervalFromDate:[NSDate date] toDate:[activity createdAt]]];
     
     [self setNeedsDisplay];
 }
