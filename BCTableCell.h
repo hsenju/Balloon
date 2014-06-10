@@ -8,14 +8,27 @@
 
 #import <UIKit/UIKit.h>
 #import <Parse/Parse.h>
+#import "BCProfileImageView.h"
+#import "Common.h"
 
 
 @interface BCTableCell : PFTableViewCell
 
 @property (strong, nonatomic) IBOutlet UILabel *groupNameLabel;
 @property (strong, nonatomic) IBOutlet UILabel *numberOfMembersLabel;
-@property (strong, nonatomic) IBOutlet UIImageView *groupPictureImageView;
+@property (strong, nonatomic) IBOutlet BCProfileImageView *groupPictureImageView;
+@property (strong, nonatomic) IBOutlet UIView *mainView;
+
+@property (nonatomic, strong) PFUser *user;
 
 + (CGFloat)heightForCellWithName:(NSString *)name contentString:(NSString *)content;
+
+@end
+
+
+@protocol BCTableCellDelegate <NSObject>
+@optional
+
+- (void)cell:(BCTableCell *)cellView didTapUserButton:(PFUser *)aUser;
 
 @end

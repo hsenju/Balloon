@@ -8,7 +8,7 @@
 
 #import "AlertsTableViewController.h"
 #import "Common.h"
-#import "BCTableCell.h"
+#import "BCAlertTableViewCell.h"
 
 @interface AlertsTableViewController ()
 @property (nonatomic, strong) NSDate *lastRefresh;
@@ -70,7 +70,7 @@
             nameString = [user objectForKey:kBCUserDisplayNameKey];
         }
         
-        return [BCTableCell heightForCellWithName:nameString contentString:activityString];
+        return [BCAlertTableViewCell heightForCellWithName:nameString contentString:activityString];
     } else {
         return 44.0f;
     }
@@ -123,16 +123,24 @@
 {
     static NSString *cellIdentifier = @"alertsIdentifier";
     
-    PFTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    BCAlertTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     if (!cell) {
-        cell = [[PFTableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle
+        cell = [[BCAlertTableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle
                                       reuseIdentifier:cellIdentifier];
+        [cell setDelegate:self];
+        [cell setSelectionStyle:UITableViewCellSelectionStyleGray];
     }
     
-    // Configure the cell to show todo item with a priority at the bottom
-    cell.textLabel.text = object[@"text"];
-    cell.detailTextLabel.text = [NSString stringWithFormat:@"Priority: %@",
-                                 object[@"priority"]];
+     [cell setActivity:object];
+    
+    if ([_lastRefresh compare:[object createdAt]] == NSOrderedAscending) {
+        [cell setIsNew:YES];
+    } else {
+        [cell setIsNew:NO];
+    }
+    
+    [cell hideSeparator:(indexPath.row == self.objects.count - 1)];
+
     
     return cell;
 }

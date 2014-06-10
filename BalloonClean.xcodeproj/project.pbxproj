@@ -73,6 +73,8 @@
 		6B6792061942701A001D8F8D /* BCSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B6792051942701A001D8F8D /* BCSettings.m */; };
 		6B67920F19455E1E001D8F8D /* BCIntegrateFacebookController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B67920E19455E1E001D8F8D /* BCIntegrateFacebookController.m */; };
 		6B679220194617EF001D8F8D /* AlertsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B67921F194617EF001D8F8D /* AlertsTableViewController.m */; };
+		6B679223194672DA001D8F8D /* BCAlertTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B679222194672DA001D8F8D /* BCAlertTableViewCell.m */; };
+		6BECF53E19476E88007C62C4 /* BCProfileImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BECF53D19476E88007C62C4 /* BCProfileImageView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -189,6 +191,10 @@
 		6B67920E19455E1E001D8F8D /* BCIntegrateFacebookController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCIntegrateFacebookController.m; sourceTree = "<group>"; };
 		6B67921E194617EF001D8F8D /* AlertsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AlertsTableViewController.h; path = ../AlertsTableViewController.h; sourceTree = "<group>"; };
 		6B67921F194617EF001D8F8D /* AlertsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AlertsTableViewController.m; path = ../AlertsTableViewController.m; sourceTree = "<group>"; };
+		6B679221194672DA001D8F8D /* BCAlertTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCAlertTableViewCell.h; sourceTree = "<group>"; };
+		6B679222194672DA001D8F8D /* BCAlertTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCAlertTableViewCell.m; sourceTree = "<group>"; };
+		6BECF53C19476E88007C62C4 /* BCProfileImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCProfileImageView.h; sourceTree = "<group>"; };
+		6BECF53D19476E88007C62C4 /* BCProfileImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCProfileImageView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -342,6 +348,10 @@
 				000E79DC193FB73E00E7024F /* PAPCardView.xib */,
 				000E7A0F193FC70600E7024F /* BCTableCell.h */,
 				000E7A10193FC70600E7024F /* BCTableCell.m */,
+				6B679221194672DA001D8F8D /* BCAlertTableViewCell.h */,
+				6B679222194672DA001D8F8D /* BCAlertTableViewCell.m */,
+				6BECF53C19476E88007C62C4 /* BCProfileImageView.h */,
+				6BECF53D19476E88007C62C4 /* BCProfileImageView.m */,
 			);
 			name = View;
 			path = ..;
@@ -597,9 +607,11 @@
 				000E79E1193FB75600E7024F /* CountdownLabel.m in Sources */,
 				000E79E9193FB81400E7024F /* Invite.m in Sources */,
 				000E7A11193FC70600E7024F /* BCTableCell.m in Sources */,
+				6BECF53E19476E88007C62C4 /* BCProfileImageView.m in Sources */,
 				6B67920F19455E1E001D8F8D /* BCIntegrateFacebookController.m in Sources */,
 				0097D08E1940E53300C26E28 /* BCParseGroup.m in Sources */,
 				000E79B2193FB2F400E7024F /* main.m in Sources */,
+				6B679223194672DA001D8F8D /* BCAlertTableViewCell.m in Sources */,
 				000E79EC193FB82000E7024F /* ParseInviteManager.m in Sources */,
 				000E7A7D193FD84F00E7024F /* SBJsonParser.m in Sources */,
 				0097D0971940F2AB00C26E28 /* BCParseBalloon.m in Sources */,

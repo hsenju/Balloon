@@ -20,6 +20,7 @@ NSString *const kBCAlertTypeJoined           = @"joined";
 NSString *const kBCUserDisplayNameKey        = @"displayName";
 NSString *const kBCAlertTypeImComing         = @"imComing";
 NSString *const kBCAlertTypeComment          = @"comment";
+NSString *const kBCUserProfilePicSmallKey    = @"ppicturesmall";
 //@implementation Common
 
 //@end

@@ -20,3 +20,4 @@ extern NSString *const kBCAlertTypeJoined;
 extern NSString *const kBCUserDisplayNameKey;
 extern NSString *const kBCAlertTypeImComing;
 extern NSString *const kBCAlertTypeComment;
+extern NSString *const kBCUserProfilePicSmallKey;

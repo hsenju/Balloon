@@ -10,5 +10,5 @@
 #import <Parse/Parse.h>
 
 @interface AlertsTableViewController : PFQueryTableViewController
-
++ (NSString *)stringForActivityType:(NSString *)activityType;
 @end
