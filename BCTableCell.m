@@ -8,12 +8,19 @@
 
 #import "BCTableCell.h"
 
+@interface BCTableCell () {
+    BOOL hideSeparator; // True if the separator shouldn't be shown
+}
+
+
+@end
 @implementation BCTableCell
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
+        hideSeparator = NO;
         // Initialization code
     }
     return self;
@@ -79,6 +86,10 @@
     // Add final spaces to be ready for first word
     [paddedString appendString:[NSString stringWithFormat:@" %@",string]];
     return paddedString;
+}
+
+- (void)hideSeparator:(BOOL)hide {
+    hideSeparator = hide;
 }
 
 @end

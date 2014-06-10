@@ -34,7 +34,7 @@ static TTTTimeIntervalFormatter *timeFormatter;
     [self.contentLabel setBackgroundColor:[UIColor clearColor]];
     [self.contentLabel setShadowColor:[UIColor colorWithWhite:1.0f alpha:0.70f]];
     [self.contentLabel setShadowOffset:CGSizeMake( 0.0f, 1.0f)];
-    [mainView addSubview:self.contentLabel];
+    [self.mainView addSubview:self.contentLabel];
     
     return self;
 }
@@ -76,46 +76,23 @@ static TTTTimeIntervalFormatter *timeFormatter;
     if (self.user && [self.user objectForKey:kBCUserDisplayNameKey] && [[self.user objectForKey:kBCUserDisplayNameKey] length] > 0) {
         nameString = [self.user objectForKey:kBCUserDisplayNameKey];
     }
-    
-    [self.groupNameLabel setTitle:nameString forState:UIControlStateNormal];
-    [self.groupNameLabel setTitle:nameString forState:UIControlStateHighlighted];
-    
-    // If user is set after the contentText, we reset the content to include padding
-    if (self.contentLabel.text) {
-        [self setContentText:self.contentLabel.text];
-    }
-    
-    if (self.user) {
-        CGSize nameSize = [self.nameButton.titleLabel.text boundingRectWithSize:CGSizeMake(nameMaxWidth, CGFLOAT_MAX)
-                                                                        options:NSStringDrawingTruncatesLastVisibleLine|NSStringDrawingUsesLineFragmentOrigin
-                                                                     attributes:@{NSFontAttributeName:[UIFont boldSystemFontOfSize:13.0f]}
-                                                                        context:nil].size;
-        NSString *paddedString = [PAPBaseTextCell padString:activityString withFont:[UIFont systemFontOfSize:13.0f] toWidth:nameSize.width];
-        [self.contentLabel setText:paddedString];
-    } else { // Otherwise we ignore the padding and we'll add it after we set the user
-        [self.contentLabel setText:activityString];
-    }
+
     
     [self.numberOfMembersLabel setText:[timeFormatter stringForTimeIntervalFromDate:[NSDate date] toDate:[activity createdAt]]];
     
     [self setNeedsDisplay];
 }
 
-- (void)setCellInsetWidth:(CGFloat)insetWidth {
-    [super setCellInsetWidth:insetWidth];
-    horizontalTextSpace = [PAPActivityCell horizontalTextSpaceForInsetWidth:insetWidth];
-}
-
 // Since we remove the compile-time check for the delegate conforming to the protocol
 // in order to allow inheritance, we add run-time checks.
 - (id<BCAlertTableViewCellDelegate>)delegate {
-    return (id<PAPActivityCellDelegate>)_delegate;
+    return (id<BCAlertTableViewCellDelegate>)_delegate;
 }
 
 - (void)setDelegate:(id<BCAlertTableViewCellDelegate>)delegate {
-    if(_delegate != delegate) {
-        _delegate = delegate;
-    }
+//    if(_delegate != delegate) {
+//        _delegate = delegate;
+//    }
 }
 
 - (void)didTapActivityButton:(id)sender {
@@ -123,5 +100,7 @@ static TTTTimeIntervalFormatter *timeFormatter;
         [self.delegate cell:self didTapActivityButton:self.activity];
     }
 }
+
+
 
 @end

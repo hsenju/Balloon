@@ -12,7 +12,11 @@
 #import "Common.h"
 
 
-@interface BCTableCell : PFTableViewCell
+@interface BCTableCell : PFTableViewCell{
+    id _delegate;
+}
+
+@property (nonatomic, strong) id delegate;
 
 @property (strong, nonatomic) IBOutlet UILabel *groupNameLabel;
 @property (strong, nonatomic) IBOutlet UILabel *numberOfMembersLabel;
@@ -22,6 +26,7 @@
 @property (nonatomic, strong) PFUser *user;
 
 + (CGFloat)heightForCellWithName:(NSString *)name contentString:(NSString *)content;
+- (void)hideSeparator:(BOOL)hide;
 
 @end
 
