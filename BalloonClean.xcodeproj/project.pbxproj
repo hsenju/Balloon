@@ -356,7 +356,7 @@
 		0026B7D019465F7800C4948E /* BCIntegrateFacebookController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0026B7CF19465F7800C4948E /* BCIntegrateFacebookController.m */; };
 		0026B7D2194660ED00C4948E /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0026B7D1194660ED00C4948E /* FacebookSDK.framework */; };
 		005E07EC194779F1000C333A /* BCMemberCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 005E07EB194779F1000C333A /* BCMemberCell.m */; };
-		005E07F51947B19B000C333A /* BCSelectMembersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 005E07F41947B19B000C333A /* BCSelectMembersViewController.m */; };
+		005F3CDF1948AFB300A299F7 /* BCSelectMembersTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 005F3CDE1948AFB300A299F7 /* BCSelectMembersTableViewController.m */; };
 		008CE12919455E3700949D00 /* BCParseTempUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 008CE12819455E3700949D00 /* BCParseTempUser.m */; };
 		0097D08E1940E53300C26E28 /* BCParseGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 0097D08D1940E53300C26E28 /* BCParseGroup.m */; };
 		0097D0941940EF5700C26E28 /* BCParseActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = 0097D0931940EF5700C26E28 /* BCParseActivity.m */; };
@@ -756,8 +756,8 @@
 		0026B7D1194660ED00C4948E /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../../Documents/FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
 		005E07EA194779F1000C333A /* BCMemberCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCMemberCell.h; sourceTree = "<group>"; };
 		005E07EB194779F1000C333A /* BCMemberCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCMemberCell.m; sourceTree = "<group>"; };
-		005E07F31947B19B000C333A /* BCSelectMembersViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCSelectMembersViewController.h; sourceTree = "<group>"; };
-		005E07F41947B19B000C333A /* BCSelectMembersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCSelectMembersViewController.m; sourceTree = "<group>"; };
+		005F3CDD1948AFB300A299F7 /* BCSelectMembersTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCSelectMembersTableViewController.h; sourceTree = "<group>"; };
+		005F3CDE1948AFB300A299F7 /* BCSelectMembersTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCSelectMembersTableViewController.m; sourceTree = "<group>"; };
 		008CE12719455E3700949D00 /* BCParseTempUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCParseTempUser.h; sourceTree = "<group>"; };
 		008CE12819455E3700949D00 /* BCParseTempUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCParseTempUser.m; sourceTree = "<group>"; };
 		0097D08C1940E53300C26E28 /* BCParseGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCParseGroup.h; sourceTree = "<group>"; };
@@ -936,8 +936,6 @@
 				0026B7CE19465F7800C4948E /* BCIntegrateFacebookController.h */,
 				0026B7CF19465F7800C4948E /* BCIntegrateFacebookController.m */,
 				0026B7C419465EA100C4948E /* Login */,
-				005E07F31947B19B000C333A /* BCSelectMembersViewController.h */,
-				005E07F41947B19B000C333A /* BCSelectMembersViewController.m */,
 				000E7A09193FC4FE00E7024F /* GroupsTableViewController.h */,
 				000E7A0A193FC4FF00E7024F /* GroupsTableViewController.m */,
 				000E79E2193FB80300E7024F /* PAPInvitesViewController.h */,
@@ -947,6 +945,8 @@
 				0097D0A01940FBB900C26E28 /* BCCreateGroupViewController.m */,
 				0026B7CB19465EFA00C4948E /* BCSettings.h */,
 				0026B7CC19465EFA00C4948E /* BCSettings.m */,
+				005F3CDD1948AFB300A299F7 /* BCSelectMembersTableViewController.h */,
+				005F3CDE1948AFB300A299F7 /* BCSelectMembersTableViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -1788,7 +1788,7 @@
 				000E7A7A193FD84F00E7024F /* NSString+SBJSON.m in Sources */,
 				000E7A81193FD84F00E7024F /* CustomIOS7AlertView.m in Sources */,
 				0026B7CD19465EFA00C4948E /* BCSettings.m in Sources */,
-				005E07F51947B19B000C333A /* BCSelectMembersViewController.m in Sources */,
+				005F3CDF1948AFB300A299F7 /* BCSelectMembersTableViewController.m in Sources */,
 				0097D09B1940F61E00C26E28 /* BCParseUser.m in Sources */,
 				008CE12919455E3700949D00 /* BCParseTempUser.m in Sources */,
 				000E7A0B193FC4FF00E7024F /* GroupsTableViewController.m in Sources */,

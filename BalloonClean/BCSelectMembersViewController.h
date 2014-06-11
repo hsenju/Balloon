@@ -11,6 +11,6 @@
 
 @interface BCSelectMembersViewController : PFQueryTableViewController
 
-@property (strong, nonatomic) BCParseGroup *selectedGroup;
+@property (strong, nonatomic) NSArray *members;
 
 @end

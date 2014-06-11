@@ -7,13 +7,15 @@
 //
 
 #import "GroupsTableViewController.h"
-#import "BCSelectMembersViewController.h"
+#import "BCSelectMembersTableViewController.h"
 #import "BCGroupCell.h"
 #import "BCParseGroup.h"
 
 @interface GroupsTableViewController ()
 
 @property (strong, nonatomic) NSString *parseClassName;
+@property (strong, nonatomic) BCParseGroup *selectedGroup;
+@property (strong, nonatomic) NSArray *groupMembers;
 
 @end
 
@@ -102,7 +104,7 @@ static const NSString *kCreateGroupsSegueIdentifier = @"createGroupSegue";
     // Configure the cell to show todo item with a priority at the bottom
     BCParseGroup *currentGroup = (BCParseGroup*)object;
     cell.groupNameLabel.text = currentGroup.groupName;
-    cell.numberOfMembersLabel.text = [NSString stringWithFormat:@"%d members available", currentGroup.members.count];
+    cell.numberOfMembersLabel.text = [NSString stringWithFormat:@"%lu members available", (unsigned long)currentGroup.members.count];
     cell.groupPictureImageView.file = currentGroup.groupImageFile;
     [cell.groupPictureImageView loadInBackground];
     
@@ -110,13 +112,29 @@ static const NSString *kCreateGroupsSegueIdentifier = @"createGroupSegue";
     return cell;
 }
 
--(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
-    NSIndexPath *path = [self.tableView indexPathForSelectedRow];
-    BCParseGroup *selectedGroup = (BCParseGroup*)[self.objects objectAtIndex:path.row];
-    
-    BCSelectMembersViewController *destination = (BCSelectMembersViewController*)[segue destinationViewController];
-    destination.selectedGroup = selectedGroup;
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    BCParseGroup *selectedGroup = (BCParseGroup*)[self.objects objectAtIndex:indexPath.row];
+    self.selectedGroup = selectedGroup;
+    self.groupMembers = [NSArray arrayWithArray:selectedGroup.members];
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
+        for (PFObject *member in self.groupMembers) {
+            [member fetchIfNeeded];
+        }
+        
+        dispatch_sync(dispatch_get_main_queue(), ^{
+            [self performSegueWithIdentifier:@"groupToMembers" sender:self];
+        });
+    });
 }
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+     BCSelectMembersTableViewController *dest = (BCSelectMembersTableViewController*)[segue destinationViewController];
+    
+    dest.members = [NSArray arrayWithArray:self.groupMembers];
+}
+
+    
 
 /*
 // Override to support conditional editing of the table view.

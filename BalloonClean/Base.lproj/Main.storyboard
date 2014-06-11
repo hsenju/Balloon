@@ -227,27 +227,29 @@
                                     <outlet property="groupNameLabel" destination="5p0-Eb-MSB" id="zoz-PB-Jfz"/>
                                     <outlet property="groupPictureImageView" destination="zg0-5j-gk7" id="GfZ-9q-PW4"/>
                                     <outlet property="numberOfMembersLabel" destination="STU-6c-P94" id="evl-Y0-oBl"/>
-                                    <segue destination="y0R-RU-7dL" kind="push" id="oWw-gz-UOW"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
                     </tableView>
                     <navigationItem key="navigationItem" title="Select Group" id="erT-Bq-cTw"/>
+                    <connections>
+                        <segue destination="y0R-RU-7dL" kind="push" identifier="groupToMembers" id="9L7-aD-toa"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ek2-V2-ggQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-4149" y="1242"/>
+            <point key="canvasLocation" x="-4156" y="1249"/>
         </scene>
-        <!--Select Members View Controller - Select Members-->
+        <!--Select Members Table View Controller - Select Members-->
         <scene sceneID="kky-eM-2TF">
             <objects>
-                <tableViewController id="y0R-RU-7dL" customClass="BCSelectMembersViewController" sceneMemberID="viewController">
+                <tableViewController id="y0R-RU-7dL" customClass="BCSelectMembersTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="vKe-vb-c8r">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="bcMemberCellReuseID" editingAccessoryType="checkmark" id="iBF-nF-Jxw" customClass="BCMemberCell">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="bcMemberCellReuseID" id="iBF-nF-Jxw" customClass="BCMemberCell">
                                 <rect key="frame" x="0.0" y="86" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="iBF-nF-Jxw" id="7qC-oz-2E3">
@@ -284,7 +286,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8q7-YH-qHL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3475" y="1242"/>
+            <point key="canvasLocation" x="-3714" y="1242"/>
         </scene>
         <!--View Controller - Add Comment-->
         <scene sceneID="cyT-op-7vD">
