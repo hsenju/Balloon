@@ -37,7 +37,6 @@
 		000E79FF193FB9C100E7024F /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 000E79FE193FB9C100E7024F /* Security.framework */; };
 		000E7A01193FB9C700E7024F /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 000E7A00193FB9C700E7024F /* StoreKit.framework */; };
 		000E7A03193FB9CD00E7024F /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 000E7A02193FB9CD00E7024F /* SystemConfiguration.framework */; };
-		000E7A05193FBB7300E7024F /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 000E7A04193FBB7300E7024F /* Parse.framework */; };
 		000E7A0B193FC4FF00E7024F /* GroupsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 000E7A0A193FC4FF00E7024F /* GroupsTableViewController.m */; };
 		000E7A0E193FC58C00E7024F /* BCGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 000E7A0D193FC58C00E7024F /* BCGroup.m */; };
 		000E7A11193FC70600E7024F /* BCGroupCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 000E7A10193FC70600E7024F /* BCGroupCell.m */; };
@@ -363,6 +362,11 @@
 		0097D0971940F2AB00C26E28 /* BCParseBalloon.m in Sources */ = {isa = PBXBuildFile; fileRef = 0097D0961940F2AB00C26E28 /* BCParseBalloon.m */; };
 		0097D09B1940F61E00C26E28 /* BCParseUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 0097D09A1940F61E00C26E28 /* BCParseUser.m */; };
 		0097D0A11940FBB900C26E28 /* BCCreateGroupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0097D0A01940FBB900C26E28 /* BCCreateGroupViewController.m */; };
+		6B265A871948CAB700D71864 /* BCTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B265A861948CAB700D71864 /* BCTableCell.m */; };
+		6B265A8A1948CAD900D71864 /* BCAlertTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B265A891948CAD900D71864 /* BCAlertTableViewCell.m */; };
+		6B265A901948CB3A00D71864 /* BCProfileImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B265A8F1948CB3A00D71864 /* BCProfileImageView.m */; };
+		6B265A931948CBA300D71864 /* BCAlertsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B265A921948CBA300D71864 /* BCAlertsTableViewController.m */; };
+		6B265A951948CC7700D71864 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B265A941948CC7700D71864 /* Parse.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -416,7 +420,6 @@
 		000E79FE193FB9C100E7024F /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		000E7A00193FB9C700E7024F /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		000E7A02193FB9CD00E7024F /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		000E7A04193FBB7300E7024F /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		000E7A09193FC4FE00E7024F /* GroupsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GroupsTableViewController.h; path = ../GroupsTableViewController.h; sourceTree = "<group>"; };
 		000E7A0A193FC4FF00E7024F /* GroupsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GroupsTableViewController.m; path = ../GroupsTableViewController.m; sourceTree = "<group>"; };
 		000E7A0C193FC58C00E7024F /* BCGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCGroup.h; sourceTree = "<group>"; };
@@ -770,6 +773,15 @@
 		0097D09A1940F61E00C26E28 /* BCParseUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCParseUser.m; sourceTree = "<group>"; };
 		0097D09F1940FBB900C26E28 /* BCCreateGroupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCCreateGroupViewController.h; sourceTree = "<group>"; };
 		0097D0A01940FBB900C26E28 /* BCCreateGroupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCCreateGroupViewController.m; sourceTree = "<group>"; };
+		6B265A851948CAB700D71864 /* BCTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCTableCell.h; sourceTree = "<group>"; };
+		6B265A861948CAB700D71864 /* BCTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCTableCell.m; sourceTree = "<group>"; };
+		6B265A881948CAD900D71864 /* BCAlertTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCAlertTableViewCell.h; sourceTree = "<group>"; };
+		6B265A891948CAD900D71864 /* BCAlertTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCAlertTableViewCell.m; sourceTree = "<group>"; };
+		6B265A8E1948CB3A00D71864 /* BCProfileImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCProfileImageView.h; sourceTree = "<group>"; };
+		6B265A8F1948CB3A00D71864 /* BCProfileImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCProfileImageView.m; sourceTree = "<group>"; };
+		6B265A911948CBA300D71864 /* BCAlertsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BCAlertsTableViewController.h; path = ../BCAlertsTableViewController.h; sourceTree = "<group>"; };
+		6B265A921948CBA300D71864 /* BCAlertsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BCAlertsTableViewController.m; path = ../BCAlertsTableViewController.m; sourceTree = "<group>"; };
+		6B265A941948CC7700D71864 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = "../../Downloads/Balloon-alerts/Parse.framework"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -781,9 +793,9 @@
 				000E7A01193FB9C700E7024F /* StoreKit.framework in Frameworks */,
 				000E79FF193FB9C100E7024F /* Security.framework in Frameworks */,
 				000E79FD193FB9BA00E7024F /* QuartzCore.framework in Frameworks */,
+				6B265A951948CC7700D71864 /* Parse.framework in Frameworks */,
 				000E79FB193FB9B400E7024F /* MobileCoreServices.framework in Frameworks */,
 				000E79F9193FB9AD00E7024F /* libz.dylib in Frameworks */,
-				000E7A05193FBB7300E7024F /* Parse.framework in Frameworks */,
 				000E79F7193FB9A600E7024F /* CoreLocation.framework in Frameworks */,
 				000E79A8193FB2F400E7024F /* CoreGraphics.framework in Frameworks */,
 				000E79F5193FB99800E7024F /* CFNetwork.framework in Frameworks */,
@@ -831,8 +843,8 @@
 		000E79A4193FB2F400E7024F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6B265A941948CC7700D71864 /* Parse.framework */,
 				0026B7D1194660ED00C4948E /* FacebookSDK.framework */,
-				000E7A04193FBB7300E7024F /* Parse.framework */,
 				000E7A02193FB9CD00E7024F /* SystemConfiguration.framework */,
 				000E7A00193FB9C700E7024F /* StoreKit.framework */,
 				000E79FE193FB9C100E7024F /* Security.framework */,
@@ -918,6 +930,12 @@
 				000E79EE193FB83C00E7024F /* CardsViewFlowLayout.m */,
 				000E79DF193FB75600E7024F /* CountdownLabel.h */,
 				000E79E0193FB75600E7024F /* CountdownLabel.m */,
+				6B265A851948CAB700D71864 /* BCTableCell.h */,
+				6B265A861948CAB700D71864 /* BCTableCell.m */,
+				6B265A881948CAD900D71864 /* BCAlertTableViewCell.h */,
+				6B265A891948CAD900D71864 /* BCAlertTableViewCell.m */,
+				6B265A8E1948CB3A00D71864 /* BCProfileImageView.h */,
+				6B265A8F1948CB3A00D71864 /* BCProfileImageView.m */,
 				000E79DA193FB73E00E7024F /* PAPCardView.h */,
 				000E79DB193FB73E00E7024F /* PAPCardView.m */,
 				000E79DC193FB73E00E7024F /* PAPCardView.xib */,
@@ -943,6 +961,8 @@
 				000E79E4193FB80300E7024F /* PAPInvitesViewController.xib */,
 				0097D09F1940FBB900C26E28 /* BCCreateGroupViewController.h */,
 				0097D0A01940FBB900C26E28 /* BCCreateGroupViewController.m */,
+				6B265A911948CBA300D71864 /* BCAlertsTableViewController.h */,
+				6B265A921948CBA300D71864 /* BCAlertsTableViewController.m */,
 				0026B7CB19465EFA00C4948E /* BCSettings.h */,
 				0026B7CC19465EFA00C4948E /* BCSettings.m */,
 				005F3CDD1948AFB300A299F7 /* BCSelectMembersTableViewController.h */,
@@ -1764,11 +1784,13 @@
 				000E79EF193FB83C00E7024F /* CardsViewFlowLayout.m in Sources */,
 				000E79E1193FB75600E7024F /* CountdownLabel.m in Sources */,
 				000E79E9193FB81400E7024F /* Invite.m in Sources */,
+				6B265A871948CAB700D71864 /* BCTableCell.m in Sources */,
 				000E7A11193FC70600E7024F /* BCGroupCell.m in Sources */,
 				0097D08E1940E53300C26E28 /* BCParseGroup.m in Sources */,
 				000E79B2193FB2F400E7024F /* main.m in Sources */,
 				000E79EC193FB82000E7024F /* ParseInviteManager.m in Sources */,
 				000E7A7D193FD84F00E7024F /* SBJsonParser.m in Sources */,
+				6B265A901948CB3A00D71864 /* BCProfileImageView.m in Sources */,
 				0097D0971940F2AB00C26E28 /* BCParseBalloon.m in Sources */,
 				000E7A7F193FD84F00E7024F /* SMContactsSelector.m in Sources */,
 				0026B7D019465F7800C4948E /* BCIntegrateFacebookController.m in Sources */,
@@ -1781,6 +1803,7 @@
 				0026B7C719465EC100C4948E /* PhoneNumberViewController.m in Sources */,
 				0097D0A11940FBB900C26E28 /* BCCreateGroupViewController.m in Sources */,
 				0097D0941940EF5700C26E28 /* BCParseActivity.m in Sources */,
+				6B265A8A1948CAD900D71864 /* BCAlertTableViewCell.m in Sources */,
 				000E7A72193FD84F00E7024F /* Address+Additions.m in Sources */,
 				000E7A7B193FD84F00E7024F /* SBJSON.m in Sources */,
 				000E79E5193FB80300E7024F /* PAPInvitesViewController.m in Sources */,
@@ -1791,6 +1814,7 @@
 				005F3CDF1948AFB300A299F7 /* BCSelectMembersTableViewController.m in Sources */,
 				0097D09B1940F61E00C26E28 /* BCParseUser.m in Sources */,
 				008CE12919455E3700949D00 /* BCParseTempUser.m in Sources */,
+				6B265A931948CBA300D71864 /* BCAlertsTableViewController.m in Sources */,
 				000E7A0B193FC4FF00E7024F /* GroupsTableViewController.m in Sources */,
 				005E07EC194779F1000C333A /* BCMemberCell.m in Sources */,
 				000E7A82193FD84F00E7024F /* UIAlertView+UITableView.m in Sources */,
@@ -1948,6 +1972,7 @@
 					"$(inherited)",
 					/Users/seanwertheim/Desktop/BalloonClean,
 					/Users/seanwertheim/Documents/FacebookSDK,
+					"/Users/hsenju/Downloads/Balloon-alerts",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BalloonClean/BalloonClean-Prefix.pch";
@@ -1966,6 +1991,7 @@
 					"$(inherited)",
 					/Users/seanwertheim/Desktop/BalloonClean,
 					/Users/seanwertheim/Documents/FacebookSDK,
+					"/Users/hsenju/Downloads/Balloon-alerts",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BalloonClean/BalloonClean-Prefix.pch";
