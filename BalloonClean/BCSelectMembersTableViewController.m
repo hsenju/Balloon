@@ -10,6 +10,7 @@
 #import "BCMemberCell.h"
 #import "BCParseUser.h"
 #import "BCParseTempUser.h"
+#import "BCAddPlanViewController.h"
 
 @interface BCSelectMembersTableViewController ()
 
@@ -60,8 +61,7 @@
     static NSString *CellIdentifier = @"bcMemberCellReuseID";
     BCMemberCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
-    
-    // Configure the cell...
+    cell.accessoryType = UITableViewCellAccessoryCheckmark;
     
     PFObject *member = (PFObject*)self.members[indexPath.row];
     
@@ -89,6 +89,20 @@
     }
     
 }
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    BCAddPlanViewController *destination = (BCAddPlanViewController*)[segue destinationViewController];
+    
+    NSArray *selectedIndexPaths = [self.tableView indexPathsForSelectedRows];
+    NSMutableArray *selectedMembers = [[NSMutableArray alloc] init];
+    for (NSIndexPath *indexPath in selectedIndexPaths) {
+        [selectedMembers addObject:self.members];
+    }
+    
+    destination.selectedMembers = selectedMembers;
+}
+
+
 
 /*
 // Override to support conditional editing of the table view.
