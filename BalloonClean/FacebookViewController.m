@@ -73,10 +73,10 @@
     NSString *phoneNumber = self.phoneNumber;
     
     //initialize and save the user with the corresponding characterisitcs to parse
-	PFUser *user = [PFUser user];
+	BCParseUser *user = [BCParseUser object];
 	user.username = phoneNumber;
     user.password = @"";
-    [user setObject:name forKey:@"name"];
+    user.name = name;
 	[user signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
 		if (error) {
             //if error in saving, show error alert
@@ -85,15 +85,9 @@
 			return;
 		}
         
-        UIImage *image = self.profilepicture.image;
-        NSData *mediumImageData = UIImageJPEGRepresentation(image, 1.0);
-        PFFile *fileMediumImage = [PFFile fileWithData:mediumImageData];
-        [fileMediumImage saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
-            if (!error) {
-                [[PFUser currentUser] setObject:fileMediumImage forKey:@"picture"];
-                [[PFUser currentUser] saveInBackground];
-            }
-        }];
+        UIImage *profileImage = self.profilepicture.image;
+        [user setUserPhotoFileWithUIImage:profileImage];
+        [user saveInBackground];
         
         //if there is not error, proceed to main view
         //[(AppDelegate*)[[UIApplication sharedApplication] delegate] balloonLogin];

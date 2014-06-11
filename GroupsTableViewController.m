@@ -7,6 +7,7 @@
 //
 
 #import "GroupsTableViewController.h"
+#import "BCSelectMembersViewController.h"
 #import "BCGroupCell.h"
 #import "BCParseGroup.h"
 
@@ -76,7 +77,6 @@ static const NSString *kCreateGroupsSegueIdentifier = @"createGroupSegue";
 
 - (PFQuery *)queryForTable {
     PFQuery *query = [PFQuery queryWithClassName:self.parseClassName];
-    
     // If no objects are loaded in memory, we look to the cache
     // first to fill the table and then subsequently do a query
     // against the network.
@@ -108,6 +108,14 @@ static const NSString *kCreateGroupsSegueIdentifier = @"createGroupSegue";
     
     
     return cell;
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    NSIndexPath *path = [self.tableView indexPathForSelectedRow];
+    BCParseGroup *selectedGroup = (BCParseGroup*)[self.objects objectAtIndex:path.row];
+    
+    BCSelectMembersViewController *destination = (BCSelectMembersViewController*)[segue destinationViewController];
+    destination.selectedGroup = selectedGroup;
 }
 
 /*

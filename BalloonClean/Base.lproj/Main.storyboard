@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="GCP-0o-63O">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="q0I-sM-01y">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
     </dependencies>
@@ -26,7 +26,7 @@
             </objects>
             <point key="canvasLocation" x="-5345" y="332"/>
         </scene>
-        <!--Groups Table View Controller - Groups-->
+        <!--Groups Table View Controller - Contact Lists-->
         <scene sceneID="Lvc-wC-nPf">
             <objects>
                 <tableViewController id="3jS-0q-wDd" customClass="GroupsTableViewController" sceneMemberID="viewController">
@@ -71,7 +71,7 @@
                             </tableViewCell>
                         </prototypes>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Groups" id="Tzr-Pt-9OV">
+                    <navigationItem key="navigationItem" title="Contact Lists" id="Tzr-Pt-9OV">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="0i9-pr-jxZ">
                             <connections>
                                 <segue destination="mb6-TA-8Tp" kind="modal" id="10p-QV-USx"/>
@@ -103,7 +103,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="doneButtonPressed:" destination="mb6-TA-8Tp" eventType="touchUpInside" id="Ri3-JG-3Na"/>
+                                    <action selector="addContactsButtonPressed:" destination="mb6-TA-8Tp" eventType="touchUpInside" id="3Z4-T9-9qC"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name The Group" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DxS-Bp-66S">
@@ -112,17 +112,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="Zqv-jd-lMj">
-                                <rect key="frame" x="125" y="212" width="70" height="70"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <inset key="contentEdgeInsets" minX="14" minY="0.0" maxX="14" maxY="0.0"/>
-                                <state key="normal" title="Add A Photo">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="addPhotoButtonPressed:" destination="mb6-TA-8Tp" eventType="touchUpInside" id="OdC-XA-KYa"/>
-                                </connections>
-                            </button>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="KpG-S3-yKq">
                                 <rect key="frame" x="251" y="346" width="51" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -134,25 +123,53 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NWm-he-dwP">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Create List" id="xE6-Rb-dDf">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="hIJ-Bd-cQY">
+                                            <connections>
+                                                <action selector="cancelPressed:" destination="mb6-TA-8Tp" id="wUQ-Js-UEu"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Add A Photo" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="47" translatesAutoresizingMaskIntoConstraints="NO" id="3g4-eQ-WyL">
+                                <rect key="frame" x="137" y="211" width="47" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="(Default if empty)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kmn-Fg-Pjx">
+                                <rect key="frame" x="111" y="274" width="99" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" image="43-43_pic_shadows.png" translatesAutoresizingMaskIntoConstraints="NO" id="8mm-3W-Z1B">
+                                <rect key="frame" x="114" y="211" width="92" height="92"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Create Group" id="M2c-zh-FMU">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="Hb8-Q8-lXN">
-                            <connections>
-                                <action selector="cancelPressed:" destination="mb6-TA-8Tp" id="yyK-SN-0wd"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="Hb8-Q8-lXN"/>
                     </navigationItem>
                     <connections>
-                        <outlet property="addPhotoButton" destination="Zqv-jd-lMj" id="IGS-Bv-Paz"/>
+                        <outlet property="addPhotoImageView" destination="8mm-3W-Z1B" id="1DL-pe-nUh"/>
+                        <outlet property="addPhotoLabel" destination="3g4-eQ-WyL" id="iFf-aX-l8q"/>
+                        <outlet property="defaultIfEmptyLabel" destination="kmn-Fg-Pjx" id="CCT-43-5qv"/>
                         <outlet property="groupNameTextField" destination="DxS-Bp-66S" id="i7k-DL-8gN"/>
                         <outlet property="shareListWithMembersSwitch" destination="KpG-S3-yKq" id="rzm-fy-9Xs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fvI-fW-Fdx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3749" y="-642"/>
+            <point key="canvasLocation" x="-3756" y="-642"/>
         </scene>
         <!--Navigation Controller - Balloon-->
         <scene sceneID="KU5-3o-ml2">
@@ -210,6 +227,7 @@
                                     <outlet property="groupNameLabel" destination="5p0-Eb-MSB" id="zoz-PB-Jfz"/>
                                     <outlet property="groupPictureImageView" destination="zg0-5j-gk7" id="GfZ-9q-PW4"/>
                                     <outlet property="numberOfMembersLabel" destination="STU-6c-P94" id="evl-Y0-oBl"/>
+                                    <segue destination="y0R-RU-7dL" kind="push" id="oWw-gz-UOW"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -220,24 +238,38 @@
             </objects>
             <point key="canvasLocation" x="-4149" y="1242"/>
         </scene>
-        <!--Query Table View Controller - Select Members-->
+        <!--Select Members View Controller - Select Members-->
         <scene sceneID="kky-eM-2TF">
             <objects>
-                <tableViewController id="y0R-RU-7dL" customClass="PFQueryTableViewController" sceneMemberID="viewController">
+                <tableViewController id="y0R-RU-7dL" customClass="BCSelectMembersViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="vKe-vb-c8r">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="xlo-mf-ZNY">
-                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="xlo-mf-ZNY" id="APs-iv-O4a">
-                                    <rect key="frame" x="0.0" y="0.0" width="287" height="43"/>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="bcMemberCellReuseID" editingAccessoryType="checkmark" id="iBF-nF-Jxw" customClass="BCMemberCell">
+                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="iBF-nF-Jxw" id="7qC-oz-2E3">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RXM-3q-Snu" customClass="PFImageView">
+                                            <rect key="frame" x="6" y="8" width="30" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        </imageView>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vqe-bg-i40">
+                                            <rect key="frame" x="44" y="11" width="256" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="14"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="SiR-dS-4y5" kind="push" identifier="addCommentSegue" id="FzJ-en-6tU"/>
+                                    <outlet property="memberImageView" destination="RXM-3q-Snu" id="3td-7F-cLN"/>
+                                    <outlet property="memberNameLabel" destination="Vqe-bg-i40" id="XhU-hv-evy"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -246,7 +278,9 @@
                             <outlet property="delegate" destination="y0R-RU-7dL" id="3h4-d3-bu6"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Select Members" id="3HS-AY-IkT"/>
+                    <navigationItem key="navigationItem" title="Select Members" id="3HS-AY-IkT">
+                        <barButtonItem key="rightBarButtonItem" title="Next" id="oEB-dW-HP0"/>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8q7-YH-qHL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -470,11 +504,11 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
             </objects>
             <point key="canvasLocation" x="-3085" y="27"/>
         </scene>
-        <!--Navigation Controller - Groups-->
+        <!--Navigation Controller - Lists-->
         <scene sceneID="zig-Kf-Jy4">
             <objects>
                 <navigationController definesPresentationContext="YES" id="SAU-ju-z9h" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Groups" id="X4R-Ub-kpb"/>
+                    <tabBarItem key="tabBarItem" title="Lists" id="X4R-Ub-kpb"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="jL1-ha-Y0O">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -981,6 +1015,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
         </scene>
     </scenes>
     <resources>
+        <image name="43-43_pic_shadows.png" width="45" height="45"/>
         <image name="Balloon-logo" width="300" height="106"/>
         <image name="LinkToFacebook.png" width="614" height="62"/>
         <image name="Logoutbutton.png" width="614" height="62"/>

@@ -13,8 +13,10 @@
 
 @property (strong, nonatomic) IBOutlet UITextField *groupNameTextField;
 @property (strong, nonatomic) BCParseGroup *groupToAdd;
-@property (strong, nonatomic) IBOutlet UIButton *addPhotoButton;
 @property (strong, nonatomic) IBOutlet UISwitch *shareListWithMembersSwitch;
+@property (strong, nonatomic) IBOutlet UIImageView *addPhotoImageView;
+@property (strong, nonatomic) IBOutlet UILabel *addPhotoLabel;
+@property (strong, nonatomic) IBOutlet UILabel *defaultIfEmptyLabel;
 
 @end
 
@@ -37,24 +39,22 @@ static const NSString *kToContactsSelectorSegueIdentifier = @"createGroupToConta
 	// Do any additional setup after loading the view.
     self.groupToAdd = [BCParseGroup object];
     self.groupNameTextField.delegate = self;
+    
+    //setup for clickable uiimageview to add photo
+    UITapGestureRecognizer *singleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(addPhotoTapDetected)];
+    singleTap.numberOfTapsRequired = 1;
+    [self.addPhotoImageView addGestureRecognizer:singleTap];
 }
 
-- (IBAction)addPhotoButtonPressed:(id)sender {
-    //want to choose photo from photo roll
-    UIImagePickerController* picker = [[UIImagePickerController alloc]init];
-    picker.delegate = self;
-    picker.allowsEditing = YES;
-    picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
-    
-    [self presentViewController:picker animated:YES completion:NULL];
-}
+#pragma mark -- UIImagePickerControllerDelegate methods
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info{
     
     UIImage *chosenImage = info[UIImagePickerControllerEditedImage];
-    //set button's image to selected photo and blank out text
-    [self.addPhotoButton setBackgroundImage:chosenImage forState:UIControlStateNormal];
-    [self.addPhotoButton setTitle:@"" forState:UIControlStateNormal];
+    //set uiimageview's image to selected photo and blank out text
+    [self.addPhotoImageView setImage:chosenImage];
+    [self.addPhotoLabel setHidden:YES];
+    [self.defaultIfEmptyLabel setHidden:YES];
     [self.groupToAdd setGroupImageFileWithUIImage:chosenImage];
     
     [picker dismissViewControllerAnimated:YES completion:nil];
@@ -64,7 +64,9 @@ static const NSString *kToContactsSelectorSegueIdentifier = @"createGroupToConta
     [picker dismissViewControllerAnimated:YES completion:NULL];
 }
 
-- (IBAction)doneButtonPressed:(id)sender {
+#pragma mark -- IBActions and Gesture Recognizer Selectors
+
+- (IBAction)addContactsButtonPressed:(id)sender {
     if(self.groupNameTextField.text && self.groupNameTextField.text.length > 0){
         
         SMContactsSelector *controller = [[SMContactsSelector alloc] initWithNibName:@"SMContactsSelector" bundle:nil];
@@ -85,11 +87,21 @@ static const NSString *kToContactsSelectorSegueIdentifier = @"createGroupToConta
     }
 }
 
+- (void)addPhotoTapDetected{
+    //want to choose photo from photo roll
+    UIImagePickerController* picker = [[UIImagePickerController alloc]init];
+    picker.delegate = self;
+    picker.allowsEditing = YES;
+    picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+    
+    [self presentViewController:picker animated:YES completion:NULL];
+}
+
 - (IBAction)cancelPressed:(id)sender {
     [self dismissViewControllerAnimated:YES completion:Nil];
 }
 
-#pragma mark -- Hide keyboard when user taps outside textfield
+#pragma mark -- TextField delegate methods
 
 - (BOOL)textFieldShouldBeginEditing:(UITextField *)textField
 {
