@@ -14,6 +14,8 @@
 
 @interface BCSelectMembersTableViewController ()
 
+@property (strong, nonatomic) NSMutableSet *invitedMembers;
+
 @end
 
 @implementation BCSelectMembersTableViewController
@@ -30,6 +32,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    self.invitedMembers = [NSMutableSet setWithArray:self.members];
+    
+    self.clearsSelectionOnViewWillAppear = NO;
 
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -62,6 +68,8 @@
     BCMemberCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     cell.accessoryType = UITableViewCellAccessoryCheckmark;
+    //select all cells by default
+    [tableView selectRowAtIndexPath:indexPath animated:NO scrollPosition: UITableViewScrollPositionNone];
     
     PFObject *member = (PFObject*)self.members[indexPath.row];
     
@@ -81,25 +89,22 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     BCMemberCell *cell = (BCMemberCell*)[tableView cellForRowAtIndexPath:indexPath];
-    
-    if (cell.accessoryType == UITableViewCellAccessoryNone) {
-        cell.accessoryType = UITableViewCellAccessoryCheckmark;
-    } else {
-        cell.accessoryType = UITableViewCellAccessoryNone;
-    }
-    
+    cell.accessoryType = UITableViewCellAccessoryCheckmark;
+    [self.invitedMembers addObject: self.members[indexPath.row]];
+    NSLog(@"\nInvited members: %@", self.invitedMembers);
+}
+
+-(void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath{
+    BCMemberCell *cell = (BCMemberCell*)[tableView cellForRowAtIndexPath:indexPath];
+    cell.accessoryType = UITableViewCellAccessoryNone;
+    [self.invitedMembers removeObject:self.members[indexPath.row]];
+    NSLog(@"\nInvited members: %@", self.invitedMembers);
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     BCAddPlanViewController *destination = (BCAddPlanViewController*)[segue destinationViewController];
-    
-    NSArray *selectedIndexPaths = [self.tableView indexPathsForSelectedRows];
-    NSMutableArray *selectedMembers = [[NSMutableArray alloc] init];
-    for (NSIndexPath *indexPath in selectedIndexPaths) {
-        [selectedMembers addObject:self.members];
-    }
-    
-    destination.selectedMembers = selectedMembers;
+    destination.selectedMembers = [NSMutableSet setWithSet:self.invitedMembers];
+    destination.groupName = self.groupName;
 }
 
 

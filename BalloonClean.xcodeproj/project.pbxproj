@@ -59,6 +59,21 @@
 		000E7A80193FD84F00E7024F /* SMContactsSelector.xib in Resources */ = {isa = PBXBuildFile; fileRef = 000E7A6C193FD84F00E7024F /* SMContactsSelector.xib */; };
 		000E7A81193FD84F00E7024F /* CustomIOS7AlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 000E7A6F193FD84F00E7024F /* CustomIOS7AlertView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		000E7A82193FD84F00E7024F /* UIAlertView+UITableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 000E7A71193FD84F00E7024F /* UIAlertView+UITableView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		00246B03194A124F0052E463 /* CHANGELOG.md in Resources */ = {isa = PBXBuildFile; fileRef = 00246AEF194A124F0052E463 /* CHANGELOG.md */; };
+		00246B04194A124F0052E463 /* Foursquare2.m in Sources */ = {isa = PBXBuildFile; fileRef = 00246AF1194A124F0052E463 /* Foursquare2.m */; };
+		00246B05194A124F0052E463 /* FSConverter.m in Sources */ = {isa = PBXBuildFile; fileRef = 00246AF3194A124F0052E463 /* FSConverter.m */; };
+		00246B06194A124F0052E463 /* FSRequester.m in Sources */ = {isa = PBXBuildFile; fileRef = 00246AF5194A124F0052E463 /* FSRequester.m */; };
+		00246B07194A124F0052E463 /* FSTargetCallback.m in Sources */ = {isa = PBXBuildFile; fileRef = 00246AF7194A124F0052E463 /* FSTargetCallback.m */; };
+		00246B08194A124F0052E463 /* FSVenue.m in Sources */ = {isa = PBXBuildFile; fileRef = 00246AF9194A124F0052E463 /* FSVenue.m */; };
+		00246B09194A124F0052E463 /* FSWebLogin.m in Sources */ = {isa = PBXBuildFile; fileRef = 00246AFB194A124F0052E463 /* FSWebLogin.m */; };
+		00246B0A194A124F0052E463 /* FSWebLogin.xib in Resources */ = {isa = PBXBuildFile; fileRef = 00246AFC194A124F0052E463 /* FSWebLogin.xib */; };
+		00246B0B194A124F0052E463 /* NearbyVenuesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00246AFE194A124F0052E463 /* NearbyVenuesViewController.m */; };
+		00246B0C194A124F0052E463 /* pin.png in Resources */ = {isa = PBXBuildFile; fileRef = 00246AFF194A124F0052E463 /* pin.png */; };
+		00246B0D194A124F0052E463 /* pin@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 00246B00194A124F0052E463 /* pin@2x.png */; };
+		00246B0E194A124F0052E463 /* poweredByFoursquare_gray.png in Resources */ = {isa = PBXBuildFile; fileRef = 00246B01194A124F0052E463 /* poweredByFoursquare_gray.png */; };
+		00246B0F194A124F0052E463 /* poweredByFoursquare_gray@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 00246B02194A124F0052E463 /* poweredByFoursquare_gray@2x.png */; };
+		00246B12194A30910052E463 /* BCNearbyVenuesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00246B11194A30910052E463 /* BCNearbyVenuesViewController.m */; };
+		00246B15194A39170052E463 /* BCSetDeadlineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00246B14194A39170052E463 /* BCSetDeadlineViewController.m */; };
 		0026B6A119465C9F00C4948E /* 29-29_pic_shadows.png in Resources */ = {isa = PBXBuildFile; fileRef = 0026B57E19465C9D00C4948E /* 29-29_pic_shadows.png */; };
 		0026B6A219465C9F00C4948E /* 29-29_pic_shadows@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0026B57F19465C9D00C4948E /* 29-29_pic_shadows@2x.png */; };
 		0026B6A319465C9F00C4948E /* 35-35_pic_shadows.png in Resources */ = {isa = PBXBuildFile; fileRef = 0026B58019465C9D00C4948E /* 35-35_pic_shadows.png */; };
@@ -364,6 +379,7 @@
 		0097D0971940F2AB00C26E28 /* BCParseBalloon.m in Sources */ = {isa = PBXBuildFile; fileRef = 0097D0961940F2AB00C26E28 /* BCParseBalloon.m */; };
 		0097D09B1940F61E00C26E28 /* BCParseUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 0097D09A1940F61E00C26E28 /* BCParseUser.m */; };
 		0097D0A11940FBB900C26E28 /* BCCreateGroupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0097D0A01940FBB900C26E28 /* BCCreateGroupViewController.m */; };
+		00E5D7BE194B5A9F008B53F4 /* BCLandingPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E5D7BD194B5A9F008B53F4 /* BCLandingPageViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -455,6 +471,30 @@
 		000E7A6F193FD84F00E7024F /* CustomIOS7AlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomIOS7AlertView.m; sourceTree = "<group>"; };
 		000E7A70193FD84F00E7024F /* UIAlertView+UITableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+UITableView.h"; sourceTree = "<group>"; };
 		000E7A71193FD84F00E7024F /* UIAlertView+UITableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+UITableView.m"; sourceTree = "<group>"; };
+		00246AEF194A124F0052E463 /* CHANGELOG.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CHANGELOG.md; sourceTree = "<group>"; };
+		00246AF0194A124F0052E463 /* Foursquare2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Foursquare2.h; sourceTree = "<group>"; };
+		00246AF1194A124F0052E463 /* Foursquare2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Foursquare2.m; sourceTree = "<group>"; };
+		00246AF2194A124F0052E463 /* FSConverter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSConverter.h; sourceTree = "<group>"; };
+		00246AF3194A124F0052E463 /* FSConverter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSConverter.m; sourceTree = "<group>"; };
+		00246AF4194A124F0052E463 /* FSRequester.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSRequester.h; sourceTree = "<group>"; };
+		00246AF5194A124F0052E463 /* FSRequester.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSRequester.m; sourceTree = "<group>"; };
+		00246AF6194A124F0052E463 /* FSTargetCallback.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSTargetCallback.h; sourceTree = "<group>"; };
+		00246AF7194A124F0052E463 /* FSTargetCallback.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSTargetCallback.m; sourceTree = "<group>"; };
+		00246AF8194A124F0052E463 /* FSVenue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSVenue.h; sourceTree = "<group>"; };
+		00246AF9194A124F0052E463 /* FSVenue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSVenue.m; sourceTree = "<group>"; };
+		00246AFA194A124F0052E463 /* FSWebLogin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSWebLogin.h; sourceTree = "<group>"; };
+		00246AFB194A124F0052E463 /* FSWebLogin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSWebLogin.m; sourceTree = "<group>"; };
+		00246AFC194A124F0052E463 /* FSWebLogin.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FSWebLogin.xib; sourceTree = "<group>"; };
+		00246AFD194A124F0052E463 /* NearbyVenuesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NearbyVenuesViewController.h; sourceTree = "<group>"; };
+		00246AFE194A124F0052E463 /* NearbyVenuesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NearbyVenuesViewController.m; sourceTree = "<group>"; };
+		00246AFF194A124F0052E463 /* pin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pin.png; sourceTree = "<group>"; };
+		00246B00194A124F0052E463 /* pin@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pin@2x.png"; sourceTree = "<group>"; };
+		00246B01194A124F0052E463 /* poweredByFoursquare_gray.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = poweredByFoursquare_gray.png; sourceTree = "<group>"; };
+		00246B02194A124F0052E463 /* poweredByFoursquare_gray@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "poweredByFoursquare_gray@2x.png"; sourceTree = "<group>"; };
+		00246B10194A30910052E463 /* BCNearbyVenuesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCNearbyVenuesViewController.h; sourceTree = "<group>"; };
+		00246B11194A30910052E463 /* BCNearbyVenuesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCNearbyVenuesViewController.m; sourceTree = "<group>"; };
+		00246B13194A39170052E463 /* BCSetDeadlineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCSetDeadlineViewController.h; sourceTree = "<group>"; };
+		00246B14194A39170052E463 /* BCSetDeadlineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCSetDeadlineViewController.m; sourceTree = "<group>"; };
 		0026B57E19465C9D00C4948E /* 29-29_pic_shadows.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "29-29_pic_shadows.png"; sourceTree = "<group>"; };
 		0026B57F19465C9D00C4948E /* 29-29_pic_shadows@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "29-29_pic_shadows@2x.png"; sourceTree = "<group>"; };
 		0026B58019465C9D00C4948E /* 35-35_pic_shadows.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "35-35_pic_shadows.png"; sourceTree = "<group>"; };
@@ -773,6 +813,8 @@
 		0097D09A1940F61E00C26E28 /* BCParseUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCParseUser.m; sourceTree = "<group>"; };
 		0097D09F1940FBB900C26E28 /* BCCreateGroupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCCreateGroupViewController.h; sourceTree = "<group>"; };
 		0097D0A01940FBB900C26E28 /* BCCreateGroupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCCreateGroupViewController.m; sourceTree = "<group>"; };
+		00E5D7BC194B5A9F008B53F4 /* BCLandingPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCLandingPageViewController.h; sourceTree = "<group>"; };
+		00E5D7BD194B5A9F008B53F4 /* BCLandingPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCLandingPageViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -834,6 +876,7 @@
 		000E79A4193FB2F400E7024F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				00246AEE194A124F0052E463 /* Foursquare2 */,
 				0026B7D1194660ED00C4948E /* FacebookSDK.framework */,
 				000E7A04193FBB7300E7024F /* Parse.framework */,
 				000E7A02193FB9CD00E7024F /* SystemConfiguration.framework */,
@@ -1026,6 +1069,33 @@
 				000E7A71193FD84F00E7024F /* UIAlertView+UITableView.m */,
 			);
 			path = "UIAlertView+UITableView";
+			sourceTree = "<group>";
+		};
+		00246AEE194A124F0052E463 /* Foursquare2 */ = {
+			isa = PBXGroup;
+			children = (
+				00246AEF194A124F0052E463 /* CHANGELOG.md */,
+				00246AF0194A124F0052E463 /* Foursquare2.h */,
+				00246AF1194A124F0052E463 /* Foursquare2.m */,
+				00246AF2194A124F0052E463 /* FSConverter.h */,
+				00246AF3194A124F0052E463 /* FSConverter.m */,
+				00246AF4194A124F0052E463 /* FSRequester.h */,
+				00246AF5194A124F0052E463 /* FSRequester.m */,
+				00246AF6194A124F0052E463 /* FSTargetCallback.h */,
+				00246AF7194A124F0052E463 /* FSTargetCallback.m */,
+				00246AF8194A124F0052E463 /* FSVenue.h */,
+				00246AF9194A124F0052E463 /* FSVenue.m */,
+				00246AFA194A124F0052E463 /* FSWebLogin.h */,
+				00246AFB194A124F0052E463 /* FSWebLogin.m */,
+				00246AFC194A124F0052E463 /* FSWebLogin.xib */,
+				00246AFD194A124F0052E463 /* NearbyVenuesViewController.h */,
+				00246AFE194A124F0052E463 /* NearbyVenuesViewController.m */,
+				00246AFF194A124F0052E463 /* pin.png */,
+				00246B00194A124F0052E463 /* pin@2x.png */,
+				00246B01194A124F0052E463 /* poweredByFoursquare_gray.png */,
+				00246B02194A124F0052E463 /* poweredByFoursquare_gray@2x.png */,
+			);
+			path = Foursquare2;
 			sourceTree = "<group>";
 		};
 		0026B57C19465C9D00C4948E /* Resources */ = {
@@ -1354,6 +1424,12 @@
 				005F3CDE1948AFB300A299F7 /* BCSelectMembersTableViewController.m */,
 				005F3CE11948CC5C00A299F7 /* BCAddPlanViewController.h */,
 				005F3CE21948CC5C00A299F7 /* BCAddPlanViewController.m */,
+				00246B10194A30910052E463 /* BCNearbyVenuesViewController.h */,
+				00246B11194A30910052E463 /* BCNearbyVenuesViewController.m */,
+				00246B13194A39170052E463 /* BCSetDeadlineViewController.h */,
+				00246B14194A39170052E463 /* BCSetDeadlineViewController.m */,
+				00E5D7BC194B5A9F008B53F4 /* BCLandingPageViewController.h */,
+				00E5D7BD194B5A9F008B53F4 /* BCLandingPageViewController.m */,
 			);
 			name = SendBalloon;
 			sourceTree = "<group>";
@@ -1423,6 +1499,9 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Sean Wertheim";
 				TargetAttributes = {
+					000E79A1193FB2F400E7024F = {
+						DevelopmentTeam = 9N4K6B6EYK;
+					};
 					000E79C2193FB2F400E7024F = {
 						TestTargetID = 000E79A1193FB2F400E7024F;
 					};
@@ -1504,6 +1583,7 @@
 				0026B78B19465CA000C4948E /* pin_button@2x.png in Resources */,
 				000E79B0193FB2F400E7024F /* InfoPlist.strings in Resources */,
 				0026B70E19465C9F00C4948E /* follow_button_pressed.png in Resources */,
+				00246B0F194A124F0052E463 /* poweredByFoursquare_gray@2x.png in Resources */,
 				0026B75119465C9F00C4948E /* iconGroups.png in Resources */,
 				0026B75019465C9F00C4948E /* iconFollowers@2x.png in Resources */,
 				0026B6CE19465C9F00C4948E /* buttonBackSelected.png in Resources */,
@@ -1519,6 +1599,7 @@
 				0026B7AD19465CA000C4948E /* timeline_separator@2x.png in Resources */,
 				0026B71F19465C9F00C4948E /* icon_add_comment.png in Resources */,
 				0026B7C019465CA000C4948E /* iTunesArtwork in Resources */,
+				00246B03194A124F0052E463 /* CHANGELOG.md in Resources */,
 				0026B6E519465C9F00C4948E /* buttonFollowingSelected@2x.png in Resources */,
 				0026B75619465C9F00C4948E /* iconHome@2x.png in Resources */,
 				0026B6E919465C9F00C4948E /* buttonImageSettings@2x.png in Resources */,
@@ -1584,6 +1665,7 @@
 				0026B6B019465C9F00C4948E /* back_button_pressed@2x.png in Resources */,
 				0026B7B519465CA000C4948E /* Default-fbFACEBOOK_APP_ID@2x.png in Resources */,
 				0026B74219465C9F00C4948E /* icon_time@2x.png in Resources */,
+				00246B0C194A124F0052E463 /* pin.png in Resources */,
 				0026B74E19465C9F00C4948E /* iconComment@2x.png in Resources */,
 				0026B6C219465C9F00C4948E /* backgroundTabBarItemSelected.png in Resources */,
 				0026B73919465C9F00C4948E /* icon_settings.png in Resources */,
@@ -1631,6 +1713,7 @@
 				0026B71D19465C9F00C4948E /* Icon.png in Resources */,
 				0026B6EB19465C9F00C4948E /* buttonImageSettingsSelected@2x.png in Resources */,
 				0026B6AD19465C9F00C4948E /* back_button.png in Resources */,
+				00246B0E194A124F0052E463 /* poweredByFoursquare_gray.png in Resources */,
 				0026B6C919465C9F00C4948E /* blank_activity@2x.png in Resources */,
 				0026B76919465CA000C4948E /* iTunesArtwork in Resources */,
 				0026B78419465CA000C4948E /* new_activities_bg.png in Resources */,
@@ -1650,6 +1733,7 @@
 				0026B70419465C9F00C4948E /* fb_button.png in Resources */,
 				0026B75B19465C9F00C4948E /* iconInvitesSelected.png in Resources */,
 				0026B7C319465CA000C4948E /* iTunesArtwork@2x.png in Resources */,
+				00246B0D194A124F0052E463 /* pin@2x.png in Resources */,
 				0026B6B619465C9F00C4948E /* backgroundHeaderPicture@2x.png in Resources */,
 				0026B6DC19465C9F00C4948E /* buttonFollow.png in Resources */,
 				0026B7C119465CA000C4948E /* iTunesArtwork.png in Resources */,
@@ -1690,6 +1774,7 @@
 				0026B6D619465C9F00C4948E /* buttonCameraSelected.png in Resources */,
 				0026B6DE19465C9F00C4948E /* buttonFollowing copy.png in Resources */,
 				0026B6C019465C9F00C4948E /* backgroundTabBar.png in Resources */,
+				00246B0A194A124F0052E463 /* FSWebLogin.xib in Resources */,
 				0026B77519465CA000C4948E /* login_bg@2x.png in Resources */,
 				0026B6FB19465C9F00C4948E /* camera_button_pressed@2x.png in Resources */,
 				0026B74519465C9F00C4948E /* icon_timeline_selected.png in Resources */,
@@ -1774,9 +1859,13 @@
 			files = (
 				000E7A15193FCB8400E7024F /* Common.m in Sources */,
 				000E7A7E193FD84F00E7024F /* SBJsonWriter.m in Sources */,
+				00E5D7BE194B5A9F008B53F4 /* BCLandingPageViewController.m in Sources */,
+				00246B07194A124F0052E463 /* FSTargetCallback.m in Sources */,
 				000E79EF193FB83C00E7024F /* CardsViewFlowLayout.m in Sources */,
+				00246B05194A124F0052E463 /* FSConverter.m in Sources */,
 				000E79E1193FB75600E7024F /* CountdownLabel.m in Sources */,
 				000E79E9193FB81400E7024F /* Invite.m in Sources */,
+				00246B0B194A124F0052E463 /* NearbyVenuesViewController.m in Sources */,
 				000E7A11193FC70600E7024F /* BCGroupCell.m in Sources */,
 				0097D08E1940E53300C26E28 /* BCParseGroup.m in Sources */,
 				000E79B2193FB2F400E7024F /* main.m in Sources */,
@@ -1785,26 +1874,32 @@
 				0097D0971940F2AB00C26E28 /* BCParseBalloon.m in Sources */,
 				000E7A7F193FD84F00E7024F /* SMContactsSelector.m in Sources */,
 				0026B7D019465F7800C4948E /* BCIntegrateFacebookController.m in Sources */,
+				00246B12194A30910052E463 /* BCNearbyVenuesViewController.m in Sources */,
 				0026B7CA19465ECC00C4948E /* FacebookViewController.m in Sources */,
 				000E7A7C193FD84F00E7024F /* SBJsonBase.m in Sources */,
 				000E7A73193FD84F00E7024F /* NSString+Additions.m in Sources */,
+				00246B08194A124F0052E463 /* FSVenue.m in Sources */,
 				000E79DD193FB73E00E7024F /* PAPCardView.m in Sources */,
 				000E79B6193FB2F400E7024F /* BCAppDelegate.m in Sources */,
+				00246B15194A39170052E463 /* BCSetDeadlineViewController.m in Sources */,
 				000E7A79193FD84F00E7024F /* NSObject+SBJSON.m in Sources */,
 				0026B7C719465EC100C4948E /* PhoneNumberViewController.m in Sources */,
 				0097D0A11940FBB900C26E28 /* BCCreateGroupViewController.m in Sources */,
 				0097D0941940EF5700C26E28 /* BCParseActivity.m in Sources */,
 				000E7A72193FD84F00E7024F /* Address+Additions.m in Sources */,
+				00246B04194A124F0052E463 /* Foursquare2.m in Sources */,
 				000E7A7B193FD84F00E7024F /* SBJSON.m in Sources */,
 				000E79E5193FB80300E7024F /* PAPInvitesViewController.m in Sources */,
 				000E7A0E193FC58C00E7024F /* BCGroup.m in Sources */,
 				000E7A7A193FD84F00E7024F /* NSString+SBJSON.m in Sources */,
+				00246B09194A124F0052E463 /* FSWebLogin.m in Sources */,
 				000E7A81193FD84F00E7024F /* CustomIOS7AlertView.m in Sources */,
 				005F3CE31948CC5C00A299F7 /* BCAddPlanViewController.m in Sources */,
 				0026B7CD19465EFA00C4948E /* BCSettings.m in Sources */,
 				005F3CDF1948AFB300A299F7 /* BCSelectMembersTableViewController.m in Sources */,
 				0097D09B1940F61E00C26E28 /* BCParseUser.m in Sources */,
 				008CE12919455E3700949D00 /* BCParseTempUser.m in Sources */,
+				00246B06194A124F0052E463 /* FSRequester.m in Sources */,
 				000E7A0B193FC4FF00E7024F /* GroupsTableViewController.m in Sources */,
 				005E07EC194779F1000C333A /* BCMemberCell.m in Sources */,
 				000E7A82193FD84F00E7024F /* UIAlertView+UITableView.m in Sources */,
@@ -1898,7 +1993,7 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Sean Wertheim (95DZ473HQ6)";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -1916,6 +2011,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "A9E333C4-78D5-4594-AA7F-EA88AC7938AD";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -1937,7 +2033,7 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -1948,6 +2044,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PROVISIONING_PROFILE = "A9E333C4-78D5-4594-AA7F-EA88AC7938AD";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -1958,6 +2055,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/seanwertheim/Desktop/BalloonClean,
@@ -1967,6 +2066,7 @@
 				GCC_PREFIX_HEADER = "BalloonClean/BalloonClean-Prefix.pch";
 				INFOPLIST_FILE = "BalloonClean/BalloonClean-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -1976,6 +2076,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/seanwertheim/Desktop/BalloonClean,
@@ -1985,6 +2087,7 @@
 				GCC_PREFIX_HEADER = "BalloonClean/BalloonClean-Prefix.pch";
 				INFOPLIST_FILE = "BalloonClean/BalloonClean-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

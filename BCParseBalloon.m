@@ -18,7 +18,7 @@
 @dynamic expirationDate;
 @dynamic createdDate;
 @dynamic eventLocation;
-@dynamic eventName;
+@dynamic eventPlan;
 @dynamic eventPhotoFile;
 
 +(NSString*)parseClassName{

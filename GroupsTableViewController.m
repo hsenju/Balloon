@@ -10,6 +10,8 @@
 #import "BCSelectMembersTableViewController.h"
 #import "BCGroupCell.h"
 #import "BCParseGroup.h"
+#import "BCParseUser.h"
+#import "BCParseTempUser.h"
 
 @interface GroupsTableViewController ()
 
@@ -117,20 +119,16 @@ static const NSString *kCreateGroupsSegueIdentifier = @"createGroupSegue";
     BCParseGroup *selectedGroup = (BCParseGroup*)[self.objects objectAtIndex:indexPath.row];
     self.selectedGroup = selectedGroup;
     self.groupMembers = [NSArray arrayWithArray:selectedGroup.members];
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
-        for (PFObject *member in self.groupMembers) {
-            [member fetchIfNeeded];
-        }
-        
-        dispatch_sync(dispatch_get_main_queue(), ^{
-            [self performSegueWithIdentifier:@"groupToMembers" sender:self];
-        });
-    });
+    
+    [PFObject fetchAllInBackground:self.groupMembers block:^(NSArray *objects, NSError *error) {
+        [self performSegueWithIdentifier:@"groupToMembers" sender:self];
+    }];
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
-     BCSelectMembersTableViewController *dest = (BCSelectMembersTableViewController*)[segue destinationViewController];
+    BCSelectMembersTableViewController *dest = (BCSelectMembersTableViewController*)[segue destinationViewController];
     
+    dest.groupName = self.selectedGroup.groupName;
     dest.members = [NSArray arrayWithArray:self.groupMembers];
 }
 

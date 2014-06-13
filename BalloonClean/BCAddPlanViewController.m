@@ -10,6 +10,7 @@
 #import <Parse/Parse.h>
 #import "BCParseUser.h"
 #import "BCParseTempUser.h"
+#import "BCNearbyVenuesViewController.h"
 
 @interface BCAddPlanViewController () <UITextViewDelegate>
 
@@ -28,12 +29,37 @@
     return self;
 }
 
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    BCNearbyVenuesViewController *destination = (BCNearbyVenuesViewController*)[segue destinationViewController];
+    destination.plan = self.planTextField.text;
+    destination.members = [NSMutableSet setWithSet:self.selectedMembers];
+    destination.groupName = self.groupName;
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
+    UITapGestureRecognizer *singleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(singleTapRecognized:)];
+    singleTap.numberOfTapsRequired = 1;
+    [self.planTextField addGestureRecognizer:singleTap];
+    
     self.planTextField.delegate = self;
+    self.planTextField.text = @"What's the plan? \n\n (e.g. Let's go to the Shake Shack at 8PM)";
+}
+
+- (void)singleTapRecognized:(UIGestureRecognizer *)gestureRecognizer {
+    UITextView *tappedView = (UITextView*)gestureRecognizer.view;
+    
+    if ([tappedView.text isEqualToString:@"What's the plan? \n\n (e.g. Let's go to the Shake Shack at 8PM)"]) {
+        tappedView.text = @"";
+        tappedView.textColor = [UIColor blackColor]; //optional
+    }
+}
+
+-(void)viewDidAppear:(BOOL)animated{
+    [self.planTextField becomeFirstResponder];
 }
 
 - (void)didReceiveMemoryWarning
@@ -44,12 +70,18 @@
 
 #pragma mark == UITextFieldDelegate methods
 
-- (void)textFieldDidBeginEditing:(UITextField *)textField {
-    textField.placeholder = nil;
+- (void)textViewDidBeginEditing:(UITextView *)textView
+{
+    [textView becomeFirstResponder];
 }
 
-- (void)textFieldDidEndEditing:(UITextField *)textField {
-    textField.placeholder = @"What's the plan? \n\n (e.g. Let's go to the Shake Shack at 8PM)";
+- (void)textViewDidEndEditing:(UITextView *)textView
+{
+    if ([textView.text isEqualToString:@""]) {
+        textView.text = @"What's the plan? \n\n (e.g. Let's go to the Shake Shack at 8PM)";
+        textView.textColor = [UIColor lightGrayColor]; //optional
+    }
+    [textView resignFirstResponder];
 }
 
 @end

@@ -10,6 +10,7 @@
 
 @interface BCAddPlanViewController : UIViewController
 
-@property (strong, nonatomic) NSArray *selectedMembers;
+@property (strong, nonatomic) NSMutableSet *selectedMembers;
+@property (strong, nonatomic) NSString *groupName;
 
 @end

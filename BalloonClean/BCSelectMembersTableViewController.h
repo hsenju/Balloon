@@ -10,6 +10,7 @@
 
 @interface BCSelectMembersTableViewController : UITableViewController
 
+@property (strong, nonatomic) NSString *groupName;
 @property (strong, nonatomic) NSArray *members;
 
 @end

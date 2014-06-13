@@ -18,7 +18,7 @@
 @property (retain) NSDate *expirationDate;
 @property (retain) NSDate *createdDate;
 @property (retain) NSString *eventLocation;
-@property (retain) NSString *eventName;
+@property (retain) NSString *eventPlan;
 
 //if photo provided, display that
 //else if foursquare photo exists, display that

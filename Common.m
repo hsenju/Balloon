@@ -6,9 +6,9 @@
 //  Copyright (c) 2014 Sean Wertheim. All rights reserved.
 //
 
-//--------------------------------------------------------------------
-// Contains commmon constants that are likely to be used in every file
-//--------------------------------------------------------------------
+//------------------------------------------------------------
+// Contains commmon constants that are likely to be used often
+//------------------------------------------------------------
 
 #import "Common.h"
 

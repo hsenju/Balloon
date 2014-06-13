@@ -14,22 +14,52 @@
 #import "BCParseBalloon.h"
 #import "BCParseUser.h"
 #import "BCParseTempUser.h"
+#import "Foursquare2.h"
 
 @implementation BCAppDelegate
 
+- (void)application:(UIApplication *)application
+didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken
+{
+    // Store the deviceToken in the current installation and save it to Parse.
+    PFInstallation *currentInstallation = [PFInstallation currentInstallation];
+    [currentInstallation setDeviceTokenFromData:deviceToken];
+    [currentInstallation saveInBackground];
+}
+
+- (void)application:(UIApplication *)application
+didReceiveRemoteNotification:(NSDictionary *)userInfo {
+    [PFPush handlePush:userInfo];
+}
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    //register PFObject subclasses
     [BCParseGroup registerSubclass];
     [BCParseActivity registerSubclass];
     [BCParseBalloon registerSubclass];
     [BCParseUser registerSubclass];
     [BCParseTempUser registerSubclass];
     
+    //setup parse client
     [Parse setApplicationId:@"F0cvLwmfI1R73szAAbXp5diFL2Q0GbQwPjhaafBI"
                   clientKey:@"gPZ4p1xWFznflPhvvZDDtyEOx1vt9lHXYnVyWpHJ"];
     [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
-    // Override point for customization after application launch.
+    
+    //register for parse push notifications
+    [application registerForRemoteNotificationTypes:UIRemoteNotificationTypeBadge|
+     UIRemoteNotificationTypeAlert|
+     UIRemoteNotificationTypeSound];
+    
+    //setup foursquare client
+    [Foursquare2 setupFoursquareWithClientId:@"QIVN42TMR5KLGEA15W1VK0ISG4V3DOT0J4XAZVZ033HQK2MH"
+                                      secret:@"YDYDI1JXQJPCVAWM1ZDMHRCCCAEJY5DT3TUTLUXU2JZ5G2AJ"
+                                 callbackURL:@"fb527538684032224://foursquare"];
     return YES;
+}
+
+-(BOOL)application:(UIApplication*)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation{
+    return [Foursquare2 handleURL:url];
 }
 							
 - (void)applicationWillResignActive:(UIApplication *)application
