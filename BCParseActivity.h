@@ -21,5 +21,6 @@
 @property (retain) NSMutableArray *notComing;
 @property (retain) PFFile *activityPhotoFile;
 @property (retain) NSDate *expirationDate;
+@property BOOL responded;
 
 @end

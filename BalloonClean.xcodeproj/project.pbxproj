@@ -370,6 +370,10 @@
 		0026B7CD19465EFA00C4948E /* BCSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = 0026B7CC19465EFA00C4948E /* BCSettings.m */; };
 		0026B7D019465F7800C4948E /* BCIntegrateFacebookController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0026B7CF19465F7800C4948E /* BCIntegrateFacebookController.m */; };
 		0026B7D2194660ED00C4948E /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0026B7D1194660ED00C4948E /* FacebookSDK.framework */; };
+		002B5EB91951E11A00688AF3 /* BCParseContactList.m in Sources */ = {isa = PBXBuildFile; fileRef = 002B5EB81951E11A00688AF3 /* BCParseContactList.m */; };
+		002B5EBC1951E34500688AF3 /* BCParseInvitation.m in Sources */ = {isa = PBXBuildFile; fileRef = 002B5EBB1951E34500688AF3 /* BCParseInvitation.m */; };
+		002B5EBF1951E95100688AF3 /* BCParseInvitationResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 002B5EBE1951E95100688AF3 /* BCParseInvitationResponse.m */; };
+		002B5EC21951E9F000688AF3 /* BCParseInvitationComment.m in Sources */ = {isa = PBXBuildFile; fileRef = 002B5EC11951E9F000688AF3 /* BCParseInvitationComment.m */; };
 		005E07EC194779F1000C333A /* BCMemberCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 005E07EB194779F1000C333A /* BCMemberCell.m */; };
 		005F3CDF1948AFB300A299F7 /* BCSelectMembersTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 005F3CDE1948AFB300A299F7 /* BCSelectMembersTableViewController.m */; };
 		005F3CE31948CC5C00A299F7 /* BCAddPlanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 005F3CE21948CC5C00A299F7 /* BCAddPlanViewController.m */; };
@@ -795,6 +799,14 @@
 		0026B7CE19465F7800C4948E /* BCIntegrateFacebookController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCIntegrateFacebookController.h; sourceTree = "<group>"; };
 		0026B7CF19465F7800C4948E /* BCIntegrateFacebookController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCIntegrateFacebookController.m; sourceTree = "<group>"; };
 		0026B7D1194660ED00C4948E /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../../Documents/FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
+		002B5EB71951E11A00688AF3 /* BCParseContactList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCParseContactList.h; sourceTree = "<group>"; };
+		002B5EB81951E11A00688AF3 /* BCParseContactList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCParseContactList.m; sourceTree = "<group>"; };
+		002B5EBA1951E34500688AF3 /* BCParseInvitation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCParseInvitation.h; sourceTree = "<group>"; };
+		002B5EBB1951E34500688AF3 /* BCParseInvitation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCParseInvitation.m; sourceTree = "<group>"; };
+		002B5EBD1951E95100688AF3 /* BCParseInvitationResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCParseInvitationResponse.h; sourceTree = "<group>"; };
+		002B5EBE1951E95100688AF3 /* BCParseInvitationResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCParseInvitationResponse.m; sourceTree = "<group>"; };
+		002B5EC01951E9F000688AF3 /* BCParseInvitationComment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCParseInvitationComment.h; sourceTree = "<group>"; };
+		002B5EC11951E9F000688AF3 /* BCParseInvitationComment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCParseInvitationComment.m; sourceTree = "<group>"; };
 		005E07EA194779F1000C333A /* BCMemberCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCMemberCell.h; sourceTree = "<group>"; };
 		005E07EB194779F1000C333A /* BCMemberCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCMemberCell.m; sourceTree = "<group>"; };
 		005F3CDD1948AFB300A299F7 /* BCSelectMembersTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCSelectMembersTableViewController.h; sourceTree = "<group>"; };
@@ -1437,16 +1449,24 @@
 		0097D0981940F50600C26E28 /* PFObjectSubclasses */ = {
 			isa = PBXGroup;
 			children = (
-				0097D08C1940E53300C26E28 /* BCParseGroup.h */,
-				0097D08D1940E53300C26E28 /* BCParseGroup.m */,
+				0097D0991940F61E00C26E28 /* BCParseUser.h */,
+				0097D09A1940F61E00C26E28 /* BCParseUser.m */,
+				002B5EBA1951E34500688AF3 /* BCParseInvitation.h */,
+				002B5EBB1951E34500688AF3 /* BCParseInvitation.m */,
+				002B5EBD1951E95100688AF3 /* BCParseInvitationResponse.h */,
+				002B5EBE1951E95100688AF3 /* BCParseInvitationResponse.m */,
+				002B5EC01951E9F000688AF3 /* BCParseInvitationComment.h */,
+				002B5EC11951E9F000688AF3 /* BCParseInvitationComment.m */,
+				002B5EB71951E11A00688AF3 /* BCParseContactList.h */,
+				002B5EB81951E11A00688AF3 /* BCParseContactList.m */,
 				0097D0921940EF5700C26E28 /* BCParseActivity.h */,
 				0097D0931940EF5700C26E28 /* BCParseActivity.m */,
 				0097D0951940F2AB00C26E28 /* BCParseBalloon.h */,
 				0097D0961940F2AB00C26E28 /* BCParseBalloon.m */,
-				0097D0991940F61E00C26E28 /* BCParseUser.h */,
-				0097D09A1940F61E00C26E28 /* BCParseUser.m */,
 				008CE12719455E3700949D00 /* BCParseTempUser.h */,
 				008CE12819455E3700949D00 /* BCParseTempUser.m */,
+				0097D08C1940E53300C26E28 /* BCParseGroup.h */,
+				0097D08D1940E53300C26E28 /* BCParseGroup.m */,
 			);
 			name = PFObjectSubclasses;
 			sourceTree = "<group>";
@@ -1866,11 +1886,13 @@
 				000E79E1193FB75600E7024F /* CountdownLabel.m in Sources */,
 				000E79E9193FB81400E7024F /* Invite.m in Sources */,
 				00246B0B194A124F0052E463 /* NearbyVenuesViewController.m in Sources */,
+				002B5EB91951E11A00688AF3 /* BCParseContactList.m in Sources */,
 				000E7A11193FC70600E7024F /* BCGroupCell.m in Sources */,
 				0097D08E1940E53300C26E28 /* BCParseGroup.m in Sources */,
 				000E79B2193FB2F400E7024F /* main.m in Sources */,
 				000E79EC193FB82000E7024F /* ParseInviteManager.m in Sources */,
 				000E7A7D193FD84F00E7024F /* SBJsonParser.m in Sources */,
+				002B5EBF1951E95100688AF3 /* BCParseInvitationResponse.m in Sources */,
 				0097D0971940F2AB00C26E28 /* BCParseBalloon.m in Sources */,
 				000E7A7F193FD84F00E7024F /* SMContactsSelector.m in Sources */,
 				0026B7D019465F7800C4948E /* BCIntegrateFacebookController.m in Sources */,
@@ -1891,6 +1913,7 @@
 				000E7A7B193FD84F00E7024F /* SBJSON.m in Sources */,
 				000E79E5193FB80300E7024F /* PAPInvitesViewController.m in Sources */,
 				000E7A0E193FC58C00E7024F /* BCGroup.m in Sources */,
+				002B5EBC1951E34500688AF3 /* BCParseInvitation.m in Sources */,
 				000E7A7A193FD84F00E7024F /* NSString+SBJSON.m in Sources */,
 				00246B09194A124F0052E463 /* FSWebLogin.m in Sources */,
 				000E7A81193FD84F00E7024F /* CustomIOS7AlertView.m in Sources */,
@@ -1901,6 +1924,7 @@
 				008CE12919455E3700949D00 /* BCParseTempUser.m in Sources */,
 				00246B06194A124F0052E463 /* FSRequester.m in Sources */,
 				000E7A0B193FC4FF00E7024F /* GroupsTableViewController.m in Sources */,
+				002B5EC21951E9F000688AF3 /* BCParseInvitationComment.m in Sources */,
 				005E07EC194779F1000C333A /* BCMemberCell.m in Sources */,
 				000E7A82193FD84F00E7024F /* UIAlertView+UITableView.m in Sources */,
 			);

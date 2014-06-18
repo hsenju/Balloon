@@ -12,21 +12,19 @@
 @implementation BCParseUser
 
 @dynamic name;
-@dynamic phoneNumber;
-@dynamic userPhotoFile;
+@dynamic mobilePhone;
+@dynamic userPhoto;
 @dynamic available;
-@dynamic userMemberGroups;
-@dynamic blockedUsers;
-@dynamic blockedGroups;
-@dynamic currentLocation;
-@dynamic lastLocation;
 @dynamic facebookID;
+@dynamic firstName;
+@dynamic lastName;
+@dynamic isPending;
 
 
--(void)setUserPhotoFileWithUIImage:(UIImage *)userImage{
+-(void)setUserPhotoWithImage:(UIImage *)userImage{
     NSData *imageData = UIImagePNGRepresentation(userImage);
     PFFile *imageFile = [PFFile fileWithName:@"userImage.png" data:imageData];
-    self.userPhotoFile = imageFile;
+    self.userPhoto = imageFile;
 }
 
 @end

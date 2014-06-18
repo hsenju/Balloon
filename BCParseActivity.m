@@ -19,6 +19,7 @@
 @dynamic notComing;
 @dynamic activityPhotoFile;
 @dynamic expirationDate;
+@dynamic responded;
 
 +(NSString*)parseClassName{
     return @"Activity";

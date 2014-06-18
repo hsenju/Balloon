@@ -401,7 +401,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s7I-Ou-y9C" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1795" y="1666"/>
+            <point key="canvasLocation" x="-1919" y="1673"/>
         </scene>
         <!--Landing Page View Controller-->
         <scene sceneID="yUe-ZN-P4Y">
@@ -607,7 +607,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3DV-nQ-nZA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1317" y="1666"/>
+            <point key="canvasLocation" x="-1341" y="1673"/>
         </scene>
         <!--Nearby Venues View Controller - Choose Location-->
         <scene sceneID="PIT-It-VOQ">
@@ -629,7 +629,7 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tJJ-sD-wLN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2440" y="1666"/>
+            <point key="canvasLocation" x="-2524" y="1673"/>
         </scene>
         <!--Table View Controller-->
         <scene sceneID="nVP-Ph-fNa">
@@ -1037,11 +1037,11 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
             </objects>
             <point key="canvasLocation" x="-4221" y="2379"/>
         </scene>
-        <!--Navigation Controller - Alerts-->
+        <!--Navigation Controller - Activity-->
         <scene sceneID="972-5z-jJx">
             <objects>
                 <navigationController id="SFu-ao-4KL" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Alerts" id="W8c-qf-dGG"/>
+                    <tabBarItem key="tabBarItem" title="Activity" id="W8c-qf-dGG"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="84T-iA-Zq3">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -1082,28 +1082,28 @@ AQABAAEAAQAB//+dkAEA//+PgAAE//+dkAEI//+dkAEMUERUAFBTVABQV1QAUFBUAAAAAAEAAAABA
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="Balloon-logo" translatesAutoresizingMaskIntoConstraints="NO" id="0xA-Fg-4ps">
-                                <rect key="frame" x="10" y="12" width="300" height="126"/>
+                                <rect key="frame" x="10" y="69" width="300" height="126"/>
                             </imageView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Please enter phone number" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RpI-QQ-nNu">
-                                <rect key="frame" x="57" y="155" width="226" height="22"/>
+                                <rect key="frame" x="57" y="212" width="226" height="22"/>
                                 <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="17"/>
                                 <color key="textColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mNC-mU-4jV">
-                                <rect key="frame" x="57" y="205" width="232" height="30"/>
+                                <rect key="frame" x="57" y="262" width="232" height="30"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="SeparatorComments.png" translatesAutoresizingMaskIntoConstraints="NO" id="nDl-GL-wkb">
-                                <rect key="frame" x="30" y="233" width="280" height="2"/>
+                                <rect key="frame" x="30" y="290" width="280" height="2"/>
                             </imageView>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" image="SeparatorComments.png" translatesAutoresizingMaskIntoConstraints="NO" id="khf-fp-m02">
-                                <rect key="frame" x="30" y="205" width="280" height="2"/>
+                                <rect key="frame" x="30" y="262" width="280" height="2"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sWw-9z-Xdk">
-                                <rect key="frame" x="232" y="243" width="57" height="33"/>
+                                <rect key="frame" x="232" y="300" width="57" height="33"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="Done">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>

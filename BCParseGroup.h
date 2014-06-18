@@ -14,9 +14,8 @@
 
 @property (retain) PFUser *creator;
 @property (retain) NSString *groupName;
+@property (retain) NSMutableArray *members;
 @property (retain) PFFile *groupImageFile;
-@property (retain) NSMutableArray *members; //stored as dictionaries of form name:phone:
-
 @property BOOL visible;
 
 @property NSUInteger totalMembers;

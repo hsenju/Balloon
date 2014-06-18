@@ -10,16 +10,18 @@
 #import "BCParseGroup.h"
 
 @interface BCParseUser : PFUser<PFSubclassing>
--(void)setUserPhotoFileWithUIImage:(UIImage *)userImage;
+
 @property (retain) NSString *name;
-@property (retain) NSString *phoneNumber;
-@property (retain) PFFile *userPhotoFile;
+@property (retain) NSString *mobilePhone;
+@property (retain) PFFile *userPhoto;
 @property BOOL available;
-@property (retain) NSMutableArray *userMemberGroups;
-@property (retain) NSMutableArray *blockedUsers;
-@property (retain) NSMutableArray *blockedGroups;
-@property (retain) PFGeoPoint *currentLocation;
-@property (retain) PFGeoPoint *lastLocation;
+//@property password inherited from PFUser
 @property (retain) NSString *facebookID;
+//@property email inherited from PFUser
+@property (retain) NSString *firstName;
+@property (retain) NSString *lastName;
+@property BOOL isPending;
+
+-(void)setUserPhotoFileWithUIImage:(UIImage *)userImage;
 
 @end

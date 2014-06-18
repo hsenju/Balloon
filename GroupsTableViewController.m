@@ -23,7 +23,7 @@
 
 @implementation GroupsTableViewController
 
-static const NSString *kCreateGroupsSegueIdentifier = @"createGroupSegue";
+static NSString * const kGroupsToMembersID = @"groupToMembers";
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -81,6 +81,7 @@ static const NSString *kCreateGroupsSegueIdentifier = @"createGroupSegue";
 
 - (PFQuery *)queryForTable {
     PFQuery *query = [PFQuery queryWithClassName:self.parseClassName];
+    
     // If no objects are loaded in memory, we look to the cache
     // first to fill the table and then subsequently do a query
     // against the network.
@@ -126,10 +127,14 @@ static const NSString *kCreateGroupsSegueIdentifier = @"createGroupSegue";
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
-    BCSelectMembersTableViewController *dest = (BCSelectMembersTableViewController*)[segue destinationViewController];
     
-    dest.groupName = self.selectedGroup.groupName;
-    dest.members = [NSArray arrayWithArray:self.groupMembers];
+    if ([segue.identifier isEqualToString: kGroupsToMembersID]) {
+        BCSelectMembersTableViewController *dest = (BCSelectMembersTableViewController*)[segue destinationViewController];
+        
+        dest.groupName = self.selectedGroup.groupName;
+        dest.members = [NSArray arrayWithArray:self.groupMembers];
+    }
+    
 }
 
     
