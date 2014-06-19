@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface BCIntegrateFacebookController : UIViewController  <UIImagePickerControllerDelegate>
+@interface BCIntegrateFacebookController : UIViewController  <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 
 - (void)facebookrequest: (UIImageView*)image textField:(UITextField*)textField;
 - (void)makeRequestForUserData:  (UIImageView*)image textField:(UITextField*)textField;

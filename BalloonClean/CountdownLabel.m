@@ -25,7 +25,7 @@
         
         if(secondsUntilEvent < toleranceInSeconds){
             self.secondsLeft = (NSInteger)secondsUntilEvent;
-            NSTimer *countdownTimer = [NSTimer scheduledTimerWithTimeInterval:1
+            NSTimer *countdownTimer __attribute__((unused)) = [NSTimer scheduledTimerWithTimeInterval:1
                                                                        target:self
                                                                      selector:@selector(refreshTimeLabel:)
                                                                      userInfo:Nil
@@ -48,7 +48,7 @@
         
         if(secondsUntilEvent < toleranceInSeconds){
             self.secondsLeft = (NSInteger)secondsUntilEvent;
-            NSTimer *countdownTimer = [NSTimer scheduledTimerWithTimeInterval:1
+            NSTimer *countdownTimer __attribute__((unused)) = [NSTimer scheduledTimerWithTimeInterval:1
                                                                        target:self
                                                                      selector:@selector(refreshTimeLabel:)
                                                                      userInfo:Nil

@@ -11,6 +11,7 @@
 
 @implementation BCParseContactList
 
+@dynamic creator;
 @dynamic name;
 @dynamic users;
 @dynamic visible;
