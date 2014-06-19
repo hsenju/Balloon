@@ -9,11 +9,11 @@
 #import "BCAppDelegate.h"
 
 #import <Parse/Parse.h>
-#import "BCParseGroup.h"
-#import "BCParseActivity.h"
-#import "BCParseBalloon.h"
 #import "BCParseUser.h"
-#import "BCParseTempUser.h"
+#import "BCParseInvitation.h"
+#import "BCParseInvitationResponse.h"
+#import "BCParseInvitationComment.h"
+#import "BCParseContactList.h"
 #import "Foursquare2.h"
 
 @implementation BCAppDelegate
@@ -35,11 +35,11 @@ didReceiveRemoteNotification:(NSDictionary *)userInfo {
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     //register PFObject subclasses
-    [BCParseGroup registerSubclass];
-    [BCParseActivity registerSubclass];
-    [BCParseBalloon registerSubclass];
     [BCParseUser registerSubclass];
-    [BCParseTempUser registerSubclass];
+    [BCParseInvitation registerSubclass];
+    [BCParseInvitationResponse registerSubclass];
+    [BCParseInvitationComment registerSubclass];
+    [BCParseContactList registerSubclass];
     
     //setup parse client
     [Parse setApplicationId:@"F0cvLwmfI1R73szAAbXp5diFL2Q0GbQwPjhaafBI"

@@ -11,8 +11,8 @@
 
 @interface BCCreateGroupViewController () <UITextFieldDelegate>
 
-@property (strong, nonatomic) IBOutlet UITextField *groupNameTextField;
-@property (strong, nonatomic) BCParseGroup *groupToAdd;
+@property (strong, nonatomic) IBOutlet UITextField *listNameTextField;
+@property (strong, nonatomic) BCParseContactList *listToAdd;
 @property (strong, nonatomic) IBOutlet UISwitch *shareListWithMembersSwitch;
 @property (strong, nonatomic) IBOutlet UIImageView *addPhotoImageView;
 @property (strong, nonatomic) IBOutlet UILabel *addPhotoLabel;
@@ -37,8 +37,8 @@ static const NSString *kToContactsSelectorSegueIdentifier = @"createGroupToConta
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    self.groupToAdd = [BCParseGroup object];
-    self.groupNameTextField.delegate = self;
+    self.listToAdd = [BCParseContactList object];
+    self.listNameTextField.delegate = self;
     
     //setup for clickable uiimageview to add photo
     UITapGestureRecognizer *singleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(addPhotoTapDetected)];
@@ -55,7 +55,7 @@ static const NSString *kToContactsSelectorSegueIdentifier = @"createGroupToConta
     [self.addPhotoImageView setImage:chosenImage];
     [self.addPhotoLabel setHidden:YES];
     [self.defaultIfEmptyLabel setHidden:YES];
-    [self.groupToAdd setGroupImageFileWithUIImage:chosenImage];
+//    [self.listToAdd setGroupImageFileWithUIImage:chosenImage];
     
     [picker dismissViewControllerAnimated:YES completion:nil];
 }
@@ -67,7 +67,7 @@ static const NSString *kToContactsSelectorSegueIdentifier = @"createGroupToConta
 #pragma mark -- IBActions and Gesture Recognizer Selectors
 
 - (IBAction)addContactsButtonPressed:(id)sender {
-    if(self.groupNameTextField.text && self.groupNameTextField.text.length > 0){
+    if(self.listNameTextField.text && self.listNameTextField.text.length > 0){
         
         SMContactsSelector *controller = [[SMContactsSelector alloc] initWithNibName:@"SMContactsSelector" bundle:nil];
         controller.delegate = self;
@@ -117,8 +117,8 @@ static const NSString *kToContactsSelectorSegueIdentifier = @"createGroupToConta
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     
     UITouch *touch = [[event allTouches] anyObject];
-    if ([self.groupNameTextField isFirstResponder] && [touch view] != self.groupNameTextField) {
-        [self.groupNameTextField resignFirstResponder];
+    if ([self.listNameTextField isFirstResponder] && [touch view] != self.listNameTextField) {
+        [self.listNameTextField resignFirstResponder];
     }
     [super touchesBegan:touches withEvent:event];
 }
@@ -133,24 +133,59 @@ static const NSString *kToContactsSelectorSegueIdentifier = @"createGroupToConta
 {
     if (data && data.count >0) {
         
-        self.groupToAdd.groupName = self.groupNameTextField.text;
-        NSMutableArray *membersArray = [NSMutableArray array];
-        for (NSDictionary *dict in data) {
-            
-            NSString *phoneString = [NSString stringWithFormat:@"%@", dict[@"number"]];
-            
-            BCParseTempUser *tempUser = [BCParseTempUser object];
-            tempUser.phoneNumber = phoneString;
-            tempUser.name = (NSString*)dict[@"name"];
-            [tempUser saveInBackground];
-            
-            [membersArray addObject:tempUser];
-        }
+        NSDictionary *paramsDictionary = [NSDictionary dictionaryWithObject:data forKey:@"addedContacts"];
         
-        self.groupToAdd.members = membersArray;
-        self.groupToAdd.visible = self.shareListWithMembersSwitch.on;
-        self.groupToAdd.numberInvitesSent = 0;
-        [self.groupToAdd saveInBackground];
+        [PFCloud callFunctionInBackground:@"conditionalUserCreate"
+                           withParameters:paramsDictionary
+                                    block:^(NSNumber *ratings, NSError *error) {
+                                        if (!error) {
+                                            NSLog(@"there was no error");
+                                        }
+                                    }];
+        
+//        //User Already Exists
+//        NSMutableSet *phoneNumbers = [NSMutableSet set];
+//        
+//        for (NSDictionary *dict in data) {
+//            NSString *phoneString = [NSString stringWithFormat:@"%@", dict[@"number"]];
+//            [phoneNumbers addObject:phoneString];
+//        }
+//        
+//        PFQuery *existingUsers = [BCParseUser query];
+//        [existingUsers whereKey:@"mobilePhone" containedIn:[NSArray arrayWithObjects:[phoneNumbers allObjects], nil]];
+//        
+//        [existingUsers findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+//            if (!error) {
+//                // The find succeeded.
+//                NSLog(@"Successfully retrieved %d scores.", objects.count);
+//                // Do something with the found objects
+//                for (PFObject *object in objects) {
+//                    NSLog(@"%@", object.objectId);
+//                }
+//            } else {
+//                // Log details of the failure
+//                NSLog(@"Error: %@ %@", error, [error userInfo]);
+//            }
+//        }];
+//        
+//        
+//        self.listToAdd.name = self.listNameTextField.text;
+//        NSMutableArray *membersArray = [NSMutableArray array];
+//        for (NSDictionary *dict in data) {
+//            
+//            NSString *phoneString = [NSString stringWithFormat:@"%@", dict[@"number"]];
+//            
+//            BCParseUser *addedUser = [BCParseUser object];
+//            addedUser.mobilePhone = phoneString;
+//            addedUser.name = (NSString*)dict[@"name"];
+//            [addedUser saveInBackground];
+//            
+//            [membersArray addObject:addedUser];
+//        }
+//        
+//        self.listToAdd.users = membersArray;
+//        self.listToAdd.visible = self.shareListWithMembersSwitch.on;
+//        [self.listToAdd saveInBackground];
         
     }
     

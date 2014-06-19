@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="q0I-sM-01y">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="mb6-TA-8Tp">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
     </dependencies>
@@ -106,7 +106,7 @@
                                     <action selector="addContactsButtonPressed:" destination="mb6-TA-8Tp" eventType="touchUpInside" id="3Z4-T9-9qC"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name The Group" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DxS-Bp-66S">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name The List" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DxS-Bp-66S">
                                 <rect key="frame" x="20" y="74" width="280" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -163,7 +163,7 @@
                         <outlet property="addPhotoImageView" destination="8mm-3W-Z1B" id="1DL-pe-nUh"/>
                         <outlet property="addPhotoLabel" destination="3g4-eQ-WyL" id="iFf-aX-l8q"/>
                         <outlet property="defaultIfEmptyLabel" destination="kmn-Fg-Pjx" id="CCT-43-5qv"/>
-                        <outlet property="groupNameTextField" destination="DxS-Bp-66S" id="i7k-DL-8gN"/>
+                        <outlet property="listNameTextField" destination="DxS-Bp-66S" id="rNw-db-E4C"/>
                         <outlet property="shareListWithMembersSwitch" destination="KpG-S3-yKq" id="rzm-fy-9Xs"/>
                     </connections>
                 </viewController>

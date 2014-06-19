@@ -11,7 +11,7 @@
 
 @implementation BCParseInvitationResponse
 
-@dynamic  user;
+@dynamic user;
 @dynamic invitation;
 @dynamic accepted;
 

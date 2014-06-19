@@ -22,6 +22,6 @@
 @property (retain) NSString *lastName;
 @property BOOL isPending;
 
--(void)setUserPhotoFileWithUIImage:(UIImage *)userImage;
+-(void)setUserPhotoWithImage:(UIImage *)userImage;
 
 @end

@@ -7,8 +7,8 @@
 //
 
 #import "BCLandingPageViewController.h"
+#import "BCParseInvitation.h"
 #import <QuartzCore/QuartzCore.h>
-#import "BCParseBalloon.h"
 
 @interface BCLandingPageViewController () <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 
@@ -31,14 +31,18 @@
 @implementation BCLandingPageViewController
 
 - (IBAction)sendButtonClicked:(id)sender {
-    BCParseBalloon *newBalloon = [BCParseBalloon object];
-    [newBalloon setEventPhotoFileWithUIImage:self.balloonImage];
-    newBalloon.invitedMembers = [NSMutableArray arrayWithArray:[self.members allObjects]];
-    newBalloon.eventPlan = self.plan;
-    newBalloon.eventLocation = self.location.name;
-    newBalloon.expirationDate = self.expirationDate;
+    BCParseInvitation *newInvitation = [BCParseInvitation object];
+    newInvitation.invitedUsers = [NSMutableArray arrayWithArray:[self.members allObjects]];
+    newInvitation.plan = self.plan;
     
-    [newBalloon saveInBackground];
+    NSMutableDictionary *venueInfo = [[NSMutableDictionary alloc] init];
+    venueInfo[@"venueName"] = self.location.name;
+    venueInfo[@"foursquareID"] = self.location.venueId;
+    
+    newInvitation.venueInfo = venueInfo;
+    newInvitation.deathDate = self.expirationDate;
+    
+    [newInvitation saveInBackground];
 }
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil

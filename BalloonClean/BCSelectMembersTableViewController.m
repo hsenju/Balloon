@@ -9,7 +9,6 @@
 #import "BCSelectMembersTableViewController.h"
 #import "BCMemberCell.h"
 #import "BCParseUser.h"
-#import "BCParseTempUser.h"
 #import "BCAddPlanViewController.h"
 
 @interface BCSelectMembersTableViewController ()
@@ -36,9 +35,6 @@
     self.invitedMembers = [NSMutableSet setWithArray:self.members];
     
     self.clearsSelectionOnViewWillAppear = NO;
-
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
@@ -65,6 +61,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"bcMemberCellReuseID";
+    
     BCMemberCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     cell.accessoryType = UITableViewCellAccessoryCheckmark;
@@ -73,16 +70,10 @@
     
     PFObject *member = (PFObject*)self.members[indexPath.row];
     
-    if ([member isMemberOfClass:[BCParseUser class]]) {
-        BCParseUser *userMember = (BCParseUser*)member;
-        cell.memberNameLabel.text = userMember.name;
-        cell.memberImageView.file = userMember.userPhotoFile;
-        [cell.memberImageView loadInBackground];
-    } else if ([member isMemberOfClass:[BCParseTempUser class]]) {
-        BCParseTempUser *tempMember = (BCParseTempUser*)member;
-        cell.memberNameLabel.text = tempMember.name;
-        cell.memberImageView.image = [UIImage imageNamed:@"defaultProfile"];
-    }
+    BCParseUser *userMember = (BCParseUser*)member;
+    cell.memberNameLabel.text = userMember.name;
+    cell.memberImageView.file = userMember.userPhoto;
+    [cell.memberImageView loadInBackground];
     
     return cell;
 }

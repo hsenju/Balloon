@@ -8,16 +8,15 @@
 
 #import "GroupsTableViewController.h"
 #import "BCSelectMembersTableViewController.h"
-#import "BCGroupCell.h"
-#import "BCParseGroup.h"
 #import "BCParseUser.h"
-#import "BCParseTempUser.h"
+#import "BCParseContactList.h"
+#import "BCGroupCell.h"
 
 @interface GroupsTableViewController ()
 
 @property (strong, nonatomic) NSString *parseClassName;
-@property (strong, nonatomic) BCParseGroup *selectedGroup;
-@property (strong, nonatomic) NSArray *groupMembers;
+@property (strong, nonatomic) BCParseContactList *selectedList;
+@property (strong, nonatomic) NSArray *listMembers;
 
 @end
 
@@ -61,11 +60,7 @@ static NSString * const kGroupsToMembersID = @"groupToMembers";
         // Customize the table
         
         // The className to query on
-        self.parseClassName = [BCParseGroup parseClassName];
-        
-        //        self.imageKey = @"groupImageFile";
-        //
-        //        self.textKey = @"groupName";
+        self.parseClassName = [BCParseContactList parseClassName];
         
         // Whether the built-in pull-to-refresh is enabled
         self.pullToRefreshEnabled = YES;
@@ -80,18 +75,25 @@ static NSString * const kGroupsToMembersID = @"groupToMembers";
 }
 
 - (PFQuery *)queryForTable {
-    PFQuery *query = [PFQuery queryWithClassName:self.parseClassName];
+    BCParseUser *currentUser = [BCParseUser currentUser];
+    
+    PFQuery *creatorQuery = [BCParseContactList query];
+    [creatorQuery whereKey:@"creator" equalTo:currentUser];
+    
+    PFQuery *memberAndVisibleQuery = [BCParseContactList query];
+    [memberAndVisibleQuery whereKey:@"users" equalTo:currentUser];
+    [memberAndVisibleQuery whereKey:@"visible" equalTo:[NSNumber numberWithBool:YES]];
+    
+    PFQuery *finalQuery = [PFQuery orQueryWithSubqueries:@[creatorQuery, memberAndVisibleQuery]];
     
     // If no objects are loaded in memory, we look to the cache
     // first to fill the table and then subsequently do a query
     // against the network.
     if ([self.objects count] == 0) {
-        query.cachePolicy = kPFCachePolicyCacheThenNetwork;
+        finalQuery.cachePolicy = kPFCachePolicyCacheThenNetwork;
     }
     
-    [query orderByDescending:@"createdAt"];
-    
-    return query;
+    return finalQuery;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView
@@ -105,23 +107,22 @@ static NSString * const kGroupsToMembersID = @"groupToMembers";
     }
     
     // Configure the cell to show todo item with a priority at the bottom
-    BCParseGroup *currentGroup = (BCParseGroup*)object;
-    cell.groupNameLabel.text = currentGroup.groupName;
-    cell.numberOfMembersLabel.text = [NSString stringWithFormat:@"%lu members available", (unsigned long)currentGroup.members.count];
-    cell.groupPictureImageView.file = currentGroup.groupImageFile;
+    BCParseContactList *currentList = (BCParseContactList*)object;
+    cell.groupNameLabel.text = currentList.name;
+    cell.numberOfMembersLabel.text = [NSString stringWithFormat:@"%lu members", (unsigned long)currentList.users.count];
+    cell.groupPictureImageView.file = currentList.photo;
     [cell.groupPictureImageView loadInBackground];
-    
     
     return cell;
 }
 
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    BCParseGroup *selectedGroup = (BCParseGroup*)[self.objects objectAtIndex:indexPath.row];
-    self.selectedGroup = selectedGroup;
-    self.groupMembers = [NSArray arrayWithArray:selectedGroup.members];
+    BCParseContactList *selectedList = (BCParseContactList*)[self.objects objectAtIndex:indexPath.row];
+    self.selectedList = selectedList;
+    self.listMembers = [NSArray arrayWithArray:selectedList.users];
     
-    [PFObject fetchAllInBackground:self.groupMembers block:^(NSArray *objects, NSError *error) {
+    [PFObject fetchAllInBackground:self.listMembers block:^(NSArray *objects, NSError *error) {
         [self performSegueWithIdentifier:@"groupToMembers" sender:self];
     }];
 }
@@ -131,8 +132,8 @@ static NSString * const kGroupsToMembersID = @"groupToMembers";
     if ([segue.identifier isEqualToString: kGroupsToMembersID]) {
         BCSelectMembersTableViewController *dest = (BCSelectMembersTableViewController*)[segue destinationViewController];
         
-        dest.groupName = self.selectedGroup.groupName;
-        dest.members = [NSArray arrayWithArray:self.groupMembers];
+        dest.groupName = self.selectedList.name;
+        dest.members = [NSArray arrayWithArray:self.listMembers];
     }
     
 }

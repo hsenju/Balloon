@@ -9,7 +9,6 @@
 #import "BCAddPlanViewController.h"
 #import <Parse/Parse.h>
 #import "BCParseUser.h"
-#import "BCParseTempUser.h"
 #import "BCNearbyVenuesViewController.h"
 
 @interface BCAddPlanViewController () <UITextViewDelegate>

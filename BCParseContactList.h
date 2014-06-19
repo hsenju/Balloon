@@ -7,9 +7,11 @@
 //
 
 #import <Parse/Parse.h>
+#import "BCParseUser.h"
 
 @interface BCParseContactList : PFObject<PFSubclassing>
 
+@property (retain) BCParseUser *creator;
 @property (retain) NSString *name;
 @property (retain) NSMutableArray *users;
 @property BOOL visible;

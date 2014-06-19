@@ -86,7 +86,7 @@
 		}
         
         UIImage *profileImage = self.profilepicture.image;
-        [user setUserPhotoFileWithUIImage:profileImage];
+        [user setUserPhotoWithImage:profileImage];
         [user saveInBackground];
         
         //if there is not error, proceed to main view

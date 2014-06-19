@@ -11,8 +11,6 @@
 
 @interface BCNearbyVenuesViewController ()
 @property (strong, nonatomic) CLLocationManager *locationManager;
-@property (strong, nonatomic) IBOutlet MKMapView *mapView;
-@property (strong, nonatomic) IBOutlet UIView *footer;
 
 @property (strong, nonatomic) FSVenue *selected;
 @property (strong, nonatomic) FSVenue *nVenue;
